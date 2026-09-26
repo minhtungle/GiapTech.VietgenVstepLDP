@@ -1,0 +1,9 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Duplicate/unused asset folder from original template extraction (unreferenced by any page)
+assets/images--/
+
+# Local backup of pre-localization stock photos (kept on disk, not needed in the repo)
+assets/images/vstep/vn-backup/

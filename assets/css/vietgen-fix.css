@@ -1,0 +1,272 @@
+/* VietGen: enlarge header logo safely without breaking the menu row */
+.full-width-header .rs-header .logo-part img {
+    max-height: 52px;
+}
+.full-width-header .rs-header .menu-area .logo-cat-wrap .logo-part img {
+    max-height: 52px;
+}
+
+/* Prevent the logo + menu from wrapping onto two lines at narrow desktop widths.
+   The template's own nav-menu li has margin-right:50px by default and no
+   white-space:nowrap on the parent ul, so with 6 menu items (vs. the template's
+   shorter demo labels) it silently wraps to a second line between ~992px and
+   ~1360px, which pushes the vertically-centered logo column down and makes it
+   look detached from the menu row. Fix: keep it on one line and tighten spacing
+   only in that width range; desktop (>=1360px) keeps the original spacing. */
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+    .full-width-header .rs-header .logo-part img,
+    .full-width-header .rs-header .menu-area .logo-cat-wrap .logo-part img {
+        max-height: 38px;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu {
+        white-space: nowrap;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li {
+        margin-right: 18px !important;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li > a {
+        font-size: 13px;
+    }
+    .full-width-header.header-style1 .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li.logo-part {
+        margin: 0 20px 0 15px;
+    }
+}
+
+/* about.html "history tabs" (Lịch Sử / Sứ Mệnh / Đội Ngũ): this component's
+   active/hover state is hardcoded orange (#ff5421) in style.css regardless of
+   the orange-color modifier class, so removing that class alone doesn't
+   change it. Override to the site's blue (#21a7d0) to match the rest of the
+   pages. */
+.rs-about .histort-part .single-history a:hover,
+.rs-about .histort-part .single-history a.active {
+    background: #21a7d0;
+}
+
+/* Topbar "Đăng Ký Ngay" CTA button: hardcoded orange (#ff5421) on the
+   home8-topbar class itself (used by all inner pages), independent of the
+   orange-color modifier. Override to blue to match the rest of the site. */
+.full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li a.apply-btn {
+    background: #21a7d0;
+}
+.full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li a.apply-btn:hover {
+    background: #1a86a8;
+}
+
+/* Contact page "Gửi Đăng Ký" submit button: hardcoded orange (#ff5421),
+   independent of the orange-color modifier. */
+.contact-page-section .rs-quick-contact .form-group .btn-send,
+.contact-page-section .contact-comment-box .form-group .btn-send,
+.contact-page-section .contact-comment-section form .form-group input.btn-send {
+    background: #21a7d0;
+}
+
+/* Breadcrumbs link hover (e.g. "Trang chủ // Giới thiệu"): hardcoded orange
+   on hover regardless of the orange-color modifier. */
+.rs-breadcrumbs .breadcrumbs-text.white-color ul li a:hover {
+    color: #21a7d0;
+}
+
+/* Course review stars/rating number (course-single.html "Đánh Giá" tab):
+   hardcoded orange. */
+.cource-review-box .rating .fa,
+.cource-review-box .total-rating {
+    color: #21a7d0;
+}
+
+/* Course overview "9 Buổi Học · 4 Kỹ Năng · 20 Bộ Đề" star icon: hardcoded orange. */
+.course-overview .inner-box .student-list li .fa {
+    color: #21a7d0;
+}
+
+/* course-single.html tab bar (Tổng Quan / Lộ Trình / Giáo Viên / Hỏi Đáp /
+   Đánh Giá) active/hover state: hardcoded orange. */
+.intro-section .intro-tabs .tab-btns .tab-btn:hover,
+.intro-section .intro-tabs .tab-btns .tab-btn.active {
+    background: #21a7d0;
+    border-color: #21a7d0;
+}
+
+/* Blog sidebar widget title underline (blog.html/blog-single.html): hardcoded orange. */
+.rs-inner-blog .widget-area .widget-title:before {
+    background: #21a7d0;
+}
+
+/* Contact page cards (Hà Nội / TP.HCM / Học Online) icons: hardcoded orange. */
+.contact-page-section .rs-contact-wrap .address-item .address-icon i {
+    color: #21a7d0;
+}
+.contact-page-section .rs-contact-wrap .address-item .address-text .des a:hover {
+    color: #21a7d0;
+}
+
+/* ==========================================================================
+   Remaining hardcoded-orange hover/active states across the shared
+   header/footer/breadcrumbs (home8-style4 topbar, home9-style footer) and a
+   few page-specific components. None of these depend on the orange-color
+   modifier class, so removing that class earlier didn't touch them.
+   ========================================================================== */
+
+/* Topbar link hovers */
+.full-width-header .rs-header .topbar-area.home8-topbar .topbar-contact li a:hover,
+.full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li.login-register a:hover {
+    color: #21a7d0;
+}
+
+/* Main nav + sub-menu + offcanvas menu hovers/active (all header states: static, sticky, expand-btn) */
+.full-width-header.home8-style4 .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li a:hover,
+.full-width-header.home8-style4 .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.current-menu-item > a,
+.full-width-header.home8-style4 .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu li a:hover,
+.full-width-header.home8-style4 .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu li.active a,
+.full-width-header.home8-style4 .rs-header .menu-area .expand-btn-inner li > a:hover,
+.full-width-header.home8-style4.main-home .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu li a:hover,
+.full-width-header.home8-style4.main-home .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu li.active a,
+.full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .rs-menu-area .main-menu .rs-menu ul.nav-menu li a:hover,
+.full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .rs-menu-area .main-menu .rs-menu ul.nav-menu li.current-menu-item > a,
+.full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .expand-btn-inner li > a:hover i:before,
+.full-width-header.home8-style4.main-home .expand-btn-inner li a:hover i:before,
+.full-width-header.home8-style4.main-home .expand-btn-inner .nav-expander:hover,
+.full-width-header.home8-style4 .rs-header .right_menu_togle .sidebarnav_menu li a:hover,
+.full-width-header.home8-style4 .rs-header .right_menu_togle .canvas-contact .social li a:hover,
+.full-width-header.home8-style4.main-home .right_menu_togle .sidebarnav_menu li a:hover,
+.full-width-header.home8-style4.main-home .right_menu_togle .canvas-contact .social li a:hover {
+    color: #21a7d0 !important;
+}
+.full-width-header.home8-style4 .rs-header .menu-area .expand-btn-inner .apply-btn,
+.full-width-header.home8-style4 .rs-header .right_menu_togle .close-btn #nav-close,
+.full-width-header.home8-style4.main-home .right_menu_togle .close-btn #nav-close,
+.full-width-header .rs-header .menu-area .nav-expander:hover span {
+    background: #21a7d0;
+}
+.full-width-header.home8-style4.main-home .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu,
+.full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .rs-menu-area .main-menu .rs-menu ul.sub-menu {
+    border-color: #21a7d0 !important;
+}
+
+/* Search modal close button hover */
+body .search-modal .close:hover {
+    color: #21a7d0 !important;
+}
+
+/* Breadcrumbs title + link hover (shared across all 8 pages) */
+.rs-breadcrumbs .breadcrumbs-text .page-title {
+    color: #21a7d0;
+}
+.rs-breadcrumbs .breadcrumbs-text ul li a:hover {
+    color: #21a7d0;
+}
+
+/* Footer (home9-style main-home): section title underline, link hovers, bullet markers */
+.rs-footer.home9-style.main-home .footer-top .widget-title:before,
+.footer-top .site-map li:before,
+.footer-bottom .copy-right-menu li:before {
+    background: #21a7d0;
+}
+.footer-top .footer_social li a:hover,
+.footer-top .site-map li a:hover,
+.footer-top .address-widget li i:before,
+.footer-top .address-widget li .desc a:hover,
+.footer-top .recent-post .post-item .post-desc a:hover,
+.footer-top .recent-post .post-item .post-date i,
+.footer-bottom .copyright a:hover,
+.footer-bottom .copy-right-menu li a:hover {
+    color: #21a7d0;
+}
+
+/* course-single.html: curriculum bullet + review list bullet */
+.course-overview .inner-box .review-list li:before {
+    color: #21a7d0;
+}
+
+/* team-single.html profile: skill list icon, social links hover, progress bars */
+.profile-section .content-column .inner-column .student-list li .fa,
+.profile-section .image-column .team-content .personal-info li a:hover,
+.profile-section .image-column .social-box a:hover {
+    color: #21a7d0;
+}
+.profile-section .rs-progress {
+    border-color: #21a7d0;
+}
+.profile-section .rs-progress .progress-bar {
+    background-color: #21a7d0;
+}
+.profile-section .rs-progress .progress-bar .pb-percent {
+    background: #21a7d0;
+}
+.profile-section .rs-progress .progress-bar .pb-percent:after {
+    border-top-color: #21a7d0;
+}
+
+/* blog.html / blog-single.html sidebar archive link hover */
+.rs-inner-blog .widget-area .widget-archives ul li a:hover {
+    color: #21a7d0;
+}
+
+/* ==========================================================================
+   Floating sticky contact buttons (Zalo / Facebook / WhatsApp)
+   ========================================================================== */
+.vg-floating-contact {
+    position: fixed;
+    right: 22px;
+    bottom: 90px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.vg-float-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 26px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: vgFloatPulse 2.4s ease-in-out infinite;
+}
+.vg-float-btn:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+    animation-play-state: paused;
+}
+.vg-float-zalo {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+}
+.vg-float-facebook {
+    background: #1877f2;
+}
+.vg-float-whatsapp {
+    background: #25d366;
+}
+@keyframes vgFloatPulse {
+    0%, 100% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25); }
+    50% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 8px rgba(33, 167, 208, 0.12); }
+}
+@media only screen and (max-width: 575px) {
+    .vg-floating-contact {
+        right: 14px;
+        bottom: 80px;
+        gap: 10px;
+    }
+    .vg-float-btn {
+        width: 46px;
+        height: 46px;
+        font-size: 22px;
+    }
+}
+
+/* Testimonial (home-style1) author photo: the template's own avatar files are
+   70x70px and the CSS sets `width: auto` on them, relying on that fixed source
+   size to keep the circle small. VietGen's real student photos are larger
+   (200x200+), so without an explicit cap they render oversized and overlap
+   the quote text above them. Cap it back to the size the layout expects. */
+.rs-testimonial.home-style1 .testi-item .author-desc .author-img img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
