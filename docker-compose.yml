@@ -1,0 +1,9 @@
+name: vstep-ldp
+
+services:
+  web:
+    build: .
+    image: ${IMAGE:-ghcr.io/minhtungle/vstep-ldp}:${TAG:-latest}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${WEB_PORT:-15090}:80"

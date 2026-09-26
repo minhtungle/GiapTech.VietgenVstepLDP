@@ -17,8 +17,7 @@
         }
 
         // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "support@rstheme.com";
+        $recipient = "tuyensinh@vietgeneducation.edu.vn";
 
         // Set the email subject.
         $subject = "New contact from $name";
