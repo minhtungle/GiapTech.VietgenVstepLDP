@@ -22,7 +22,7 @@
         white-space: nowrap;
     }
     .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li {
-        margin-right: 18px !important;
+        margin-right: 28px !important;
     }
     .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li > a {
         font-size: 13px;
@@ -268,5 +268,382 @@ body .search-modal .close:hover {
     width: 70px;
     height: 70px;
     object-fit: cover;
+}
+
+/* Partner carousel (Các đơn vị tổ chức thi VSTEP) on index.html: the
+   template's .partner-item CSS only targets `img` nested inside an `<a>`
+   (`.partner-item a img`), but these university logos aren't links (they're
+   informational, not partner links), so add the sizing directly. */
+.rs-partner .partner-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.rs-partner .partner-item img {
+    max-width: 130px;
+    max-height: 110px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    filter: grayscale(15%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+.rs-partner .partner-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Training Format cards (index.html "Hình Thức Đào Tạo") — image banner with
+   a colored gradient overlay + heading, plus a text body below, similar to
+   the reference site's 4-card layout.
+   ========================================================================== */
+.vg-format-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vg-format-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+.vg-format-img {
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+}
+.vg-format-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    color: #ffffff;
+}
+.vg-format-overlay h4 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.vg-format-overlay span {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.95;
+}
+.vg-overlay-blue {
+    background: linear-gradient(120deg, rgba(33, 167, 208, 0.92) 0%, rgba(33, 167, 208, 0.55) 55%, rgba(33, 167, 208, 0) 100%);
+}
+.vg-overlay-orange {
+    background: linear-gradient(120deg, rgba(255, 111, 42, 0.92) 0%, rgba(255, 111, 42, 0.55) 55%, rgba(255, 111, 42, 0) 100%);
+}
+.vg-format-body {
+    padding: 22px 20px 26px;
+}
+.vg-format-body .title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111111;
+}
+.vg-format-body .desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #626262;
+}
+
+/* ==========================================================================
+   Quick Roadmap section (index.html "Lộ Trình Nhanh Chóng") — icon circle
+   above a bordered card containing a big step number + heading + text.
+   ========================================================================== */
+.vg-roadmap-item {
+    position: relative;
+    padding-top: 35px;
+}
+.vg-roadmap-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #21a7d0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto -30px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 6px 16px rgba(33, 167, 208, 0.35);
+}
+.vg-roadmap-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 45px 25px 25px;
+    text-align: left;
+    height: 100%;
+}
+.vg-roadmap-number {
+    display: block;
+    font-size: 56px;
+    font-weight: 800;
+    color: #171f32;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+.vg-roadmap-card .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #21a7d0;
+    margin-bottom: 10px;
+}
+.vg-roadmap-card .desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #626262;
+}
+@media only screen and (max-width: 767px) {
+    .vg-format-overlay h4 {
+        font-size: 20px;
+    }
+    .vg-roadmap-card {
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   Lead Popup Modal (index.html only) — auto-opens shortly after page load,
+   offers a promo banner + region-tabbed lead capture form. Plain overlay +
+   box, no Bootstrap modal dependency so it can't be affected by other modal
+   CSS on the page (e.g. #searchModal).
+   ========================================================================== */
+.vg-popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.65);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.vg-popup-overlay.vg-popup-active {
+    display: flex;
+}
+.vg-popup-box {
+    position: relative;
+    background: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: vgPopupIn 0.35s ease;
+}
+@keyframes vgPopupIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.vg-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: #171f32;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vg-popup-close:hover {
+    background: #ffffff;
+    color: #21a7d0;
+}
+.vg-popup-left {
+    background: linear-gradient(160deg, #171f32 0%, #21a7d0 100%);
+    color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px 0 0 12px;
+}
+.vg-popup-badge {
+    display: inline-block;
+    background: #ff6f2a;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+.vg-popup-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.vg-popup-subtitle {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+.vg-popup-tags {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+}
+.vg-popup-tags li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.95;
+}
+.vg-popup-tags i {
+    color: #ffde59;
+}
+.vg-popup-img {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    max-height: 130px;
+}
+.vg-popup-img img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+.vg-popup-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.vg-popup-stat {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 10px 8px;
+    text-align: center;
+}
+.vg-popup-stat strong {
+    display: block;
+    font-size: 18px;
+    color: #ffde59;
+    line-height: 1.2;
+}
+.vg-popup-stat span {
+    font-size: 11px;
+    opacity: 0.9;
+}
+.vg-popup-right {
+    padding: 35px 30px;
+}
+.vg-popup-form-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #171f32;
+    margin-bottom: 18px;
+}
+.vg-popup-region-tabs {
+    display: flex;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+.vg-region-tab {
+    flex: 1;
+    border: none;
+    background: #f7f7f7;
+    padding: 10px 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #626262;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.vg-region-tab.active {
+    background: #21a7d0;
+    color: #ffffff;
+}
+.vg-popup-form input,
+.vg-popup-form select {
+    width: 100%;
+    padding: 11px 14px;
+    margin-bottom: 14px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #171f32;
+}
+.vg-popup-form input:focus,
+.vg-popup-form select:focus {
+    outline: none;
+    border-color: #21a7d0;
+}
+.vg-popup-submit {
+    width: 100%;
+    background: #ff6f2a;
+    color: #ffffff;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.vg-popup-submit:hover {
+    background: #e85f1c;
+}
+.vg-popup-note {
+    text-align: center;
+    font-size: 12px;
+    color: #939393;
+    margin-top: 12px;
+}
+.vg-popup-note i {
+    color: #21a7d0;
+    margin-right: 4px;
+}
+@media only screen and (max-width: 767px) {
+    .vg-popup-left {
+        border-radius: 12px 12px 0 0;
+        padding: 28px 22px;
+    }
+    .vg-popup-right {
+        padding: 28px 22px;
+    }
+    .vg-popup-title {
+        font-size: 20px;
+    }
+    .vg-popup-img {
+        display: none;
+    }
 }
 
