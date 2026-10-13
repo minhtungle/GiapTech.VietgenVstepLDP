@@ -621,6 +621,25 @@ body .search-modal .close:hover {
 .vg-popup-submit:hover {
     background: #e85f1c;
 }
+.vg-popup-submit:disabled {
+    background: #c2c2c2;
+    cursor: not-allowed;
+}
+.vg-popup-message {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 12px;
+    text-align: center;
+}
+.vg-popup-message:empty {
+    display: none;
+}
+.vg-popup-message-ok {
+    color: #1a7f4b;
+}
+.vg-popup-message-error {
+    color: #d93025;
+}
 .vg-popup-note {
     text-align: center;
     font-size: 12px;

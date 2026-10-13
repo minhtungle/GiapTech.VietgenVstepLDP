@@ -68,7 +68,7 @@
                                 <ul class="topbar-contact">
                                     <li>
                                         <i class="flaticon-email"></i>
-                                        <a href="mailto:tuyensinh@vietgeneducation.edu.vn">tuyensinh@vietgeneducation.edu.vn</a>
+                                        <a href="mailto:tuyensinh.vstep@vietgeneducation.edu.vn">tuyensinh.vstep@vietgeneducation.edu.vn</a>
                                     </li>
                                     <li>
                                         <i class="flaticon-location"></i>
@@ -83,7 +83,7 @@
                                         Hotline: <a href="tel:0866538942">0866.538.942</a>
                                     </li>
                                     <li class="btn-part">
-                                        <a class="apply-btn" href="contact.html">Đăng Ký Ngay</a>
+                                        <a class="apply-btn" href="#vgLeadPopup" data-vg-popup>Đăng Ký Ngay</a>
                                     </li>
                                 </ul>
                             </div>
@@ -205,7 +205,7 @@
                         <h1 class="banner-title capitalize wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="3000ms">Luyện Thi VSTEP Cấp Tốc Cùng VietGen</h1>
                         <div class="desc mb-35 wow wow fadeInRight" data-wow-delay="900ms" data-wow-duration="3000ms">Khóa VSTEP B1 (9 buổi) &amp; B2 (10 buổi) - mô hình 1 Giáo viên + 1 Trợ giảng, <br>chữa Speaking &amp; Writing trực tiếp, luyện đề sát cấu trúc thi thật.</div>
                         <div class="banner-btn wow fadeInUp" data-wow-delay="1500ms" data-wow-duration="2000ms">
-                            <a class="readon banner-style" href="contact.html">Đăng Ký Tư Vấn Miễn Phí</a>
+                            <a class="readon banner-style" href="#vgLeadPopup" data-vg-popup>Đăng Ký Tư Vấn Miễn Phí</a>
                         </div>
                     </div>
                 </div>
@@ -235,7 +235,7 @@
                                     <li><i class="fa fa-check-circle"></i> <strong>Ôn đúng mục tiêu</strong> &ndash; Xét tuyển, miễn học phần, chuẩn đầu ra, nâng ngạch</li>
                                     <li><i class="fa fa-check-circle"></i> <strong>Phù hợp người mất gốc</strong> &ndash; Học theo lộ trình cá nhân hóa, dễ theo sát</li>
                                 </ul>
-                                <a class="readon banner-style uppercase" href="contact.html">Đăng Ký Tư Vấn VSTEP Ngay</a>
+                                <a class="readon banner-style uppercase" href="#vgLeadPopup" data-vg-popup>Đăng Ký Tư Vấn VSTEP Ngay</a>
                             </div>
                             <div class="col-lg-5">
                                 <div class="vg-cert-img">
@@ -309,7 +309,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="btn-part text-end sm-text-start">
-                                <a href="contact.html" class="readon">Nhận Tư Vấn Miễn Phí</a>
+                                <a href="#vgLeadPopup" data-vg-popup class="readon">Nhận Tư Vấn Miễn Phí</a>
                             </div>
                         </div>
                     </div>
@@ -615,7 +615,7 @@
                                 <div class="desc">Có tùy chọn học cấp tốc 1 kèm 1 trong 7 buổi dành cho học viên cần tiến độ nhanh hơn, được take care xuyên suốt khóa học. Trợ giảng chấm bài, theo sát và nhắc tiến độ học viên trong suốt quá trình ôn thi.</div>
                             </div>
                             <div class="btn-part">
-                                <a class="readon banner-style uppercase" href="contact.html">Đăng Ký Ngay</a>
+                                <a class="readon banner-style uppercase" href="#vgLeadPopup" data-vg-popup>Đăng Ký Ngay</a>
                             </div>
                         </div>
                     </div>
@@ -929,8 +929,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <form class="newsletter-form" action="contact.html">
-                                        <input type="email" name="email" placeholder="Nhập email hoặc số điện thoại" required="">
+                                    <form class="newsletter-form" action="#vgLeadPopup" data-vg-popup-form>
+                                        <input type="email" name="email" placeholder="Nhập email của bạn" required="">
                                         <button type="submit">Đăng Ký</button>
                                     </form>
                                 </div>
@@ -991,7 +991,7 @@
                                 <li>
                                     <i class="flaticon-email"></i>
                                     <div class="desc">
-                                        <a href="mailto:info@vietgeneducation.edu.vn">info@vietgeneducation.edu.vn</a>
+                                        <a href="mailto:tuyensinh.vstep@vietgeneducation.edu.vn">tuyensinh.vstep@vietgeneducation.edu.vn</a>
                                     </div>
                                 </li>
                             </ul>
@@ -1084,17 +1084,20 @@
                             <button type="button" class="vg-region-tab" data-region="hcm">TP.HCM</button>
                             <button type="button" class="vg-region-tab" data-region="online">Học Online</button>
                         </div>
-                        <form class="vg-popup-form" action="#" onsubmit="return false;">
+                        <form class="vg-popup-form" action="mailer.php" method="post">
+                            <input type="hidden" name="region" value="Hà Nội">
                             <input type="text" name="name" placeholder="Họ và tên" required>
                             <input type="tel" name="phone" placeholder="Số điện thoại" required>
+                            <input type="email" name="email" placeholder="Email" required>
                             <select name="course">
                                 <option value="">Chứng chỉ bạn cần</option>
-                                <option value="B1">VSTEP B1 Cấp Tốc (9 buổi)</option>
-                                <option value="B2">VSTEP B2 Cấp Tốc (10 buổi)</option>
-                                <option value="1-1">Cấp Tốc 1-1 (7 buổi)</option>
+                                <option value="VSTEP B1 Cấp Tốc (9 buổi)">VSTEP B1 Cấp Tốc (9 buổi)</option>
+                                <option value="VSTEP B2 Cấp Tốc (10 buổi)">VSTEP B2 Cấp Tốc (10 buổi)</option>
+                                <option value="Cấp Tốc 1-1 (7 buổi)">Cấp Tốc 1-1 (7 buổi)</option>
                             </select>
                             <button type="submit" class="vg-popup-submit">NHẬN TƯ VẤN NGAY</button>
                         </form>
+                        <div class="vg-popup-message" role="status"></div>
                         <div class="vg-popup-note"><i class="fa fa-shield"></i> Thông tin của bạn được bảo mật tuyệt đối</div>
                     </div>
                 </div>

@@ -7,3 +7,6 @@ assets/images--/
 
 # Local backup of pre-localization stock photos (kept on disk, not needed in the repo)
 assets/images/vstep/vn-backup/
+
+# Biến môi trường chứa mật khẩu SMTP
+.env
