@@ -35,18 +35,18 @@
 /* about.html "history tabs" (Lịch Sử / Sứ Mệnh / Đội Ngũ): this component's
    active/hover state is hardcoded orange (#ff5421) in style.css regardless of
    the orange-color modifier class, so removing that class alone doesn't
-   change it. Override to the site's blue (#21a7d0) to match the rest of the
+   change it. Override to the site's blue (#0b0c51) to match the rest of the
    pages. */
 .rs-about .histort-part .single-history a:hover,
 .rs-about .histort-part .single-history a.active {
-    background: #21a7d0;
+    background: #0b0c51;
 }
 
 /* Topbar "Đăng Ký Ngay" CTA button: hardcoded orange (#ff5421) on the
    home8-topbar class itself (used by all inner pages), independent of the
    orange-color modifier. Override to blue to match the rest of the site. */
 .full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li a.apply-btn {
-    background: #21a7d0;
+    background: #0b0c51;
 }
 .full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li a.apply-btn:hover {
     background: #1a86a8;
@@ -57,46 +57,46 @@
 .contact-page-section .rs-quick-contact .form-group .btn-send,
 .contact-page-section .contact-comment-box .form-group .btn-send,
 .contact-page-section .contact-comment-section form .form-group input.btn-send {
-    background: #21a7d0;
+    background: #0b0c51;
 }
 
 /* Breadcrumbs link hover (e.g. "Trang chủ // Giới thiệu"): hardcoded orange
    on hover regardless of the orange-color modifier. */
 .rs-breadcrumbs .breadcrumbs-text.white-color ul li a:hover {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* Course review stars/rating number (course-single.html "Đánh Giá" tab):
    hardcoded orange. */
 .cource-review-box .rating .fa,
 .cource-review-box .total-rating {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* Course overview "9 Buổi Học · 4 Kỹ Năng · 20 Bộ Đề" star icon: hardcoded orange. */
 .course-overview .inner-box .student-list li .fa {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* course-single.html tab bar (Tổng Quan / Lộ Trình / Giáo Viên / Hỏi Đáp /
    Đánh Giá) active/hover state: hardcoded orange. */
 .intro-section .intro-tabs .tab-btns .tab-btn:hover,
 .intro-section .intro-tabs .tab-btns .tab-btn.active {
-    background: #21a7d0;
-    border-color: #21a7d0;
+    background: #0b0c51;
+    border-color: #0b0c51;
 }
 
 /* Blog sidebar widget title underline (blog.html/blog-single.html): hardcoded orange. */
 .rs-inner-blog .widget-area .widget-title:before {
-    background: #21a7d0;
+    background: #0b0c51;
 }
 
 /* Contact page cards (Hà Nội / TP.HCM / Học Online) icons: hardcoded orange. */
 .contact-page-section .rs-contact-wrap .address-item .address-icon i {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 .contact-page-section .rs-contact-wrap .address-item .address-text .des a:hover {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* ==========================================================================
@@ -109,7 +109,7 @@
 /* Topbar link hovers */
 .full-width-header .rs-header .topbar-area.home8-topbar .topbar-contact li a:hover,
 .full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li.login-register a:hover {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* Main nav + sub-menu + offcanvas menu hovers/active (all header states: static, sticky, expand-btn) */
@@ -129,37 +129,37 @@
 .full-width-header.home8-style4 .rs-header .right_menu_togle .canvas-contact .social li a:hover,
 .full-width-header.home8-style4.main-home .right_menu_togle .sidebarnav_menu li a:hover,
 .full-width-header.home8-style4.main-home .right_menu_togle .canvas-contact .social li a:hover {
-    color: #21a7d0 !important;
+    color: #0b0c51 !important;
 }
 .full-width-header.home8-style4 .rs-header .menu-area .expand-btn-inner .apply-btn,
 .full-width-header.home8-style4 .rs-header .right_menu_togle .close-btn #nav-close,
 .full-width-header.home8-style4.main-home .right_menu_togle .close-btn #nav-close,
 .full-width-header .rs-header .menu-area .nav-expander:hover span {
-    background: #21a7d0;
+    background: #0b0c51;
 }
 .full-width-header.home8-style4.main-home .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu,
 .full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .rs-menu-area .main-menu .rs-menu ul.sub-menu {
-    border-color: #21a7d0 !important;
+    border-color: #0b0c51 !important;
 }
 
 /* Search modal close button hover */
 body .search-modal .close:hover {
-    color: #21a7d0 !important;
+    color: #0b0c51 !important;
 }
 
 /* Breadcrumbs title + link hover (shared across all 8 pages) */
 .rs-breadcrumbs .breadcrumbs-text .page-title {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 .rs-breadcrumbs .breadcrumbs-text ul li a:hover {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* Footer (home9-style main-home): section title underline, link hovers, bullet markers */
 .rs-footer.home9-style.main-home .footer-top .widget-title:before,
 .footer-top .site-map li:before,
 .footer-bottom .copy-right-menu li:before {
-    background: #21a7d0;
+    background: #0b0c51;
 }
 .footer-top .footer_social li a:hover,
 .footer-top .site-map li a:hover,
@@ -169,36 +169,36 @@ body .search-modal .close:hover {
 .footer-top .recent-post .post-item .post-date i,
 .footer-bottom .copyright a:hover,
 .footer-bottom .copy-right-menu li a:hover {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* course-single.html: curriculum bullet + review list bullet */
 .course-overview .inner-box .review-list li:before {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* team-single.html profile: skill list icon, social links hover, progress bars */
 .profile-section .content-column .inner-column .student-list li .fa,
 .profile-section .image-column .team-content .personal-info li a:hover,
 .profile-section .image-column .social-box a:hover {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 .profile-section .rs-progress {
-    border-color: #21a7d0;
+    border-color: #0b0c51;
 }
 .profile-section .rs-progress .progress-bar {
-    background-color: #21a7d0;
+    background-color: #0b0c51;
 }
 .profile-section .rs-progress .progress-bar .pb-percent {
-    background: #21a7d0;
+    background: #0b0c51;
 }
 .profile-section .rs-progress .progress-bar .pb-percent:after {
-    border-top-color: #21a7d0;
+    border-top-color: #0b0c51;
 }
 
 /* blog.html / blog-single.html sidebar archive link hover */
 .rs-inner-blog .widget-area .widget-archives ul li a:hover {
-    color: #21a7d0;
+    color: #0b0c51;
 }
 
 /* ==========================================================================
@@ -374,7 +374,7 @@ body .search-modal .close:hover {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #21a7d0;
+    background: #0b0c51;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -404,7 +404,7 @@ body .search-modal .close:hover {
 .vg-roadmap-card .title {
     font-size: 18px;
     font-weight: 700;
-    color: #21a7d0;
+    color: #0b0c51;
     margin-bottom: 10px;
 }
 .vg-roadmap-card .desc {
@@ -475,10 +475,10 @@ body .search-modal .close:hover {
 }
 .vg-popup-close:hover {
     background: #ffffff;
-    color: #21a7d0;
+    color: #0b0c51;
 }
 .vg-popup-left {
-    background: linear-gradient(160deg, #171f32 0%, #21a7d0 100%);
+    background: linear-gradient(160deg, #060718 0%, #0b0c51 100%);
     color: #ffffff;
     padding: 35px 30px;
     border-radius: 12px 0 0 12px;
@@ -587,7 +587,7 @@ body .search-modal .close:hover {
     transition: all 0.2s ease;
 }
 .vg-region-tab.active {
-    background: #21a7d0;
+    background: #0b0c51;
     color: #ffffff;
 }
 .vg-popup-form input,
@@ -603,7 +603,7 @@ body .search-modal .close:hover {
 .vg-popup-form input:focus,
 .vg-popup-form select:focus {
     outline: none;
-    border-color: #21a7d0;
+    border-color: #0b0c51;
 }
 .vg-popup-submit {
     width: 100%;
@@ -628,7 +628,7 @@ body .search-modal .close:hover {
     margin-top: 12px;
 }
 .vg-popup-note i {
-    color: #21a7d0;
+    color: #0b0c51;
     margin-right: 4px;
 }
 @media only screen and (max-width: 767px) {
@@ -645,5 +645,95 @@ body .search-modal .close:hover {
     .vg-popup-img {
         display: none;
     }
+}
+
+/* ==========================================================================
+   Certificate Intro section (index.html "Luyện Thi VSTEP B1, B2, C1") —
+   bordered content box with a red accent title, checklist of eligible
+   audiences, and a sample certificate image on the right.
+   ========================================================================== */
+.vg-cert-box {
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 45px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+}
+.vg-cert-title {
+    color: #e2231a;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+.vg-cert-subtitle {
+    color: #171f32;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+.vg-cert-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #626262;
+    margin-bottom: 22px;
+}
+.vg-cert-list-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #171f32;
+    margin-bottom: 14px;
+}
+.vg-cert-list {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+}
+.vg-cert-list li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #343434;
+    margin-bottom: 10px;
+    padding-left: 2px;
+}
+.vg-cert-list li i {
+    color: #2bb673;
+    margin-right: 8px;
+}
+.vg-cert-list-alt li i {
+    color: #0b0c51;
+}
+.vg-cert-img {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.vg-cert-img img {
+    width: 100%;
+    display: block;
+}
+@media only screen and (max-width: 767px) {
+    .vg-cert-box {
+        padding: 28px 22px;
+    }
+    .vg-cert-title {
+        font-size: 24px;
+    }
+}
+
+/* The site-wide ".readon" outline button (e.g. "Xem Thêm Về VietGen") uses a
+   thin 1px border in the primary color against a very light background —
+   that worked fine against the old bright cyan (#21a7d0), but the new navy
+   (#0b0c51) is dark enough that a 1px border reads as nearly invisible next
+   to the equally dark text. Give it a thicker border and a filled navy text
+   color so it stays a clearly visible outline button. */
+.readon:not(.banner-style) {
+    border-width: 2px;
+    color: #0b0c51;
+    font-weight: 700;
+}
+.readon:not(.banner-style):hover {
+    background: #0b0c51;
+    color: #ffffff;
 }
 
