@@ -15,7 +15,10 @@
             overlay.classList.remove("vg-popup-active");
         }
 
-        var timer = window.setTimeout(openPopup, SHOW_DELAY_MS);
+        // Trang nào có data-vg-no-autopopup (ví dụ trang làm bài test) thì không
+        // tự bật popup, tránh che mất nội dung người dùng đang làm dở.
+        var autoOpen = !document.body.hasAttribute("data-vg-no-autopopup");
+        var timer = autoOpen ? window.setTimeout(openPopup, SHOW_DELAY_MS) : null;
 
         var closeBtn = overlay.querySelector(".vg-popup-close");
         if (closeBtn) {

@@ -13,7 +13,7 @@ COPY supervisord.conf /etc/supervisord.conf
 # Thông tin đăng nhập đến từ biến môi trường lúc chạy, không nằm trong image.
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh \
-    && printf 'sendmail_path = /usr/bin/msmtp -t --read-envelope-from\n' \
+    && printf 'sendmail_path = /usr/bin/msmtp -t --read-envelope-from\nmax_execution_time = 300\ndefault_socket_timeout = 120\n' \
        > /etc/php82/conf.d/99-msmtp.ini
 
 WORKDIR /var/www/html

@@ -38,8 +38,31 @@ function smtp_cmd($fp, $cmd, $expect)
 /**
  * Gửi một email dạng text thuần qua SMTP có xác thực.
  * Ném RuntimeException kèm lý do cụ thể nếu thất bại.
+ *
+ * Máy chủ thỉnh thoảng ngắt kết nối không trả lời lời chào khi nhận nhiều
+ * phiên liên tiếp, nên thử lại vài lần trước khi báo lỗi.
  */
 function smtp_send_mail($config, $to, $subject, $body)
+{
+    $attempts = isset($config["retries"]) ? (int) $config["retries"] : 3;
+    $lastError = null;
+
+    for ($i = 0; $i < $attempts; $i++) {
+        if ($i > 0) {
+            // Giãn dần giữa các lần thử: 3s, 6s.
+            sleep(3 * $i);
+        }
+        try {
+            return smtp_send_once($config, $to, $subject, $body);
+        } catch (RuntimeException $e) {
+            $lastError = $e;
+        }
+    }
+
+    throw $lastError;
+}
+
+function smtp_send_once($config, $to, $subject, $body)
 {
     $host    = $config["host"];
     $port    = (int) $config["port"];

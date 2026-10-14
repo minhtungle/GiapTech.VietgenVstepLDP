@@ -1,0 +1,127 @@
+{
+  "id": "reading",
+  "title": "Phần 3: Đọc hiểu",
+  "description": "Đọc đoạn văn rồi chọn đáp án đúng nhất.",
+  "type": "reading",
+  "passages": [
+    {
+      "id": "p1",
+      "level": "B1",
+      "title": "Remote Working",
+      "text": "Over the past decade, working from home has changed from a rare privilege into a normal arrangement for millions of employees. Companies discovered that many tasks could be completed just as well outside the office, and workers welcomed the chance to avoid long daily journeys. However, the shift has not been entirely positive. Some employees report that the line between work and private life has become blurred, and that they find it harder to stop thinking about their jobs in the evening. Younger staff, in particular, say they miss the informal conversations through which they once learned from more experienced colleagues. For this reason, a growing number of organisations now ask their teams to come to the office two or three days a week, hoping to combine the flexibility of home working with the social benefits of a shared workplace.",
+      "questions": [
+        {
+          "id": "r1",
+          "question": "According to the passage, why did companies accept home working?",
+          "options": [
+            "Because employees refused to return to the office",
+            "Because they realised much work could be done equally well at home",
+            "Because offices had become too expensive to rent",
+            "Because governments required them to do so"
+          ],
+          "answer": 1,
+          "explanation": "Đoạn văn nêu: \"Companies discovered that many tasks could be completed just as well outside the office.\""
+        },
+        {
+          "id": "r2",
+          "question": "What problem do some employees mention?",
+          "options": [
+            "Their salaries were reduced",
+            "They have to travel more than before",
+            "Work and personal life are no longer clearly separated",
+            "Their computers are too slow at home"
+          ],
+          "answer": 2,
+          "explanation": "Bài đọc nói \"the line between work and private life has become blurred\" - ranh giới giữa công việc và đời sống riêng bị mờ đi."
+        },
+        {
+          "id": "r3",
+          "question": "Why do many organisations now ask staff to come in a few days a week?",
+          "options": [
+            "To reduce the cost of electricity at home",
+            "To check whether employees are really working",
+            "To keep flexibility while restoring the social side of work",
+            "To train employees in new software"
+          ],
+          "answer": 2,
+          "explanation": "Câu cuối nêu rõ mục đích: \"to combine the flexibility of home working with the social benefits of a shared workplace.\""
+        },
+        {
+          "id": "r4",
+          "question": "The word \"blurred\" in the passage is closest in meaning to:",
+          "options": ["unclear", "stronger", "shorter", "official"],
+          "answer": 0,
+          "explanation": "\"Blurred\" nghĩa là mờ nhạt, không rõ ràng, đồng nghĩa với \"unclear\"."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "level": "B2",
+      "title": "Learning a Second Language",
+      "text": "It is often claimed that children acquire a second language effortlessly while adults struggle. The reality is more complicated. Children do tend to achieve a more native-like accent, probably because their brains remain highly sensitive to unfamiliar sounds. Adults, on the other hand, bring considerable advantages of their own: they already understand how grammar works, they can memorise vocabulary systematically, and they are able to study with a clear purpose in mind. Research suggests that in the first year of instruction, motivated adult learners frequently progress faster than children in reading and writing. What adults genuinely lack is not ability but exposure. A child may hear the target language for several hours every day, whereas an adult learner might practise for only two hours a week. When adults are given comparable amounts of meaningful contact with the language, the supposed gap narrows considerably.",
+      "questions": [
+        {
+          "id": "r5",
+          "question": "What is the main idea of the passage?",
+          "options": [
+            "Children are always better language learners than adults",
+            "The common belief about children learning faster is oversimplified",
+            "Adults should not attempt to learn a second language",
+            "Accent is the most important part of language learning"
+          ],
+          "answer": 1,
+          "explanation": "Câu thứ hai nêu luận điểm chính: \"The reality is more complicated\" - thực tế phức tạp hơn quan niệm phổ biến."
+        },
+        {
+          "id": "r6",
+          "question": "According to the passage, children's advantage lies mainly in:",
+          "options": [
+            "understanding grammar rules",
+            "studying with a clear purpose",
+            "achieving pronunciation closer to native speakers",
+            "memorising vocabulary systematically"
+          ],
+          "answer": 2,
+          "explanation": "Bài đọc nêu \"Children do tend to achieve a more native-like accent\"; các lựa chọn còn lại là ưu thế của người lớn."
+        },
+        {
+          "id": "r7",
+          "question": "What does the writer say adults really lack?",
+          "options": [
+            "Natural ability",
+            "Interest in the language",
+            "Enough contact with the language",
+            "Good teaching materials"
+          ],
+          "answer": 2,
+          "explanation": "Câu \"What adults genuinely lack is not ability but exposure\" khẳng định điều người lớn thiếu là sự tiếp xúc."
+        },
+        {
+          "id": "r8",
+          "question": "In the first year of study, motivated adults often do better than children at:",
+          "options": [
+            "pronunciation",
+            "reading and writing",
+            "listening to fast speech",
+            "informal conversation"
+          ],
+          "answer": 1,
+          "explanation": "Bài đọc nêu: \"motivated adult learners frequently progress faster than children in reading and writing.\""
+        },
+        {
+          "id": "r9",
+          "question": "The phrase \"the gap narrows\" at the end of the passage suggests that the difference between adults and children:",
+          "options": [
+            "disappears completely",
+            "becomes much larger",
+            "becomes considerably smaller",
+            "remains exactly the same"
+          ],
+          "answer": 2,
+          "explanation": "\"Narrow\" nghĩa là thu hẹp, nên khoảng cách giảm đi đáng kể chứ không biến mất hoàn toàn."
+        }
+      ]
+    }
+  ]
+}

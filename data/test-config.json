@@ -1,0 +1,44 @@
+{
+  "title": "Bài Test Trình Độ Tiếng Anh Đầu Vào",
+  "subtitle": "Đánh giá trình độ hiện tại của bạn theo khung VSTEP",
+  "duration_minutes": 25,
+  "sections": [
+    "data/test-grammar.json",
+    "data/test-vocabulary.json",
+    "data/test-reading.json"
+  ],
+  "levels": [
+    {
+      "min_percent": 0,
+      "code": "A1-A2",
+      "label": "Sơ cấp (A1 - A2)",
+      "summary": "Bạn đã nắm được một số cấu trúc cơ bản nhưng nền tảng ngữ pháp và từ vựng còn mỏng.",
+      "advice": "Bạn nên bắt đầu từ lớp nền tảng để củng cố ngữ pháp và từ vựng cốt lõi trước khi luyện đề VSTEP. Lộ trình phù hợp là học nền tảng rồi chuyển sang VSTEP B1.",
+      "course": "Khóa nền tảng + VSTEP B1 Cấp Tốc (9 buổi)"
+    },
+    {
+      "min_percent": 40,
+      "code": "A2-B1",
+      "label": "Cận trung cấp (A2 - B1)",
+      "summary": "Bạn đã có nền tảng tương đối, xử lý tốt câu đơn giản nhưng còn lúng túng với cấu trúc phức tạp.",
+      "advice": "Với nền tảng này, bạn hoàn toàn có thể vào thẳng lớp VSTEP B1 cấp tốc. Cần tập trung thêm vào thì động từ, câu bị động và mệnh đề quan hệ.",
+      "course": "VSTEP B1 Cấp Tốc (9 buổi)"
+    },
+    {
+      "min_percent": 60,
+      "code": "B1",
+      "label": "Trung cấp (B1)",
+      "summary": "Bạn đã đạt mức B1 ở kỹ năng ngữ pháp và đọc hiểu, đủ điều kiện hướng tới mục tiêu B2.",
+      "advice": "Bạn nên luyện đề VSTEP có hệ thống, đặc biệt là Speaking và Writing - hai kỹ năng quyết định điểm số mà bài test này chưa đo được.",
+      "course": "VSTEP B2 Cấp Tốc (10 buổi)"
+    },
+    {
+      "min_percent": 80,
+      "code": "B2+",
+      "label": "Trung cao cấp (B2 trở lên)",
+      "summary": "Bạn có nền tảng tốt, xử lý được cả những cấu trúc nâng cao như đảo ngữ và câu giả định.",
+      "advice": "Bạn phù hợp với lớp luyện đề chuyên sâu hoặc kèm riêng 1-1 để tối ưu điểm Speaking và Writing, hướng tới mức B2 cao hoặc C1.",
+      "course": "Cấp Tốc 1-1 (7 buổi) hoặc VSTEP B2 Cấp Tốc"
+    }
+  ]
+}
