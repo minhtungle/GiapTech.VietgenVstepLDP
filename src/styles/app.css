@@ -28,16 +28,35 @@ button.readon {
     .rs-menu .nav-menu {
         display: none;
     }
+    /* CSS gốc của template đặt .rs-menu thành absolute rộng ~165px (jQuery sẽ
+       chỉnh lại lúc chạy). Không có jQuery thì panel bị bó trong khung hẹp đó,
+       nên trả .rs-menu về static và cho panel bám theo .menu-area. */
+    .menu-area {
+        position: relative;
+    }
+    .rs-menu-area,
+    .rs-menu-area .main-menu,
+    .rs-menu-area .main-menu .rs-menu {
+        position: static;
+        width: auto;
+    }
+    /* Cột chứa menu là col-6 trên mobile; để panel trải hết chiều ngang thì
+       chính nó phải là mốc neo, nếu không panel chỉ rộng bằng nửa màn hình. */
+    .menu-area .row > [class*="col-"] {
+        position: static;
+    }
     .rs-menu.rs-menu-open .nav-menu {
         display: block;
         background: #ffffff;
         position: absolute;
         left: 0;
         right: 0;
+        width: 100%;
         top: 100%;
         z-index: 999;
         max-height: 70vh;
         overflow-y: auto;
+        text-align: left;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
     .rs-menu.rs-menu-open .nav-menu > li {
@@ -71,7 +90,12 @@ button.readon {
         height: auto;
         line-height: 1.5;
     }
-    /* Dấu + báo mục có menu con */
+    /* Dấu + báo mục có menu con. Template gốc cũng chèn một dấu qua
+       .menu-item-has-children::before nên phải tắt đi, tránh hiện hai lần. */
+    .rs-menu.rs-menu-open .nav-menu > li.menu-item-has-children::before,
+    .rs-menu.rs-menu-open .nav-menu > li.menu-item-has-children > a::before {
+        content: none !important;
+    }
     .rs-menu.rs-menu-open .nav-menu > li.menu-item-has-children > a::after {
         content: "+";
         float: right;
@@ -89,19 +113,42 @@ button.readon {
     }
 }
 
-/* Menu con trên desktop: thay hiệu ứng hover của jQuery bằng CSS thuần */
+/* Menu con trên desktop: thay hiệu ứng hover của jQuery bằng CSS thuần.
+   CSS gốc của template không đặt position/width cho .sub-menu (jQuery lo việc đó
+   lúc chạy), nên phải khai báo ở đây, nếu không các mục sẽ dàn ngang cả màn hình. */
 @media only screen and (min-width: 992px) {
     .rs-menu .nav-menu > li.menu-item-has-children {
         position: relative;
     }
     .rs-menu .nav-menu .sub-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 240px;
+        text-align: left;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.25s ease;
+        transform: translateY(10px);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .rs-menu .nav-menu .sub-menu li {
+        display: block;
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .rs-menu .nav-menu .sub-menu li a {
+        display: block;
+        white-space: nowrap;
+    }
+    /* Mục cuối cùng: thả menu con sang trái để không tràn khỏi màn hình */
+    .rs-menu .nav-menu > li.menu-item-has-children:last-child > .sub-menu {
+        left: auto;
+        right: 0;
     }
     .rs-menu .nav-menu > li.menu-item-has-children:hover > .sub-menu {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0);
     }
     .mobile-menu {
         display: none;
