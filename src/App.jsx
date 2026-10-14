@@ -28,9 +28,9 @@ export default function App() {
   const [popupOpen, setPopupOpen] = useState(false)
   const location = useLocation()
 
-  // Popup tự mở sau vài giây, trừ trang làm bài test vì sẽ che mất nội dung.
+  // Popup chỉ tự mở ở trang chủ. Các trang phụ vẫn mở được bằng nút CTA.
   useEffect(() => {
-    if (location.pathname.startsWith('/test')) return
+    if (location.pathname !== '/') return
     const timer = setTimeout(() => setPopupOpen(true), AUTO_OPEN_DELAY_MS)
     return () => clearTimeout(timer)
   }, [location.pathname])
