@@ -5,7 +5,10 @@
   "sections": [
     "data/test-grammar.json",
     "data/test-vocabulary.json",
-    "data/test-reading.json"
+    "data/test-reading.json",
+    "data/bank-grammar.json",
+    "data/bank-vocabulary.json",
+    "data/bank-reading.json"
   ],
   "levels": [
     {
@@ -40,5 +43,15 @@
       "advice": "Bạn phù hợp với lớp luyện đề chuyên sâu hoặc kèm riêng 1-1 để tối ưu điểm Speaking và Writing, hướng tới mức B2 cao hoặc C1.",
       "course": "Cấp Tốc 1-1 (7 buổi) hoặc VSTEP B2 Cấp Tốc"
     }
-  ]
+  ],
+  "blueprint": {
+    "grammar": 12,
+    "vocabulary": 9,
+    "reading": 9
+  },
+  "level_ratios": {
+    "A2": 0.3,
+    "B1": 0.4,
+    "B2": 0.3
+  }
 }

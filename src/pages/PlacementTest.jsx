@@ -3,6 +3,7 @@ import Seo from '../components/Seo.jsx'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
 import { useLeadPopup } from '../App.jsx'
 import { getJSON, postJSON } from '../lib/api.js'
+import { buildQuiz, mergeSections } from '../lib/quiz.js'
 import { COURSE_OPTIONS, REGIONS } from '../data/site.js'
 
 const STAGES = { INTRO: 'intro', QUIZ: 'quiz', GATE: 'gate', RESULT: 'result' }
@@ -57,10 +58,20 @@ export default function PlacementTest() {
     let cancelled = false
     getJSON('/data/test-config.json')
       .then(async (cfg) => {
-        const loaded = await Promise.all(cfg.sections.map((url) => getJSON('/' + url.replace(/^\//, ''))))
+        // Nạp mọi file đề rồi gộp các phần cùng tên thành một ngân hàng chung.
+        // Thiếu file nào thì bỏ qua file đó, không làm hỏng cả bài test.
+        const loaded = await Promise.all(
+          cfg.sections.map((url) =>
+            getJSON('/' + url.replace(/^\//, '')).catch(() => null),
+          ),
+        )
         if (cancelled) return
+
+        const bank = mergeSections(loaded.filter(Boolean).map((x) => [x]))
+        if (!bank.length) throw new Error('Ngân hàng câu hỏi rỗng')
+
         setConfig(cfg)
-        setSections(loaded)
+        setSections(buildQuiz(bank, cfg.blueprint || {}, cfg.level_ratios))
       })
       .catch(() => !cancelled && setLoadError(true))
     return () => {

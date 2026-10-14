@@ -1,0 +1,632 @@
+{
+  "id": "grammar",
+  "title": "Phần 1: Ngữ pháp",
+  "description": "Chọn đáp án đúng để hoàn thành câu.",
+  "type": "multiple_choice",
+  "questions": [
+    {
+      "id": "bg1",
+      "level": "A2",
+      "question": "My parents ______ in Hanoi since 2010.",
+      "options": [
+        "have lived",
+        "are living",
+        "lived",
+        "live"
+      ],
+      "answer": 0,
+      "explanation": "\"Since 2010\" chỉ hành động bắt đầu trong quá khứ và kéo dài đến nay, nên dùng hiện tại hoàn thành: have lived."
+    },
+    {
+      "id": "bg2",
+      "level": "A2",
+      "question": "Look! The children ______ football in the yard.",
+      "options": [
+        "played",
+        "are playing",
+        "play",
+        "plays"
+      ],
+      "answer": 1,
+      "explanation": "\"Look!\" báo hiệu hành động đang xảy ra ngay lúc nói, nên dùng hiện tại tiếp diễn: are playing."
+    },
+    {
+      "id": "bg3",
+      "level": "A2",
+      "question": "There is ______ milk left in the fridge.",
+      "options": [
+        "a little",
+        "many",
+        "several",
+        "a few"
+      ],
+      "answer": 0,
+      "explanation": "\"Milk\" là danh từ không đếm được nên đi với \"a little\"; \"a few\", \"many\", \"several\" chỉ dùng cho danh từ đếm được."
+    },
+    {
+      "id": "bg4",
+      "level": "A2",
+      "question": "She is ______ university student in her second year.",
+      "options": [
+        "an",
+        "the",
+        "a",
+        "no article"
+      ],
+      "answer": 2,
+      "explanation": "\"University\" bắt đầu bằng âm /j/ (phụ âm) nên dùng mạo từ \"a\", không dùng \"an\"."
+    },
+    {
+      "id": "bg5",
+      "level": "A2",
+      "question": "We ______ go to school on Sundays.",
+      "options": [
+        "couldn't",
+        "don't have to",
+        "mustn't",
+        "shouldn't"
+      ],
+      "answer": 1,
+      "explanation": "\"Don't have to\" nghĩa là không bắt buộc; \"mustn't\" lại mang nghĩa cấm, không hợp ngữ cảnh."
+    },
+    {
+      "id": "bg6",
+      "level": "A2",
+      "question": "This is the ______ film I have ever seen.",
+      "options": [
+        "most good",
+        "good",
+        "better",
+        "best"
+      ],
+      "answer": 3,
+      "explanation": "Cấu trúc \"the + so sánh nhất + I have ever seen\". Dạng so sánh nhất của \"good\" là \"best\"."
+    },
+    {
+      "id": "bg7",
+      "level": "A2",
+      "question": "My father enjoys ______ in the garden at weekends.",
+      "options": [
+        "working",
+        "to work",
+        "works",
+        "work"
+      ],
+      "answer": 0,
+      "explanation": "Sau động từ \"enjoy\" luôn dùng danh động từ (V-ing): working."
+    },
+    {
+      "id": "bg8",
+      "level": "A2",
+      "question": "The train ______ at 7.30 every morning.",
+      "options": [
+        "left",
+        "is leaving",
+        "leaves",
+        "leave"
+      ],
+      "answer": 2,
+      "explanation": "Lịch trình cố định lặp lại hằng ngày dùng hiện tại đơn; chủ ngữ số ít nên động từ thêm -s: leaves."
+    },
+    {
+      "id": "bg9",
+      "level": "A2",
+      "question": "I was tired, ______ I went to bed early.",
+      "options": [
+        "so",
+        "because",
+        "but",
+        "although"
+      ],
+      "answer": 0,
+      "explanation": "Mệnh đề sau là kết quả của mệnh đề trước nên dùng liên từ chỉ kết quả \"so\"."
+    },
+    {
+      "id": "bg10",
+      "level": "A2",
+      "question": "He didn't ______ his homework yesterday.",
+      "options": [
+        "doing",
+        "does",
+        "did",
+        "do"
+      ],
+      "answer": 3,
+      "explanation": "Sau trợ động từ \"didn't\" phải dùng động từ nguyên thể không \"to\": do."
+    },
+    {
+      "id": "bg11",
+      "level": "A2",
+      "question": "Our new flat is ______ the city centre.",
+      "options": [
+        "nearby to",
+        "near",
+        "nearly",
+        "near to"
+      ],
+      "answer": 1,
+      "explanation": "\"Near\" là giới từ đứng trực tiếp trước danh từ; \"nearly\" nghĩa là gần như, không chỉ vị trí."
+    },
+    {
+      "id": "bg12",
+      "level": "A2",
+      "question": "Where ______ you born?",
+      "options": [
+        "did",
+        "were",
+        "was",
+        "are"
+      ],
+      "answer": 1,
+      "explanation": "\"Be born\" là cấu trúc bị động cố định ở quá khứ; chủ ngữ \"you\" đi với \"were\"."
+    },
+    {
+      "id": "bg13",
+      "level": "A2",
+      "question": "I bought this dictionary ______ my little sister.",
+      "options": [
+        "for",
+        "at",
+        "to",
+        "with"
+      ],
+      "answer": 0,
+      "explanation": "\"Buy something for somebody\" nghĩa là mua cái gì cho ai; không dùng \"to\" với động từ buy."
+    },
+    {
+      "id": "bg14",
+      "level": "A2",
+      "question": "She can speak English, and ______ can her brother.",
+      "options": [
+        "also",
+        "too",
+        "either",
+        "so"
+      ],
+      "answer": 3,
+      "explanation": "Cấu trúc \"so + trợ động từ + chủ ngữ\" dùng để đồng tình ở câu khẳng định."
+    },
+    {
+      "id": "bg15",
+      "level": "B1",
+      "question": "By the time we arrived, the film ______.",
+      "options": [
+        "was starting",
+        "started",
+        "has started",
+        "had started"
+      ],
+      "answer": 3,
+      "explanation": "Hành động xảy ra trước một mốc quá khứ khác dùng quá khứ hoàn thành: had started."
+    },
+    {
+      "id": "bg16",
+      "level": "B1",
+      "question": "This bridge ______ in 1998 and is still in good condition.",
+      "options": [
+        "is building",
+        "has built",
+        "was built",
+        "built"
+      ],
+      "answer": 2,
+      "explanation": "Cây cầu được xây nên dùng bị động; mốc 1998 là quá khứ nên dùng was built."
+    },
+    {
+      "id": "bg17",
+      "level": "B1",
+      "question": "If you heat ice, it ______.",
+      "options": [
+        "would melt",
+        "melts",
+        "melted",
+        "will have melted"
+      ],
+      "answer": 1,
+      "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên: cả hai mệnh đề đều dùng hiện tại đơn."
+    },
+    {
+      "id": "bg18",
+      "level": "B1",
+      "question": "The book ______ I borrowed from the library is really interesting.",
+      "options": [
+        "whose",
+        "what",
+        "who",
+        "which"
+      ],
+      "answer": 3,
+      "explanation": "Đại từ quan hệ thay cho vật (the book) là \"which\"; \"what\" không dùng làm đại từ quan hệ."
+    },
+    {
+      "id": "bg19",
+      "level": "B1",
+      "question": "He told me that he ______ the email the day before.",
+      "options": [
+        "had sent",
+        "sent",
+        "sends",
+        "will send"
+      ],
+      "answer": 0,
+      "explanation": "Câu tường thuật lùi thì: quá khứ đơn lùi thành quá khứ hoàn thành (had sent)."
+    },
+    {
+      "id": "bg20",
+      "level": "B1",
+      "question": "You ______ be tired after such a long flight.",
+      "options": [
+        "need",
+        "should",
+        "must",
+        "can't"
+      ],
+      "answer": 2,
+      "explanation": "\"Must\" diễn tả suy đoán gần như chắc chắn ở hiện tại: chắc hẳn bạn mệt."
+    },
+    {
+      "id": "bg21",
+      "level": "B1",
+      "question": "I don't mind ______ overtime if the project is urgent.",
+      "options": [
+        "to work",
+        "working",
+        "work",
+        "worked"
+      ],
+      "answer": 1,
+      "explanation": "Sau \"don't mind\" phải dùng danh động từ (V-ing): working."
+    },
+    {
+      "id": "bg22",
+      "level": "B1",
+      "question": "She promised ______ me as soon as she got home.",
+      "options": [
+        "to call",
+        "calling",
+        "called",
+        "call"
+      ],
+      "answer": 0,
+      "explanation": "Động từ \"promise\" đi với động từ nguyên thể có \"to\": promise to do something."
+    },
+    {
+      "id": "bg23",
+      "level": "B1",
+      "question": "The more you practise, ______ you will become.",
+      "options": [
+        "more confident",
+        "the most confident",
+        "the confident",
+        "the more confident"
+      ],
+      "answer": 3,
+      "explanation": "Cấu trúc so sánh kép \"The more..., the more...\". \"Confident\" là tính từ dài nên dùng \"the more confident\"."
+    },
+    {
+      "id": "bg24",
+      "level": "B1",
+      "question": "I wish I ______ how to drive a car.",
+      "options": [
+        "have known",
+        "will know",
+        "knew",
+        "know"
+      ],
+      "answer": 2,
+      "explanation": "\"Wish\" diễn tả điều trái với hiện tại thì mệnh đề sau lùi về quá khứ đơn: knew."
+    },
+    {
+      "id": "bg25",
+      "level": "B1",
+      "question": "We have known each other ______ we were at primary school.",
+      "options": [
+        "when",
+        "for",
+        "since",
+        "during"
+      ],
+      "answer": 2,
+      "explanation": "\"Since\" đi với mốc thời gian bắt đầu; \"for\" đi với khoảng thời gian kéo dài."
+    },
+    {
+      "id": "bg26",
+      "level": "B1",
+      "question": "Neither the teacher nor the students ______ satisfied with the result.",
+      "options": [
+        "was",
+        "has been",
+        "were",
+        "is"
+      ],
+      "answer": 2,
+      "explanation": "Với \"neither... nor...\", động từ chia theo chủ ngữ đứng gần nhất là \"the students\" (số nhiều)."
+    },
+    {
+      "id": "bg27",
+      "level": "B1",
+      "question": "This room ______ every morning by the cleaning staff.",
+      "options": [
+        "has cleaned",
+        "cleans",
+        "is cleaning",
+        "is cleaned"
+      ],
+      "answer": 3,
+      "explanation": "Căn phòng được dọn nên dùng bị động hiện tại đơn: is cleaned."
+    },
+    {
+      "id": "bg28",
+      "level": "B1",
+      "question": "He is interested ______ learning more about Vietnamese culture.",
+      "options": [
+        "on",
+        "in",
+        "about",
+        "for"
+      ],
+      "answer": 1,
+      "explanation": "Cụm cố định \"be interested in + V-ing/danh từ\" nghĩa là quan tâm đến."
+    },
+    {
+      "id": "bg29",
+      "level": "B1",
+      "question": "I'd rather ______ at home tonight than go out.",
+      "options": [
+        "to stay",
+        "staying",
+        "stayed",
+        "stay"
+      ],
+      "answer": 3,
+      "explanation": "\"Would rather + V nguyên thể không to\" khi chủ ngữ tự làm hành động đó."
+    },
+    {
+      "id": "bg30",
+      "level": "B1",
+      "question": "The weather was terrible; ______, the festival went ahead.",
+      "options": [
+        "however",
+        "because",
+        "therefore",
+        "moreover"
+      ],
+      "answer": 0,
+      "explanation": "Hai vế mang ý tương phản nên dùng từ nối \"however\" (tuy nhiên)."
+    },
+    {
+      "id": "bg31",
+      "level": "B1",
+      "question": "She asked me ______ I had finished the report.",
+      "options": [
+        "what",
+        "whether",
+        "which",
+        "that"
+      ],
+      "answer": 1,
+      "explanation": "Tường thuật câu hỏi Yes/No dùng \"whether\" hoặc \"if\", không dùng \"that\"."
+    },
+    {
+      "id": "bg32",
+      "level": "B1",
+      "question": "It's the first time I ______ such a beautiful beach.",
+      "options": [
+        "have seen",
+        "had seen",
+        "saw",
+        "see"
+      ],
+      "answer": 0,
+      "explanation": "Sau \"It's the first time\" dùng hiện tại hoàn thành: have seen."
+    },
+    {
+      "id": "bg33",
+      "level": "B1",
+      "question": "Hoa is used to ______ up early because of her job.",
+      "options": [
+        "get",
+        "got",
+        "gets",
+        "getting"
+      ],
+      "answer": 3,
+      "explanation": "Trong \"be used to\", \"to\" là giới từ nên theo sau là V-ing: getting."
+    },
+    {
+      "id": "bg34",
+      "level": "B1",
+      "question": "There aren't many hotels here, ______ there?",
+      "options": [
+        "aren't",
+        "do",
+        "is",
+        "are"
+      ],
+      "answer": 3,
+      "explanation": "Câu hỏi đuôi của mệnh đề phủ định phải ở dạng khẳng định và chia theo \"there are\"."
+    },
+    {
+      "id": "bg35",
+      "level": "B2",
+      "question": "If she ______ harder last term, she would have passed the exam.",
+      "options": [
+        "had studied",
+        "has studied",
+        "studied",
+        "would study"
+      ],
+      "answer": 0,
+      "explanation": "Câu điều kiện loại 3 (trái với quá khứ): If + had + V3, would have + V3."
+    },
+    {
+      "id": "bg36",
+      "level": "B2",
+      "question": "Rarely ______ such a well-organised conference.",
+      "options": [
+        "I have attended",
+        "did I attended",
+        "have I attended",
+        "I attended"
+      ],
+      "answer": 2,
+      "explanation": "Trạng từ phủ định \"Rarely\" đứng đầu câu gây đảo ngữ: trợ động từ đứng trước chủ ngữ."
+    },
+    {
+      "id": "bg37",
+      "level": "B2",
+      "question": "The manager insisted that every report ______ submitted before Friday.",
+      "options": [
+        "is",
+        "be",
+        "will be",
+        "was"
+      ],
+      "answer": 1,
+      "explanation": "Câu giả định sau \"insist that\" dùng động từ nguyên thể không chia: (should) be submitted."
+    },
+    {
+      "id": "bg38",
+      "level": "B2",
+      "question": "I wish I ______ the job offer when I had the chance.",
+      "options": [
+        "had accepted",
+        "have accepted",
+        "would accept",
+        "accepted"
+      ],
+      "answer": 0,
+      "explanation": "\"Wish\" tiếc nuối về quá khứ dùng quá khứ hoàn thành: had accepted."
+    },
+    {
+      "id": "bg39",
+      "level": "B2",
+      "question": "The candidate, ______ qualifications impressed the panel, was offered the post.",
+      "options": [
+        "that",
+        "which",
+        "whose",
+        "who"
+      ],
+      "answer": 2,
+      "explanation": "\"Whose\" chỉ sở hữu (bằng cấp của ứng viên) và dùng được trong mệnh đề quan hệ không xác định."
+    },
+    {
+      "id": "bg40",
+      "level": "B2",
+      "question": "Had I known about the traffic, I ______ an earlier train.",
+      "options": [
+        "would take",
+        "would have taken",
+        "had taken",
+        "will take"
+      ],
+      "answer": 1,
+      "explanation": "Đây là điều kiện loại 3 đảo ngữ (bỏ \"if\"), mệnh đề chính dùng would have + V3."
+    },
+    {
+      "id": "bg41",
+      "level": "B2",
+      "question": "No sooner ______ the station than the train pulled in.",
+      "options": [
+        "had we reached",
+        "did we reach",
+        "we had reached",
+        "we reached"
+      ],
+      "answer": 0,
+      "explanation": "Cấu trúc \"No sooner had + S + V3 ... than + quá khứ đơn\" với đảo ngữ."
+    },
+    {
+      "id": "bg42",
+      "level": "B2",
+      "question": "He is said ______ in Australia for over a decade.",
+      "options": [
+        "to live",
+        "to have lived",
+        "that he lived",
+        "living"
+      ],
+      "answer": 1,
+      "explanation": "Bị động với \"be said\": hành động xảy ra trước nên dùng to have + V3 (to have lived)."
+    },
+    {
+      "id": "bg43",
+      "level": "B2",
+      "question": "______ the budget was limited, the team completed the project successfully.",
+      "options": [
+        "Despite",
+        "Because of",
+        "Even though",
+        "In spite of"
+      ],
+      "answer": 2,
+      "explanation": "Sau chỗ trống là mệnh đề đầy đủ nên dùng liên từ \"Even though\"; despite và in spite of chỉ đi với cụm danh từ."
+    },
+    {
+      "id": "bg44",
+      "level": "B2",
+      "question": "It is high time the government ______ stricter rules on air pollution.",
+      "options": [
+        "introduces",
+        "introduced",
+        "will introduce",
+        "introduce"
+      ],
+      "answer": 1,
+      "explanation": "Cấu trúc \"It is high time + S + quá khứ đơn\" diễn tả việc lẽ ra phải làm từ lâu."
+    },
+    {
+      "id": "bg45",
+      "level": "B2",
+      "question": "______ in a hurry, she forgot to lock the office door.",
+      "options": [
+        "She was",
+        "To be",
+        "Been",
+        "Being"
+      ],
+      "answer": 3,
+      "explanation": "Mệnh đề phân từ rút gọn chỉ nguyên nhân dùng V-ing: Being in a hurry = Because she was in a hurry."
+    },
+    {
+      "id": "bg46",
+      "level": "B2",
+      "question": "The faster the economy grows, the ______ pressure there is on natural resources.",
+      "options": [
+        "great",
+        "more great",
+        "greatest",
+        "greater"
+      ],
+      "answer": 3,
+      "explanation": "Vế thứ hai của so sánh kép cũng phải ở dạng so sánh hơn: the greater."
+    },
+    {
+      "id": "bg47",
+      "level": "B2",
+      "question": "We must leave now; ______, we will miss the last bus.",
+      "options": [
+        "therefore",
+        "besides",
+        "otherwise",
+        "nevertheless"
+      ],
+      "answer": 2,
+      "explanation": "\"Otherwise\" nghĩa là nếu không thì, diễn tả hậu quả nếu không thực hiện hành động trên."
+    },
+    {
+      "id": "bg48",
+      "level": "B2",
+      "question": "Only after the results were announced ______ how much work had been involved.",
+      "options": [
+        "understood we",
+        "we understood",
+        "did we understand",
+        "we did understand"
+      ],
+      "answer": 2,
+      "explanation": "\"Only after + mệnh đề\" đứng đầu câu gây đảo ngữ ở mệnh đề chính: did + S + V nguyên thể."
+    }
+  ]
+}

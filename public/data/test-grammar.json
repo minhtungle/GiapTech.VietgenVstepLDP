@@ -8,39 +8,64 @@
       "id": "g1",
       "level": "A2",
       "question": "She ______ to the English club every Saturday morning.",
-      "options": ["go", "goes", "going", "is go"],
-      "answer": 1,
+      "options": [
+        "is go",
+        "go",
+        "going",
+        "goes"
+      ],
+      "answer": 3,
       "explanation": "Chủ ngữ \"She\" là ngôi thứ ba số ít ở thì hiện tại đơn, nên động từ thêm -es: goes."
     },
     {
       "id": "g2",
       "level": "A2",
       "question": "There aren't ______ students in the classroom today.",
-      "options": ["some", "much", "many", "a lot"],
-      "answer": 2,
+      "options": [
+        "many",
+        "much",
+        "a lot",
+        "some"
+      ],
+      "answer": 0,
       "explanation": "\"Students\" là danh từ đếm được số nhiều. Trong câu phủ định ta dùng \"many\"."
     },
     {
       "id": "g3",
       "level": "A2",
       "question": "My brother is ______ than me, but I am taller.",
-      "options": ["old", "older", "oldest", "more old"],
-      "answer": 1,
+      "options": [
+        "oldest",
+        "old",
+        "more old",
+        "older"
+      ],
+      "answer": 3,
       "explanation": "Có \"than\" nên dùng so sánh hơn. \"Old\" là tính từ ngắn, thêm -er: older."
     },
     {
       "id": "g4",
       "level": "A2",
       "question": "I ______ my homework when my mother came home.",
-      "options": ["do", "did", "was doing", "have done"],
-      "answer": 2,
+      "options": [
+        "did",
+        "do",
+        "have done",
+        "was doing"
+      ],
+      "answer": 3,
       "explanation": "Hành động đang diễn ra thì bị cắt ngang bởi hành động khác, dùng quá khứ tiếp diễn: was doing."
     },
     {
       "id": "g5",
       "level": "B1",
       "question": "If I ______ more time, I would take an extra English course.",
-      "options": ["have", "had", "will have", "would have"],
+      "options": [
+        "will have",
+        "had",
+        "would have",
+        "have"
+      ],
       "answer": 1,
       "explanation": "Câu điều kiện loại 2 (giả định trái hiện tại): If + quá khứ đơn, would + V."
     },
@@ -48,23 +73,38 @@
       "id": "g6",
       "level": "B1",
       "question": "The report ______ by the marketing team last week.",
-      "options": ["prepared", "was prepared", "has prepared", "is preparing"],
-      "answer": 1,
+      "options": [
+        "was prepared",
+        "prepared",
+        "has prepared",
+        "is preparing"
+      ],
+      "answer": 0,
       "explanation": "Báo cáo được chuẩn bị, nên dùng bị động. Mốc \"last week\" là quá khứ: was prepared."
     },
     {
       "id": "g7",
       "level": "B1",
       "question": "I have been learning English ______ five years.",
-      "options": ["since", "for", "during", "from"],
-      "answer": 1,
+      "options": [
+        "for",
+        "since",
+        "from",
+        "during"
+      ],
+      "answer": 0,
       "explanation": "\"For\" đi với khoảng thời gian (five years); \"since\" đi với mốc thời gian cụ thể."
     },
     {
       "id": "g8",
       "level": "B1",
       "question": "She asked me where I ______ the previous summer.",
-      "options": ["go", "went", "had gone", "will go"],
+      "options": [
+        "go",
+        "will go",
+        "had gone",
+        "went"
+      ],
       "answer": 2,
       "explanation": "Câu tường thuật lùi thì: quá khứ đơn lùi thành quá khứ hoàn thành (had gone)."
     },
@@ -72,8 +112,13 @@
       "id": "g9",
       "level": "B1",
       "question": "The man ______ car was stolen reported it to the police.",
-      "options": ["who", "which", "whose", "whom"],
-      "answer": 2,
+      "options": [
+        "whom",
+        "whose",
+        "who",
+        "which"
+      ],
+      "answer": 1,
       "explanation": "\"Whose\" chỉ quan hệ sở hữu: chiếc xe của người đàn ông đó."
     },
     {
@@ -81,27 +126,37 @@
       "level": "B2",
       "question": "Not until the meeting ended ______ the seriousness of the problem.",
       "options": [
+        "we did realize",
         "we realized",
         "did we realize",
-        "we did realize",
         "had we realized"
       ],
-      "answer": 1,
+      "answer": 2,
       "explanation": "\"Not until\" đứng đầu câu gây đảo ngữ: did + chủ ngữ + V nguyên thể."
     },
     {
       "id": "g11",
       "level": "B2",
       "question": "I would rather you ______ anything about this to my colleagues.",
-      "options": ["don't say", "didn't say", "not saying", "won't say"],
-      "answer": 1,
+      "options": [
+        "won't say",
+        "don't say",
+        "didn't say",
+        "not saying"
+      ],
+      "answer": 2,
       "explanation": "\"Would rather + S + quá khứ đơn\" diễn tả mong muốn người khác làm gì ở hiện tại."
     },
     {
       "id": "g12",
       "level": "B2",
       "question": "______ the heavy traffic, we still arrived at the airport on time.",
-      "options": ["Although", "Despite", "However", "Because of"],
+      "options": [
+        "However",
+        "Despite",
+        "Although",
+        "Because of"
+      ],
       "answer": 1,
       "explanation": "\"Despite\" + cụm danh từ. \"Although\" phải đi với mệnh đề có chủ ngữ và động từ."
     }

@@ -14,10 +14,10 @@
           "id": "r1",
           "question": "According to the passage, why did companies accept home working?",
           "options": [
-            "Because employees refused to return to the office",
-            "Because they realised much work could be done equally well at home",
             "Because offices had become too expensive to rent",
-            "Because governments required them to do so"
+            "Because they realised much work could be done equally well at home",
+            "Because governments required them to do so",
+            "Because employees refused to return to the office"
           ],
           "answer": 1,
           "explanation": "Đoạn văn nêu: \"Companies discovered that many tasks could be completed just as well outside the office.\""
@@ -26,12 +26,12 @@
           "id": "r2",
           "question": "What problem do some employees mention?",
           "options": [
-            "Their salaries were reduced",
-            "They have to travel more than before",
             "Work and personal life are no longer clearly separated",
-            "Their computers are too slow at home"
+            "They have to travel more than before",
+            "Their computers are too slow at home",
+            "Their salaries were reduced"
           ],
-          "answer": 2,
+          "answer": 0,
           "explanation": "Bài đọc nói \"the line between work and private life has become blurred\" - ranh giới giữa công việc và đời sống riêng bị mờ đi."
         },
         {
@@ -39,9 +39,9 @@
           "question": "Why do many organisations now ask staff to come in a few days a week?",
           "options": [
             "To reduce the cost of electricity at home",
-            "To check whether employees are really working",
+            "To train employees in new software",
             "To keep flexibility while restoring the social side of work",
-            "To train employees in new software"
+            "To check whether employees are really working"
           ],
           "answer": 2,
           "explanation": "Câu cuối nêu rõ mục đích: \"to combine the flexibility of home working with the social benefits of a shared workplace.\""
@@ -49,7 +49,12 @@
         {
           "id": "r4",
           "question": "The word \"blurred\" in the passage is closest in meaning to:",
-          "options": ["unclear", "stronger", "shorter", "official"],
+          "options": [
+            "unclear",
+            "stronger",
+            "official",
+            "shorter"
+          ],
           "answer": 0,
           "explanation": "\"Blurred\" nghĩa là mờ nhạt, không rõ ràng, đồng nghĩa với \"unclear\"."
         }
@@ -65,46 +70,46 @@
           "id": "r5",
           "question": "What is the main idea of the passage?",
           "options": [
-            "Children are always better language learners than adults",
-            "The common belief about children learning faster is oversimplified",
             "Adults should not attempt to learn a second language",
-            "Accent is the most important part of language learning"
+            "Accent is the most important part of language learning",
+            "Children are always better language learners than adults",
+            "The common belief about children learning faster is oversimplified"
           ],
-          "answer": 1,
+          "answer": 3,
           "explanation": "Câu thứ hai nêu luận điểm chính: \"The reality is more complicated\" - thực tế phức tạp hơn quan niệm phổ biến."
         },
         {
           "id": "r6",
           "question": "According to the passage, children's advantage lies mainly in:",
           "options": [
+            "achieving pronunciation closer to native speakers",
             "understanding grammar rules",
             "studying with a clear purpose",
-            "achieving pronunciation closer to native speakers",
             "memorising vocabulary systematically"
           ],
-          "answer": 2,
+          "answer": 0,
           "explanation": "Bài đọc nêu \"Children do tend to achieve a more native-like accent\"; các lựa chọn còn lại là ưu thế của người lớn."
         },
         {
           "id": "r7",
           "question": "What does the writer say adults really lack?",
           "options": [
-            "Natural ability",
             "Interest in the language",
-            "Enough contact with the language",
-            "Good teaching materials"
+            "Good teaching materials",
+            "Natural ability",
+            "Enough contact with the language"
           ],
-          "answer": 2,
+          "answer": 3,
           "explanation": "Câu \"What adults genuinely lack is not ability but exposure\" khẳng định điều người lớn thiếu là sự tiếp xúc."
         },
         {
           "id": "r8",
           "question": "In the first year of study, motivated adults often do better than children at:",
           "options": [
-            "pronunciation",
+            "informal conversation",
             "reading and writing",
             "listening to fast speech",
-            "informal conversation"
+            "pronunciation"
           ],
           "answer": 1,
           "explanation": "Bài đọc nêu: \"motivated adult learners frequently progress faster than children in reading and writing.\""
@@ -113,10 +118,10 @@
           "id": "r9",
           "question": "The phrase \"the gap narrows\" at the end of the passage suggests that the difference between adults and children:",
           "options": [
-            "disappears completely",
             "becomes much larger",
+            "remains exactly the same",
             "becomes considerably smaller",
-            "remains exactly the same"
+            "disappears completely"
           ],
           "answer": 2,
           "explanation": "\"Narrow\" nghĩa là thu hẹp, nên khoảng cách giảm đi đáng kể chứ không biến mất hoàn toàn."
