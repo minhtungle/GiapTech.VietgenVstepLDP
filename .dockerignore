@@ -6,7 +6,3 @@
 docker-compose.yml
 node_modules
 dist
-.git
-.github
-*.md
-.env

@@ -2,9 +2,7 @@ name: vstep-ldp
 
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile.react
+    build: .
     image: ${IMAGE:-ghcr.io/minhtungle/vstep-ldp}:${TAG:-react}
     restart: unless-stopped
     ports:
