@@ -106,7 +106,7 @@ app.post('/api/register', async (req, res) => {
       to: email,
       subject: 'VietGen đã nhận đăng ký của bạn',
       text: confirmLines.join('\n'),
-      replyTo: `VietGen <${RECIPIENT}>`,
+      replyTo: `VietGen VSTEP <${RECIPIENT}>`,
     })
   } catch (err) {
     console.error('[register] Gửi mail xác nhận cho khách thất bại:', err.message)
@@ -171,7 +171,7 @@ app.post('/api/test-result', async (req, res) => {
       to: email,
       subject: 'Kết quả test trình độ tiếng Anh của bạn - VietGen',
       text: studentBody,
-      replyTo: `VietGen <${RECIPIENT}>`,
+      replyTo: `VietGen VSTEP <${RECIPIENT}>`,
     })
     studentSent = true
   } catch (err) {
