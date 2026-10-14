@@ -1,0 +1,155 @@
+/* Bù các hành vi mà bản jQuery xử lý bằng JS, nay React không còn plugin đó. */
+
+/* Nút bấm đóng vai trò link: kế thừa kiểu của thẻ <a> tương ứng trong template.
+   Các quy tắc gốc viết cho `a.apply-btn` nên <button> không tự nhận được. */
+button.apply-btn,
+button.readon {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+.topbar-area .topbar-right li.btn-part button.apply-btn {
+    display: inline-block;
+    background: #0b0c51;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 30px;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+.topbar-area .topbar-right li.btn-part button.apply-btn:hover {
+    background: #ff6f2a;
+    color: #ffffff;
+}
+
+/* Menu mobile: rsmenu-main.js trước đây tự chèn, nay điều khiển bằng state */
+@media only screen and (max-width: 991px) {
+    .rs-menu .nav-menu {
+        display: none;
+    }
+    .rs-menu.rs-menu-open .nav-menu {
+        display: block;
+        background: #ffffff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 999;
+        max-height: 70vh;
+        overflow-y: auto;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .rs-menu.rs-menu-open .nav-menu > li {
+        display: block;
+        margin-right: 0 !important;
+        border-bottom: 1px solid #eef0f6;
+        text-align: left;
+    }
+    .rs-menu.rs-menu-open .nav-menu > li > a {
+        display: block;
+        padding: 14px 20px;
+        height: auto;
+        line-height: 1.5;
+    }
+    /* Menu con chỉ mở khi người dùng chạm vào mục cha */
+    .rs-menu.rs-menu-open .nav-menu .sub-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background: #f7f8fc;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+    .rs-menu.rs-menu-open .nav-menu > li.vg-submenu-open > .sub-menu {
+        display: block;
+    }
+    .rs-menu.rs-menu-open .nav-menu .sub-menu li a {
+        padding: 11px 32px;
+        height: auto;
+        line-height: 1.5;
+    }
+    /* Dấu + báo mục có menu con */
+    .rs-menu.rs-menu-open .nav-menu > li.menu-item-has-children > a::after {
+        content: "+";
+        float: right;
+        font-weight: 700;
+    }
+    .rs-menu.rs-menu-open .nav-menu > li.vg-submenu-open > a::after {
+        content: "\2013";
+    }
+    .mobile-menu .rs-menu-toggle {
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        color: #0b0c51;
+        padding: 10px;
+    }
+}
+
+/* Menu con trên desktop: thay hiệu ứng hover của jQuery bằng CSS thuần */
+@media only screen and (min-width: 992px) {
+    .rs-menu .nav-menu > li.menu-item-has-children {
+        position: relative;
+    }
+    .rs-menu .nav-menu .sub-menu {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease;
+    }
+    .rs-menu .nav-menu > li.menu-item-has-children:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Nút lên đầu trang: trước do plugins.js điều khiển */
+#scrollUp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: #0b0c51;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 998;
+}
+#scrollUp.vg-scroll-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Swiper: giữ khoảng cách giống owl-carousel cũ */
+.swiper {
+    padding-bottom: 10px;
+}
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+    color: #0b0c51;
+}
+.swiper .swiper-pagination-bullet-active {
+    background: #ff6f2a;
+}
+
+/* Trang 404 */
+.vg-notfound {
+    text-align: center;
+    padding: 90px 20px;
+}
+.vg-notfound h2 {
+    font-size: 72px;
+    color: #0b0c51;
+    margin-bottom: 10px;
+}

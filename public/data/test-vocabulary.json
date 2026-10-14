@@ -1,0 +1,80 @@
+{
+  "id": "vocabulary",
+  "title": "Phần 2: Từ vựng - Điền khuyết",
+  "description": "Gõ một từ thích hợp vào chỗ trống. Không phân biệt chữ hoa, chữ thường.",
+  "type": "fill_blank",
+  "questions": [
+    {
+      "id": "v1",
+      "level": "A2",
+      "question": "I usually ______ up at six o'clock in the morning.",
+      "answer": ["get", "wake"],
+      "hint": "động từ chỉ việc thức dậy",
+      "explanation": "\"Get up\" hoặc \"wake up\" đều dùng để nói về việc thức dậy buổi sáng."
+    },
+    {
+      "id": "v2",
+      "level": "A2",
+      "question": "My sister is very ______ at playing the piano. She practises every day.",
+      "answer": ["good"],
+      "hint": "be good at = giỏi về",
+      "explanation": "Cụm cố định \"be good at something\" nghĩa là giỏi làm việc gì."
+    },
+    {
+      "id": "v3",
+      "level": "A2",
+      "question": "Could you please turn ______ the lights? The room is too dark.",
+      "answer": ["on"],
+      "hint": "trái nghĩa với off",
+      "explanation": "\"Turn on\" nghĩa là bật thiết bị; \"turn off\" là tắt."
+    },
+    {
+      "id": "v4",
+      "level": "B1",
+      "question": "She applied ______ a scholarship to study abroad next year.",
+      "answer": ["for"],
+      "hint": "giới từ đi với apply khi nộp đơn xin",
+      "explanation": "\"Apply for something\" nghĩa là nộp đơn xin cái gì (học bổng, công việc)."
+    },
+    {
+      "id": "v5",
+      "level": "B1",
+      "question": "The company is looking ______ a qualified English teacher.",
+      "answer": ["for"],
+      "hint": "look ... = tìm kiếm",
+      "explanation": "\"Look for\" nghĩa là tìm kiếm. Phân biệt với \"look after\" (chăm sóc)."
+    },
+    {
+      "id": "v6",
+      "level": "B1",
+      "question": "In ______ of the bad weather, the outdoor event was cancelled.",
+      "answer": ["spite"],
+      "hint": "in ... of = mặc dù",
+      "explanation": "\"In spite of\" + cụm danh từ, nghĩa là mặc dù, tương đương \"despite\"."
+    },
+    {
+      "id": "v7",
+      "level": "B1",
+      "question": "Learning a language ______ a lot of time and patience.",
+      "answer": ["takes", "requires", "needs"],
+      "hint": "động từ nghĩa là đòi hỏi, cần",
+      "explanation": "\"Take time\" là cụm thông dụng; \"require\" và \"need\" cũng đúng về nghĩa."
+    },
+    {
+      "id": "v8",
+      "level": "B2",
+      "question": "The new policy will come ______ effect at the beginning of next month.",
+      "answer": ["into"],
+      "hint": "come ... effect = có hiệu lực",
+      "explanation": "\"Come into effect\" là cụm cố định nghĩa là bắt đầu có hiệu lực."
+    },
+    {
+      "id": "v9",
+      "level": "B2",
+      "question": "Her argument was so convincing that nobody could ______ it.",
+      "answer": ["refute", "deny", "dispute", "challenge"],
+      "hint": "động từ nghĩa là bác bỏ",
+      "explanation": "\"Refute\" nghĩa là bác bỏ bằng lập luận. Các từ deny, dispute, challenge cũng phù hợp."
+    }
+  ]
+}

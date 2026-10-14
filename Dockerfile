@@ -1,23 +1,25 @@
-# Landing page tĩnh (HTML/CSS/JS) + mailer.php (form liên hệ qua PHP mail()).
-# Gộp Nginx + PHP-FPM trong 1 container vì đây chỉ là site tĩnh, không cần tách service
-# như các dự án backend khác trên VPS này.
-FROM nginx:1.27-alpine
-RUN apk add --no-cache php82 php82-fpm php82-openssl php82-mbstring supervisor msmtp ca-certificates \
-    && ln -sf /usr/bin/msmtp /usr/sbin/sendmail
+# Giai đoạn 1: build React bằng Vite
+FROM node:22-alpine AS build
+WORKDIR /app
 
-COPY . /var/www/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY supervisord.conf /etc/supervisord.conf
+COPY package.json package-lock.json* ./
+RUN npm ci --no-audit --no-fund
 
-# msmtp thay busybox sendmail để mail() gửi được qua SMTP thật.
-# Thông tin đăng nhập đến từ biến môi trường lúc chạy, không nằm trong image.
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh \
-    && printf 'sendmail_path = /usr/bin/msmtp -t --read-envelope-from\nmax_execution_time = 300\ndefault_socket_timeout = 120\n' \
-       > /etc/php82/conf.d/99-msmtp.ini
+COPY vite.config.js index.html ./
+COPY src ./src
+COPY public ./public
+RUN npm run build
 
-WORKDIR /var/www/html
+# Giai đoạn 2: chỉ mang theo bản build và server Node
+FROM node:22-alpine
+WORKDIR /app
+ENV NODE_ENV=production
 
-EXPOSE 80
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-CMD ["supervisord", "-c", "/etc/supervisord.conf"]
+COPY package.json package-lock.json* ./
+RUN npm ci --omit=dev --no-audit --no-fund && npm cache clean --force
+
+COPY server ./server
+COPY --from=build /app/dist ./dist
+
+EXPOSE 3101
+CMD ["node", "server/index.js"]

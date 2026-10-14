@@ -10,3 +10,8 @@ assets/images/vstep/vn-backup/
 
 # Biến môi trường chứa mật khẩu SMTP
 .env
+
+# Node / Vite
+node_modules/
+dist/
+*.local
