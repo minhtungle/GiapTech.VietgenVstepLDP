@@ -1274,3 +1274,72 @@ body .search-modal .close:hover {
         margin-left: auto;
     }
 }
+
+/* ===== Mục "Test trình độ" nổi bật trên thanh menu ===== */
+/* Trên chính trang test, mục này mang thêm class current-menu-item nên cần
+   nhắc lại màu chữ để quy tắc "đang xem" không đè mất. */
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight.current-menu-item > a,
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight.current-menu-item > a:hover {
+    color: #ffffff !important;
+}
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a {
+    position: relative;
+    background: #ff6f2a;
+    color: #ffffff !important;
+    height: auto;
+    line-height: 1;
+    padding: 10px 18px;
+    border-radius: 22px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(255, 111, 42, 0.35);
+    animation: vgNavPulse 2.4s ease-in-out infinite;
+}
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a:hover {
+    background: #e85f1c;
+    color: #ffffff !important;
+    animation: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 111, 42, 0.45);
+}
+/* Chấm nhỏ báo mục mới */
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background: #ffd43b;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(255, 212, 59, 0.8);
+    animation: vgDotPulse 1.8s ease-out infinite;
+}
+@keyframes vgNavPulse {
+    0%, 100% { box-shadow: 0 4px 14px rgba(255, 111, 42, 0.35); }
+    50%      { box-shadow: 0 4px 22px rgba(255, 111, 42, 0.65); }
+}
+@keyframes vgDotPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255, 212, 59, 0.8); }
+    70%  { box-shadow: 0 0 0 7px rgba(255, 212, 59, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 212, 59, 0); }
+}
+/* Tôn trọng tuỳ chọn giảm chuyển động của người dùng */
+@media (prefers-reduced-motion: reduce) {
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a,
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a::after {
+        animation: none;
+    }
+}
+/* Menu dọc trên mobile: trả về dạng hàng, chỉ giữ màu nhấn */
+@media only screen and (max-width: 991px) {
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a {
+        display: block;
+        border-radius: 0;
+        padding: 10px 20px;
+        box-shadow: none;
+        animation: none;
+    }
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a::after {
+        display: none;
+    }
+}
