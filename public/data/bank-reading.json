@@ -1,0 +1,392 @@
+{
+  "id": "reading",
+  "title": "Phần 3: Đọc hiểu",
+  "description": "Đọc đoạn văn rồi chọn đáp án đúng nhất.",
+  "type": "reading",
+  "passages": [
+    {
+      "id": "bp1",
+      "level": "A2",
+      "title": "A Student Part-Time Job",
+      "text": "Lan is a second-year student at a university in Da Nang. Three evenings a week she works at a small coffee shop near her campus. She starts at five o'clock and finishes at nine. The work is not difficult, but she has to stand for four hours and speak to many customers. At first she was nervous, especially when foreign visitors ordered in English. Now she enjoys those moments because they give her a chance to practise. Her manager is friendly and allows her to change her shifts during the examination period. The money Lan earns is not very much, but it pays for her books and her bus tickets. More importantly, she has learned how to organise her time. She says that since she started the job, she actually studies harder than before, because she knows exactly how many free hours she has each week.",
+      "questions": [
+        {
+          "id": "br1",
+          "question": "How often does Lan work at the coffee shop?",
+          "options": [
+            "Three evenings a week",
+            "Four hours every day",
+            "Only at weekends",
+            "Every evening"
+          ],
+          "answer": 0,
+          "explanation": "Bài đọc nêu rõ \"Three evenings a week she works at a small coffee shop\"."
+        },
+        {
+          "id": "br2",
+          "question": "Why did Lan feel nervous at first?",
+          "options": [
+            "Because the manager was strict",
+            "Because the shop was very far from her home",
+            "Because foreign customers ordered in English",
+            "Because she had to carry heavy things"
+          ],
+          "answer": 2,
+          "explanation": "Câu \"she was nervous, especially when foreign visitors ordered in English\" cho biết lý do."
+        },
+        {
+          "id": "br3",
+          "question": "What does Lan spend her money on?",
+          "options": [
+            "A new laptop",
+            "Books and bus tickets",
+            "Clothes and food",
+            "University tuition fees"
+          ],
+          "answer": 1,
+          "explanation": "Bài nêu \"it pays for her books and her bus tickets\"."
+        },
+        {
+          "id": "br4",
+          "question": "What is the main benefit of the job for Lan?",
+          "options": [
+            "She has become rich",
+            "She has learned to manage her time better",
+            "She no longer needs to study",
+            "She has found a permanent career"
+          ],
+          "answer": 1,
+          "explanation": "Đoạn cuối nhấn mạnh \"More importantly, she has learned how to organise her time\"."
+        }
+      ]
+    },
+    {
+      "id": "bp2",
+      "level": "A2",
+      "title": "Sleep and Health",
+      "text": "Most doctors agree that adults need between seven and nine hours of sleep every night. Yet many people get far less. They stay up late watching videos or checking messages on their phones, and then wake up early for work. After a few days like this, they feel tired, forget simple things and lose their temper easily. Sleep is not a waste of time. While we sleep, the brain organises what we have learned during the day and the body repairs itself. Students who sleep well usually remember lessons better than those who study until two in the morning. Experts suggest some simple habits: go to bed at the same hour each night, keep the bedroom dark and cool, and avoid coffee after the middle of the afternoon. Putting the phone in another room also helps, because a bright screen makes the brain think it is still daytime.",
+      "questions": [
+        {
+          "id": "br5",
+          "question": "How much sleep do adults need, according to the passage?",
+          "options": [
+            "It depends on the season",
+            "Five to six hours",
+            "At least ten hours",
+            "Seven to nine hours"
+          ],
+          "answer": 3,
+          "explanation": "Câu đầu tiên nêu \"adults need between seven and nine hours of sleep every night\"."
+        },
+        {
+          "id": "br6",
+          "question": "What happens in the body during sleep?",
+          "options": [
+            "The brain organises learning and the body repairs itself",
+            "Nothing important happens",
+            "The brain stops working completely",
+            "The body grows taller"
+          ],
+          "answer": 0,
+          "explanation": "Bài nêu \"the brain organises what we have learned during the day and the body repairs itself\"."
+        },
+        {
+          "id": "br7",
+          "question": "Why is it useful to leave the phone in another room?",
+          "options": [
+            "Because phones are expensive",
+            "Because phone screens make the brain think it is still daytime",
+            "Because the bedroom should be quiet",
+            "Because people talk too loudly on the phone"
+          ],
+          "answer": 1,
+          "explanation": "Câu cuối giải thích \"a bright screen makes the brain think it is still daytime\"."
+        },
+        {
+          "id": "br8",
+          "question": "The phrase \"lose their temper\" in the passage means:",
+          "options": [
+            "forget an appointment",
+            "lose weight quickly",
+            "feel very cold",
+            "become angry easily"
+          ],
+          "answer": 3,
+          "explanation": "\"Lose one's temper\" là idiom nghĩa là nổi nóng, dễ tức giận."
+        }
+      ]
+    },
+    {
+      "id": "bp3",
+      "level": "B1",
+      "title": "Plastic in the Ocean",
+      "text": "Every year millions of tonnes of plastic end up in the sea. Some of it comes from ships, but most of it is carried there by rivers from towns far inland. Large pieces are dangerous for birds and turtles, which often mistake floating bags for food. The smaller fragments, known as microplastics, may be an even greater worry. Sunlight and waves break plastic bottles into tiny particles that fish swallow, and these particles then move up the food chain. Cleaning the open ocean is extremely expensive and only removes a small share of the waste, so many environmental groups argue that the real solution lies on land. They call for better rubbish collection in coastal cities, deposit schemes that encourage people to return bottles, and packaging designed to be reused rather than thrown away. Some governments have already banned the thinnest shopping bags, and early reports suggest such measures do reduce the amount of plastic reaching the water.",
+      "questions": [
+        {
+          "id": "br9",
+          "question": "Where does most ocean plastic come from?",
+          "options": [
+            "Rivers carrying waste from inland towns",
+            "Factories built on the coast",
+            "Fishing boats",
+            "Tourists on beaches"
+          ],
+          "answer": 0,
+          "explanation": "Bài nêu \"most of it is carried there by rivers from towns far inland\"."
+        },
+        {
+          "id": "br10",
+          "question": "Why are microplastics described as a serious problem?",
+          "options": [
+            "They dissolve in salt water",
+            "They are easy to see and collect",
+            "They float on the surface only",
+            "Fish swallow them and they move up the food chain"
+          ],
+          "answer": 3,
+          "explanation": "Bài nêu các hạt nhỏ bị cá nuốt và \"these particles then move up the food chain\"."
+        },
+        {
+          "id": "br11",
+          "question": "What do environmental groups believe is the real solution?",
+          "options": [
+            "Stopping all fishing activities",
+            "Building more ships to collect waste",
+            "Taking action on land, such as better waste collection",
+            "Teaching turtles to avoid plastic"
+          ],
+          "answer": 2,
+          "explanation": "Bài nêu \"the real solution lies on land\" với các biện pháp thu gom rác và bao bì tái sử dụng."
+        },
+        {
+          "id": "br12",
+          "question": "The word \"fragments\" in the passage is closest in meaning to:",
+          "options": [
+            "small pieces",
+            "containers",
+            "colours",
+            "chemicals"
+          ],
+          "answer": 0,
+          "explanation": "\"Fragments\" nghĩa là những mảnh nhỏ, đồng nghĩa với \"small pieces\"."
+        },
+        {
+          "id": "br13",
+          "question": "What does the passage say about banning thin shopping bags?",
+          "options": [
+            "It is too expensive for governments",
+            "It has made no difference at all",
+            "Only one country has tried it",
+            "Early reports suggest it reduces plastic reaching the sea"
+          ],
+          "answer": 3,
+          "explanation": "Câu cuối nêu \"early reports suggest such measures do reduce the amount of plastic reaching the water\"."
+        }
+      ]
+    },
+    {
+      "id": "bp4",
+      "level": "B1",
+      "title": "Travelling Slowly",
+      "text": "A new kind of holiday is attracting travellers who are tired of rushing from one famous sight to another. Instead of visiting five cities in seven days, slow travellers choose a single town and stay there for a week or more. They shop at the local market, take a cooking class, and sometimes rent a bicycle rather than join an organised tour. Supporters say this approach is both cheaper and more rewarding: you spend less on transport, and you remember far more about the place because you have time to notice ordinary details. It is also better for the environment, since flights and long coach journeys produce most of the carbon emissions of a typical holiday. Critics reply that slow travel suits people with long holidays and flexible jobs, not families who have only a few days off each year. Even so, travel agencies report rising demand, and several now advertise one-destination packages aimed at visitors who would rather understand a place than simply photograph it.",
+      "questions": [
+        {
+          "id": "br14",
+          "question": "What is the main idea of the passage?",
+          "options": [
+            "Flying is the cheapest way to travel",
+            "Organised tours are always a waste of money",
+            "Travel agencies are losing customers",
+            "Staying longer in one place is becoming a popular style of travel"
+          ],
+          "answer": 3,
+          "explanation": "Toàn bài giới thiệu xu hướng \"slow travel\": ở lại lâu tại một nơi thay vì đi nhiều nơi."
+        },
+        {
+          "id": "br15",
+          "question": "According to supporters, why is slow travel more rewarding?",
+          "options": [
+            "Hotels offer bigger discounts",
+            "Travellers have time to notice ordinary details",
+            "Guides speak better English",
+            "There are fewer tourists in small towns"
+          ],
+          "answer": 1,
+          "explanation": "Bài nêu \"you remember far more about the place because you have time to notice ordinary details\"."
+        },
+        {
+          "id": "br16",
+          "question": "Why is slow travel described as better for the environment?",
+          "options": [
+            "Local markets sell organic food",
+            "Bicycles are made of recycled metal",
+            "Flights and long coach journeys cause most holiday emissions",
+            "Fewer hotels need to be built"
+          ],
+          "answer": 2,
+          "explanation": "Bài nêu \"flights and long coach journeys produce most of the carbon emissions of a typical holiday\"."
+        },
+        {
+          "id": "br17",
+          "question": "What criticism of slow travel is mentioned?",
+          "options": [
+            "It is more expensive than package tours",
+            "It damages local culture",
+            "It is boring for young people",
+            "It does not suit families with only a few days off"
+          ],
+          "answer": 3,
+          "explanation": "Bài nêu phê bình rằng slow travel không hợp với \"families who have only a few days off each year\"."
+        },
+        {
+          "id": "br18",
+          "question": "The phrase \"Even so\" near the end of the passage introduces:",
+          "options": [
+            "a contrast with the criticism just mentioned",
+            "a summary of the first paragraph",
+            "the cause of the problem",
+            "an example supporting the criticism"
+          ],
+          "answer": 0,
+          "explanation": "\"Even so\" nghĩa là \"dù vậy\", dùng để nêu ý trái ngược với phê bình vừa trình bày."
+        }
+      ]
+    },
+    {
+      "id": "bp5",
+      "level": "B2",
+      "title": "Artificial Intelligence at Work",
+      "text": "Few technologies have provoked as much hope and anxiety as artificial intelligence. Headlines warn that machines will replace human workers, yet the picture emerging from recent studies is more nuanced. AI tools are proving remarkably good at narrow, repetitive tasks: sorting documents, drafting routine emails, and detecting unusual patterns in financial data. They are considerably less reliable when a task demands judgement, ethical reasoning, or an understanding of a particular client's history. Consequently, in most workplaces AI has reshaped jobs rather than eliminated them. An accountant may now spend less time entering figures and more time advising clients, while a junior lawyer may review a contract that software has already summarised. The genuine risk, researchers argue, is not mass unemployment but a widening gap between employees who are trained to use these tools critically and those who are not. Firms that invest in retraining tend to gain most, whereas those that simply buy software and expect instant savings are frequently disappointed.",
+      "questions": [
+        {
+          "id": "br19",
+          "question": "What is the writer's main point about AI and employment?",
+          "options": [
+            "AI is only useful in the financial sector",
+            "AI has changed the content of jobs more than it has destroyed them",
+            "AI has had almost no effect on workplaces",
+            "AI will soon replace most human workers"
+          ],
+          "answer": 1,
+          "explanation": "Bài nêu \"AI has reshaped jobs rather than eliminated them\" - AI làm thay đổi công việc chứ không xóa bỏ."
+        },
+        {
+          "id": "br20",
+          "question": "According to the passage, AI performs least well when a task requires:",
+          "options": [
+            "judgement and ethical reasoning",
+            "detecting unusual patterns in data",
+            "drafting routine emails",
+            "sorting large numbers of documents"
+          ],
+          "answer": 0,
+          "explanation": "Bài nêu AI \"less reliable when a task demands judgement, ethical reasoning\"; các lựa chọn khác là điểm mạnh của AI."
+        },
+        {
+          "id": "br21",
+          "question": "What do researchers consider the genuine risk?",
+          "options": [
+            "A shortage of accountants and lawyers",
+            "The high cost of buying software",
+            "A growing gap between trained and untrained employees",
+            "A sudden rise in mass unemployment"
+          ],
+          "answer": 2,
+          "explanation": "Bài nêu rủi ro thật sự là \"a widening gap between employees who are trained to use these tools critically and those who are not\"."
+        },
+        {
+          "id": "br22",
+          "question": "The word \"nuanced\" in the passage is closest in meaning to:",
+          "options": [
+            "easy to summarise",
+            "more complicated and detailed",
+            "completely negative",
+            "widely accepted"
+          ],
+          "answer": 1,
+          "explanation": "\"Nuanced\" nghĩa là có nhiều sắc thái, phức tạp và chi tiết hơn so với cách nhìn đơn giản."
+        },
+        {
+          "id": "br23",
+          "question": "What does the passage say about firms that simply buy software?",
+          "options": [
+            "They are often disappointed with the results",
+            "They usually save money immediately",
+            "They outperform firms that retrain employees",
+            "They refuse to train their staff"
+          ],
+          "answer": 0,
+          "explanation": "Câu cuối nêu các công ty chỉ mua phần mềm và mong tiết kiệm ngay \"are frequently disappointed\"."
+        }
+      ]
+    },
+    {
+      "id": "bp6",
+      "level": "B2",
+      "title": "Rethinking the Examination",
+      "text": "For more than a century, the written examination has been the standard way of measuring what students know. Its appeal is obvious: it is cheap to administer, it treats every candidate alike, and the results can be compared across thousands of schools. Nevertheless, educators have long questioned what such tests actually capture. A timed paper rewards speed and memory, qualities that matter far less in most professions than the ability to collaborate, revise a draft, or solve an unfamiliar problem over several days. Some universities have therefore begun to supplement examinations with portfolios, extended projects, and oral defences. The results are encouraging but not without complications. Marking a portfolio takes much longer than marking a multiple-choice paper, and teachers worry that assessment of coursework is more vulnerable to unequal family support or, increasingly, to undisclosed use of writing software. The emerging consensus is not that examinations should disappear, but that no single instrument can fairly describe a learner's ability.",
+      "questions": [
+        {
+          "id": "br24",
+          "question": "Why have written examinations remained popular?",
+          "options": [
+            "Students prefer them to projects",
+            "They are cheap, consistent and easy to compare",
+            "They take very little time to mark by hand",
+            "They measure creativity accurately"
+          ],
+          "answer": 1,
+          "explanation": "Bài nêu ba lý do: \"cheap to administer\", \"treats every candidate alike\", và kết quả so sánh được."
+        },
+        {
+          "id": "br25",
+          "question": "What criticism of timed examinations does the writer make?",
+          "options": [
+            "They are marked too slowly",
+            "They are too expensive for most schools",
+            "They reward speed and memory rather than skills used at work",
+            "They are only suitable for university students"
+          ],
+          "answer": 2,
+          "explanation": "Bài nêu bài thi tính giờ \"rewards speed and memory\", những phẩm chất ít quan trọng trong nghề nghiệp."
+        },
+        {
+          "id": "br26",
+          "question": "What problems with coursework assessment are mentioned?",
+          "options": [
+            "It is boring for teachers and students",
+            "It cannot be compared between schools at all",
+            "It takes longer to mark and may reflect unequal family support",
+            "It requires expensive laboratory equipment"
+          ],
+          "answer": 2,
+          "explanation": "Bài nêu chấm portfolio mất nhiều thời gian hơn và dễ bị ảnh hưởng bởi \"unequal family support\"."
+        },
+        {
+          "id": "br27",
+          "question": "What is the writer's final conclusion?",
+          "options": [
+            "Portfolios are always fairer than examinations",
+            "Writing software should be banned in all schools",
+            "Examinations should be abolished immediately",
+            "No single method can fairly describe a learner's ability"
+          ],
+          "answer": 3,
+          "explanation": "Câu cuối nêu \"no single instrument can fairly describe a learner's ability\"."
+        },
+        {
+          "id": "br28",
+          "question": "The word \"supplement\" in the passage is closest in meaning to:",
+          "options": [
+            "replace",
+            "criticise",
+            "add to",
+            "shorten"
+          ],
+          "answer": 2,
+          "explanation": "\"Supplement\" nghĩa là bổ sung thêm vào, không phải thay thế hoàn toàn (replace)."
+        }
+      ]
+    }
+  ]
+}

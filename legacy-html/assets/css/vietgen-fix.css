@@ -1,0 +1,1345 @@
+/* VietGen: enlarge header logo safely without breaking the menu row */
+.full-width-header .rs-header .logo-part img {
+    max-height: 52px;
+}
+.full-width-header .rs-header .menu-area .logo-cat-wrap .logo-part img {
+    max-height: 52px;
+}
+
+/* Prevent the logo + menu from wrapping onto two lines at narrow desktop widths.
+   The template's own nav-menu li has margin-right:50px by default and no
+   white-space:nowrap on the parent ul, so with 6 menu items (vs. the template's
+   shorter demo labels) it silently wraps to a second line between ~992px and
+   ~1360px, which pushes the vertically-centered logo column down and makes it
+   look detached from the menu row. Fix: keep it on one line and tighten spacing
+   only in that width range; desktop (>=1360px) keeps the original spacing. */
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+    .full-width-header .rs-header .logo-part img,
+    .full-width-header .rs-header .menu-area .logo-cat-wrap .logo-part img {
+        max-height: 38px;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu {
+        white-space: nowrap;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li {
+        margin-right: 28px !important;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li > a {
+        font-size: 13px;
+    }
+    .full-width-header.header-style1 .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li.logo-part {
+        margin: 0 20px 0 15px;
+    }
+}
+
+/* about.html "history tabs" (Lịch Sử / Sứ Mệnh / Đội Ngũ): this component's
+   active/hover state is hardcoded orange (#ff5421) in style.css regardless of
+   the orange-color modifier class, so removing that class alone doesn't
+   change it. Override to the site's blue (#0b0c51) to match the rest of the
+   pages. */
+.rs-about .histort-part .single-history a:hover,
+.rs-about .histort-part .single-history a.active {
+    background: #0b0c51;
+}
+
+/* Topbar "Đăng Ký Ngay" CTA button: hardcoded orange (#ff5421) on the
+   home8-topbar class itself (used by all inner pages), independent of the
+   orange-color modifier. Override to blue to match the rest of the site. */
+.full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li a.apply-btn {
+    background: #0b0c51;
+}
+.full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li a.apply-btn:hover {
+    background: #1a86a8;
+}
+
+/* Contact page "Gửi Đăng Ký" submit button: hardcoded orange (#ff5421),
+   independent of the orange-color modifier. */
+.contact-page-section .rs-quick-contact .form-group .btn-send,
+.contact-page-section .contact-comment-box .form-group .btn-send,
+.contact-page-section .contact-comment-section form .form-group input.btn-send {
+    background: #0b0c51;
+}
+
+/* Breadcrumbs link hover (e.g. "Trang chủ // Giới thiệu"): hardcoded orange
+   on hover regardless of the orange-color modifier. */
+.rs-breadcrumbs .breadcrumbs-text.white-color ul li a:hover {
+    color: #0b0c51;
+}
+
+/* Course review stars/rating number (course-single.html "Đánh Giá" tab):
+   hardcoded orange. */
+.cource-review-box .rating .fa,
+.cource-review-box .total-rating {
+    color: #0b0c51;
+}
+
+/* Course overview "9 Buổi Học · 4 Kỹ Năng · 20 Bộ Đề" star icon: hardcoded orange. */
+.course-overview .inner-box .student-list li .fa {
+    color: #0b0c51;
+}
+
+/* course-single.html tab bar (Tổng Quan / Lộ Trình / Giáo Viên / Hỏi Đáp /
+   Đánh Giá) active/hover state: hardcoded orange. */
+.intro-section .intro-tabs .tab-btns .tab-btn:hover,
+.intro-section .intro-tabs .tab-btns .tab-btn.active {
+    background: #0b0c51;
+    border-color: #0b0c51;
+}
+
+/* Blog sidebar widget title underline (blog.html/blog-single.html): hardcoded orange. */
+.rs-inner-blog .widget-area .widget-title:before {
+    background: #0b0c51;
+}
+
+/* Contact page cards (Hà Nội / TP.HCM / Học Online) icons: hardcoded orange. */
+.contact-page-section .rs-contact-wrap .address-item .address-icon i {
+    color: #0b0c51;
+}
+.contact-page-section .rs-contact-wrap .address-item .address-text .des a:hover {
+    color: #0b0c51;
+}
+
+/* ==========================================================================
+   Remaining hardcoded-orange hover/active states across the shared
+   header/footer/breadcrumbs (home8-style4 topbar, home9-style footer) and a
+   few page-specific components. None of these depend on the orange-color
+   modifier class, so removing that class earlier didn't touch them.
+   ========================================================================== */
+
+/* Topbar link hovers */
+.full-width-header .rs-header .topbar-area.home8-topbar .topbar-contact li a:hover,
+.full-width-header .rs-header .topbar-area.home8-topbar .topbar-right li.login-register a:hover {
+    color: #0b0c51;
+}
+
+/* Main nav + sub-menu + offcanvas menu hovers/active (all header states: static, sticky, expand-btn) */
+.full-width-header.home8-style4 .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li a:hover,
+.full-width-header.home8-style4 .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.current-menu-item > a,
+.full-width-header.home8-style4 .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu li a:hover,
+.full-width-header.home8-style4 .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu li.active a,
+.full-width-header.home8-style4 .rs-header .menu-area .expand-btn-inner li > a:hover,
+.full-width-header.home8-style4.main-home .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu li a:hover,
+.full-width-header.home8-style4.main-home .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu li.active a,
+.full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .rs-menu-area .main-menu .rs-menu ul.nav-menu li a:hover,
+.full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .rs-menu-area .main-menu .rs-menu ul.nav-menu li.current-menu-item > a,
+.full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .expand-btn-inner li > a:hover i:before,
+.full-width-header.home8-style4.main-home .expand-btn-inner li a:hover i:before,
+.full-width-header.home8-style4.main-home .expand-btn-inner .nav-expander:hover,
+.full-width-header.home8-style4 .rs-header .right_menu_togle .sidebarnav_menu li a:hover,
+.full-width-header.home8-style4 .rs-header .right_menu_togle .canvas-contact .social li a:hover,
+.full-width-header.home8-style4.main-home .right_menu_togle .sidebarnav_menu li a:hover,
+.full-width-header.home8-style4.main-home .right_menu_togle .canvas-contact .social li a:hover {
+    color: #0b0c51 !important;
+}
+.full-width-header.home8-style4 .rs-header .menu-area .expand-btn-inner .apply-btn,
+.full-width-header.home8-style4 .rs-header .right_menu_togle .close-btn #nav-close,
+.full-width-header.home8-style4.main-home .right_menu_togle .close-btn #nav-close,
+.full-width-header .rs-header .menu-area .nav-expander:hover span {
+    background: #0b0c51;
+}
+.full-width-header.home8-style4.main-home .menu-area .rs-menu-area .main-menu .rs-menu ul.sub-menu,
+.full-width-header.home8-style4.main-home .menu-area.menu-sticky.sticky .rs-menu-area .main-menu .rs-menu ul.sub-menu {
+    border-color: #0b0c51 !important;
+}
+
+/* Search modal close button hover */
+body .search-modal .close:hover {
+    color: #0b0c51 !important;
+}
+
+/* Breadcrumbs title + link hover (shared across all 8 pages) */
+.rs-breadcrumbs .breadcrumbs-text .page-title {
+    color: #0b0c51;
+}
+.rs-breadcrumbs .breadcrumbs-text ul li a:hover {
+    color: #0b0c51;
+}
+
+/* Footer (home9-style main-home): section title underline, link hovers, bullet markers */
+.rs-footer.home9-style.main-home .footer-top .widget-title:before,
+.footer-top .site-map li:before,
+.footer-bottom .copy-right-menu li:before {
+    background: #0b0c51;
+}
+.footer-top .footer_social li a:hover,
+.footer-top .site-map li a:hover,
+.footer-top .address-widget li i:before,
+.footer-top .address-widget li .desc a:hover,
+.footer-top .recent-post .post-item .post-desc a:hover,
+.footer-top .recent-post .post-item .post-date i,
+.footer-bottom .copyright a:hover,
+.footer-bottom .copy-right-menu li a:hover {
+    color: #0b0c51;
+}
+
+/* course-single.html: curriculum bullet + review list bullet */
+.course-overview .inner-box .review-list li:before {
+    color: #0b0c51;
+}
+
+/* team-single.html profile: skill list icon, social links hover, progress bars */
+.profile-section .content-column .inner-column .student-list li .fa,
+.profile-section .image-column .team-content .personal-info li a:hover,
+.profile-section .image-column .social-box a:hover {
+    color: #0b0c51;
+}
+.profile-section .rs-progress {
+    border-color: #0b0c51;
+}
+.profile-section .rs-progress .progress-bar {
+    background-color: #0b0c51;
+}
+.profile-section .rs-progress .progress-bar .pb-percent {
+    background: #0b0c51;
+}
+.profile-section .rs-progress .progress-bar .pb-percent:after {
+    border-top-color: #0b0c51;
+}
+
+/* blog.html / blog-single.html sidebar archive link hover */
+.rs-inner-blog .widget-area .widget-archives ul li a:hover {
+    color: #0b0c51;
+}
+
+/* ==========================================================================
+   Floating sticky contact buttons (Zalo / Facebook / WhatsApp)
+   ========================================================================== */
+.vg-floating-contact {
+    position: fixed;
+    right: 22px;
+    bottom: 90px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.vg-float-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 26px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: vgFloatPulse 2.4s ease-in-out infinite;
+}
+.vg-float-btn:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+    animation-play-state: paused;
+}
+.vg-float-zalo {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+}
+.vg-float-facebook {
+    background: #1877f2;
+}
+.vg-float-whatsapp {
+    background: #25d366;
+}
+@keyframes vgFloatPulse {
+    0%, 100% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25); }
+    50% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 8px rgba(33, 167, 208, 0.12); }
+}
+@media only screen and (max-width: 575px) {
+    .vg-floating-contact {
+        right: 14px;
+        bottom: 80px;
+        gap: 10px;
+    }
+    .vg-float-btn {
+        width: 46px;
+        height: 46px;
+        font-size: 22px;
+    }
+}
+
+/* Testimonial (home-style1) author photo: the template's own avatar files are
+   70x70px and the CSS sets `width: auto` on them, relying on that fixed source
+   size to keep the circle small. VietGen's real student photos are larger
+   (200x200+), so without an explicit cap they render oversized and overlap
+   the quote text above them. Cap it back to the size the layout expects. */
+.rs-testimonial.home-style1 .testi-item .author-desc .author-img img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* Partner carousel (Các đơn vị tổ chức thi VSTEP) on index.html: the
+   template's .partner-item CSS only targets `img` nested inside an `<a>`
+   (`.partner-item a img`), but these university logos aren't links (they're
+   informational, not partner links), so add the sizing directly. */
+.rs-partner .partner-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.rs-partner .partner-item img {
+    max-width: 130px;
+    max-height: 110px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    filter: grayscale(15%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+.rs-partner .partner-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Training Format cards (index.html "Hình Thức Đào Tạo") — image banner with
+   a colored gradient overlay + heading, plus a text body below, similar to
+   the reference site's 4-card layout.
+   ========================================================================== */
+.vg-format-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vg-format-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+.vg-format-img {
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+}
+.vg-format-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    color: #ffffff;
+}
+.vg-format-overlay h4 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.vg-format-overlay span {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.95;
+}
+.vg-overlay-blue {
+    background: linear-gradient(120deg, rgba(33, 167, 208, 0.92) 0%, rgba(33, 167, 208, 0.55) 55%, rgba(33, 167, 208, 0) 100%);
+}
+.vg-overlay-orange {
+    background: linear-gradient(120deg, rgba(255, 111, 42, 0.92) 0%, rgba(255, 111, 42, 0.55) 55%, rgba(255, 111, 42, 0) 100%);
+}
+.vg-format-body {
+    padding: 22px 20px 26px;
+}
+.vg-format-body .title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111111;
+}
+.vg-format-body .desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #626262;
+}
+
+/* ==========================================================================
+   Quick Roadmap section (index.html "Lộ Trình Nhanh Chóng") — icon circle
+   above a bordered card containing a big step number + heading + text.
+   ========================================================================== */
+.vg-roadmap-item {
+    position: relative;
+    padding-top: 35px;
+}
+.vg-roadmap-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #0b0c51;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto -30px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 6px 16px rgba(33, 167, 208, 0.35);
+}
+.vg-roadmap-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 45px 25px 25px;
+    text-align: left;
+    height: 100%;
+}
+.vg-roadmap-number {
+    display: block;
+    font-size: 56px;
+    font-weight: 800;
+    color: #171f32;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+.vg-roadmap-card .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b0c51;
+    margin-bottom: 10px;
+}
+.vg-roadmap-card .desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #626262;
+}
+@media only screen and (max-width: 767px) {
+    .vg-format-overlay h4 {
+        font-size: 20px;
+    }
+    .vg-roadmap-card {
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   Lead Popup Modal (index.html only) — auto-opens shortly after page load,
+   offers a promo banner + region-tabbed lead capture form. Plain overlay +
+   box, no Bootstrap modal dependency so it can't be affected by other modal
+   CSS on the page (e.g. #searchModal).
+   ========================================================================== */
+.vg-popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.65);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.vg-popup-overlay.vg-popup-active {
+    display: flex;
+}
+.vg-popup-box {
+    position: relative;
+    background: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: vgPopupIn 0.35s ease;
+}
+@keyframes vgPopupIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.vg-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: #171f32;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vg-popup-close:hover {
+    background: #ffffff;
+    color: #0b0c51;
+}
+.vg-popup-left {
+    background: linear-gradient(160deg, #060718 0%, #0b0c51 100%);
+    color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px 0 0 12px;
+}
+.vg-popup-badge {
+    display: inline-block;
+    background: #ff6f2a;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+.vg-popup-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.vg-popup-subtitle {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+.vg-popup-tags {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+}
+.vg-popup-tags li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.95;
+}
+.vg-popup-tags i {
+    color: #ffde59;
+}
+.vg-popup-img {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    max-height: 130px;
+}
+.vg-popup-img img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+.vg-popup-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.vg-popup-stat {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 10px 8px;
+    text-align: center;
+}
+.vg-popup-stat strong {
+    display: block;
+    font-size: 18px;
+    color: #ffde59;
+    line-height: 1.2;
+}
+.vg-popup-stat span {
+    font-size: 11px;
+    opacity: 0.9;
+}
+.vg-popup-right {
+    padding: 35px 30px;
+}
+.vg-popup-form-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #171f32;
+    margin-bottom: 18px;
+}
+.vg-popup-region-tabs {
+    display: flex;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+.vg-region-tab {
+    flex: 1;
+    border: none;
+    background: #f7f7f7;
+    padding: 10px 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #626262;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.vg-region-tab.active {
+    background: #0b0c51;
+    color: #ffffff;
+}
+.vg-popup-form input,
+.vg-popup-form select {
+    width: 100%;
+    padding: 11px 14px;
+    margin-bottom: 14px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #171f32;
+}
+.vg-popup-form input:focus,
+.vg-popup-form select:focus {
+    outline: none;
+    border-color: #0b0c51;
+}
+.vg-popup-submit {
+    width: 100%;
+    background: #ff6f2a;
+    color: #ffffff;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.vg-popup-submit:hover {
+    background: #e85f1c;
+}
+.vg-popup-submit:disabled {
+    background: #c2c2c2;
+    cursor: not-allowed;
+}
+.vg-popup-message {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 12px;
+    text-align: center;
+}
+.vg-popup-message:empty {
+    display: none;
+}
+.vg-popup-message-ok {
+    color: #1a7f4b;
+}
+.vg-popup-message-error {
+    color: #d93025;
+}
+.vg-popup-note {
+    text-align: center;
+    font-size: 12px;
+    color: #939393;
+    margin-top: 12px;
+}
+.vg-popup-note i {
+    color: #0b0c51;
+    margin-right: 4px;
+}
+@media only screen and (max-width: 767px) {
+    .vg-popup-left {
+        border-radius: 12px 12px 0 0;
+        padding: 28px 22px;
+    }
+    .vg-popup-right {
+        padding: 28px 22px;
+    }
+    .vg-popup-title {
+        font-size: 20px;
+    }
+    .vg-popup-img {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Certificate Intro section (index.html "Luyện Thi VSTEP B1, B2, C1") —
+   bordered content box with a red accent title, checklist of eligible
+   audiences, and a sample certificate image on the right.
+   ========================================================================== */
+.vg-cert-box {
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 45px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+}
+.vg-cert-title {
+    color: #e2231a;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+.vg-cert-subtitle {
+    color: #171f32;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+.vg-cert-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #626262;
+    margin-bottom: 22px;
+}
+.vg-cert-list-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #171f32;
+    margin-bottom: 14px;
+}
+.vg-cert-list {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+}
+.vg-cert-list li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #343434;
+    margin-bottom: 10px;
+    padding-left: 2px;
+}
+.vg-cert-list li i {
+    color: #2bb673;
+    margin-right: 8px;
+}
+.vg-cert-list-alt li i {
+    color: #0b0c51;
+}
+.vg-cert-img {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.vg-cert-img img {
+    width: 100%;
+    display: block;
+}
+@media only screen and (max-width: 767px) {
+    .vg-cert-box {
+        padding: 28px 22px;
+    }
+    .vg-cert-title {
+        font-size: 24px;
+    }
+}
+
+/* The site-wide ".readon" outline button (e.g. "Xem Thêm Về VietGen") uses a
+   thin 1px border in the primary color against a very light background —
+   that worked fine against the old bright cyan (#21a7d0), but the new navy
+   (#0b0c51) is dark enough that a 1px border reads as nearly invisible next
+   to the equally dark text. Give it a thicker border and a filled navy text
+   color so it stays a clearly visible outline button. */
+.readon:not(.banner-style) {
+    border-width: 2px;
+    color: #0b0c51;
+    font-weight: 700;
+}
+.readon:not(.banner-style):hover {
+    background: #0b0c51;
+    color: #ffffff;
+}
+
+
+/* ===== Trang test trình độ ===== */
+.vg-test-panel {
+    margin-bottom: 40px;
+}
+.vg-test-intro {
+    background: #ffffff;
+    border: 1px solid #e8ebf3;
+    border-radius: 14px;
+    padding: 45px;
+    box-shadow: 0 6px 30px rgba(11, 12, 81, 0.06);
+}
+.vg-test-heading {
+    font-size: 30px;
+    color: #0b0c51;
+    margin-bottom: 15px;
+}
+.vg-test-lead {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 30px;
+}
+.vg-test-meta {
+    margin-bottom: 30px;
+}
+.vg-test-meta-box {
+    background: #f5f7fc;
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.vg-test-meta-box strong {
+    display: block;
+    font-size: 26px;
+    color: #0b0c51;
+    line-height: 1.2;
+}
+.vg-test-meta-box span {
+    font-size: 13px;
+    color: #777777;
+}
+.vg-test-notes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+.vg-test-notes li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #555555;
+    line-height: 1.6;
+}
+.vg-test-notes li i {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #ff6f2a;
+}
+.vg-test-error {
+    background: #fff4f4;
+    border: 1px solid #f5c6c6;
+    color: #d93025;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Thanh tiến độ + đồng hồ */
+.vg-test-progress-bar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #ffffff;
+    border: 1px solid #e8ebf3;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 16px rgba(11, 12, 81, 0.08);
+}
+.vg-test-progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b0c51;
+    margin-bottom: 10px;
+}
+.vg-test-timer {
+    color: #0b0c51;
+}
+.vg-test-timer.vg-timer-low {
+    color: #d93025;
+}
+.vg-test-progress-track {
+    height: 6px;
+    background: #e8ebf3;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.vg-test-progress-fill {
+    height: 100%;
+    width: 0;
+    background: #ff6f2a;
+    border-radius: 3px;
+    transition: width 0.25s ease;
+}
+
+/* Phần thi */
+.vg-test-section {
+    margin-bottom: 40px;
+}
+.vg-test-section-head {
+    border-left: 4px solid #0b0c51;
+    padding-left: 16px;
+    margin-bottom: 25px;
+}
+.vg-test-section-head h3 {
+    font-size: 22px;
+    color: #0b0c51;
+    margin-bottom: 5px;
+}
+.vg-test-section-head p {
+    color: #777777;
+    margin: 0;
+    font-size: 14px;
+}
+.vg-test-passage {
+    background: #f5f7fc;
+    border-radius: 10px;
+    padding: 25px 28px;
+    margin-bottom: 25px;
+}
+.vg-test-passage h4 {
+    font-size: 18px;
+    color: #0b0c51;
+    margin-bottom: 12px;
+}
+.vg-test-passage p {
+    margin: 0;
+    line-height: 1.8;
+    color: #444444;
+    text-align: justify;
+}
+
+/* Thẻ câu hỏi */
+.vg-question-card {
+    background: #ffffff;
+    border: 1px solid #e8ebf3;
+    border-radius: 10px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    transition: border-color 0.2s ease;
+}
+.vg-question-card.vg-answered {
+    border-color: #0b0c51;
+}
+.vg-question-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #171f32;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+.vg-question-num {
+    display: inline-block;
+    min-width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: #0b0c51;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 13px;
+    margin-right: 10px;
+}
+.vg-option {
+    display: flex;
+    align-items: center;
+    padding: 11px 14px;
+    border: 1px solid #e8ebf3;
+    border-radius: 8px;
+    margin-bottom: 9px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+.vg-option:hover {
+    border-color: #0b0c51;
+    background: #f8f9fe;
+}
+.vg-option input {
+    display: none;
+}
+.vg-option-marker {
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #c9cfe0;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    color: #777777;
+    margin-right: 12px;
+    transition: all 0.18s ease;
+}
+.vg-option input:checked ~ .vg-option-marker {
+    background: #0b0c51;
+    border-color: #0b0c51;
+    color: #ffffff;
+}
+.vg-option input:checked ~ .vg-option-text {
+    color: #0b0c51;
+    font-weight: 600;
+}
+.vg-option-text {
+    color: #444444;
+    line-height: 1.5;
+}
+.vg-blank-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.vg-blank-input {
+    flex: 0 0 260px;
+    max-width: 100%;
+    border: 1px solid #e8ebf3;
+    border-radius: 8px;
+    padding: 11px 14px;
+    font-size: 15px;
+    color: #171f32;
+    background: #f8f9fe;
+}
+.vg-blank-input:focus {
+    outline: none;
+    border-color: #0b0c51;
+    background: #ffffff;
+}
+.vg-blank-hint {
+    font-size: 13px;
+    color: #939393;
+    font-style: italic;
+}
+
+.vg-test-actions {
+    text-align: center;
+    padding: 30px 0 10px;
+}
+.vg-test-warn {
+    margin-top: 14px;
+    color: #d93025;
+    font-size: 14px;
+}
+
+/* Màn hình nhập thông tin */
+.vg-test-gate {
+    max-width: 540px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e8ebf3;
+    border-radius: 14px;
+    padding: 40px;
+    box-shadow: 0 6px 30px rgba(11, 12, 81, 0.08);
+}
+.vg-test-gate-title {
+    font-size: 24px;
+    color: #0b0c51;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.vg-test-gate-desc {
+    text-align: center;
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+.vg-test-gate-form input,
+.vg-test-gate-form select {
+    width: 100%;
+    border: 1px solid #e8ebf3;
+    background: #f8f9fe;
+    border-radius: 6px;
+    padding: 13px 15px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #171f32;
+}
+.vg-test-gate-form input:focus,
+.vg-test-gate-form select:focus {
+    outline: none;
+    border-color: #0b0c51;
+}
+
+/* Kết quả */
+.vg-test-score-card {
+    background: #0b0c51;
+    border-radius: 14px;
+    padding: 40px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.vg-score-circle {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+    border: 8px solid #ff6f2a;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.vg-score-circle span {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+}
+.vg-score-circle small {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 6px;
+}
+.vg-score-level {
+    display: inline-block;
+    background: #ff6f2a;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.vg-score-summary,
+.vg-score-advice {
+    line-height: 1.75;
+    margin-bottom: 12px;
+    opacity: 0.92;
+}
+.vg-score-course {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-top: 18px;
+}
+.vg-score-course i {
+    color: #ffc107;
+    margin-right: 8px;
+}
+.vg-section-scores {
+    margin-bottom: 30px;
+}
+.vg-section-score {
+    background: #ffffff;
+    border: 1px solid #e8ebf3;
+    border-radius: 10px;
+    padding: 22px;
+    height: 100%;
+}
+.vg-section-score h5 {
+    font-size: 15px;
+    color: #0b0c51;
+    margin-bottom: 14px;
+}
+.vg-section-bar {
+    height: 8px;
+    background: #e8ebf3;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.vg-section-bar span {
+    display: block;
+    height: 100%;
+    background: #0b0c51;
+    border-radius: 4px;
+}
+.vg-test-cta {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.vg-mail-note {
+    color: #1a7f4b;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+/* Đáp án chi tiết */
+.vg-review-heading {
+    font-size: 24px;
+    color: #0b0c51;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e8ebf3;
+}
+.vg-review-item {
+    background: #ffffff;
+    border: 1px solid #e8ebf3;
+    border-left: 4px solid #c9cfe0;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+}
+.vg-review-item.vg-review-ok {
+    border-left-color: #1a7f4b;
+}
+.vg-review-item.vg-review-bad {
+    border-left-color: #d93025;
+}
+.vg-review-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.vg-review-num {
+    font-weight: 700;
+    color: #0b0c51;
+    font-size: 14px;
+}
+.vg-review-badge {
+    font-size: 13px;
+    font-weight: 600;
+}
+.vg-review-ok .vg-review-badge {
+    color: #1a7f4b;
+}
+.vg-review-bad .vg-review-badge {
+    color: #d93025;
+}
+.vg-review-q {
+    color: #171f32;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.vg-review-line {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 5px;
+}
+.vg-review-line span {
+    color: #939393;
+    margin-right: 5px;
+}
+.vg-review-right {
+    color: #1a7f4b;
+    font-weight: 600;
+}
+.vg-review-explain {
+    background: #f8f9fe;
+    border-radius: 6px;
+    padding: 11px 14px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+}
+.vg-review-explain i {
+    color: #ff6f2a;
+    margin-right: 6px;
+}
+
+@media only screen and (max-width: 767px) {
+    .vg-test-intro,
+    .vg-test-gate {
+        padding: 28px 22px;
+    }
+    .vg-test-heading {
+        font-size: 24px;
+    }
+    .vg-test-score-card {
+        padding: 28px 22px;
+    }
+    .vg-question-card {
+        padding: 20px 18px;
+    }
+    .vg-test-passage {
+        padding: 20px 18px;
+    }
+    .vg-blank-input {
+        flex: 1 1 100%;
+    }
+    /* Chừa chỗ cho cụm nút liên hệ nổi ở góc phải. */
+    .vg-question-card,
+    .vg-test-passage {
+        margin-right: 0;
+    }
+    .vg-test-actions {
+        padding-bottom: 70px;
+    }
+}
+
+/* Nút phụ kiểu viền, dùng cạnh nút CTA chính ở banner */
+.readon.banner-style.vg-btn-outline {
+    background: transparent;
+    color: #0b0c51;
+    border: 2px solid #0b0c51;
+    margin-left: 14px;
+}
+.readon.banner-style.vg-btn-outline:hover {
+    background: #0b0c51;
+    color: #ffffff;
+}
+@media only screen and (max-width: 575px) {
+    .banner-btn .readon.banner-style {
+        display: block;
+        margin: 0 auto 14px;
+        max-width: 290px;
+    }
+    .readon.banner-style.vg-btn-outline {
+        margin-left: auto;
+    }
+}
+
+/* ===== Mục "Test trình độ" nổi bật trên thanh menu ===== */
+/* Trên chính trang test, mục này mang thêm class current-menu-item nên cần
+   nhắc lại màu chữ để quy tắc "đang xem" không đè mất. */
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight.current-menu-item > a,
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight.current-menu-item > a:hover {
+    color: #ffffff !important;
+}
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a {
+    position: relative;
+    background: #ff6f2a;
+    color: #ffffff !important;
+    height: auto;
+    line-height: 1;
+    padding: 10px 18px;
+    border-radius: 22px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(255, 111, 42, 0.35);
+    animation: vgNavPulse 2.4s ease-in-out infinite;
+}
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a:hover {
+    background: #e85f1c;
+    color: #ffffff !important;
+    animation: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 111, 42, 0.45);
+}
+/* Chấm nhỏ báo mục mới */
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background: #ffd43b;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(255, 212, 59, 0.8);
+    animation: vgDotPulse 1.8s ease-out infinite;
+}
+@keyframes vgNavPulse {
+    0%, 100% { box-shadow: 0 4px 14px rgba(255, 111, 42, 0.35); }
+    50%      { box-shadow: 0 4px 22px rgba(255, 111, 42, 0.65); }
+}
+@keyframes vgDotPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255, 212, 59, 0.8); }
+    70%  { box-shadow: 0 0 0 7px rgba(255, 212, 59, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 212, 59, 0); }
+}
+/* Tôn trọng tuỳ chọn giảm chuyển động của người dùng */
+@media (prefers-reduced-motion: reduce) {
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a,
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a::after {
+        animation: none;
+    }
+}
+/* Menu dọc trên mobile: trả về dạng hàng, chỉ giữ màu nhấn */
+@media only screen and (max-width: 991px) {
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a {
+        display: block;
+        border-radius: 0;
+        padding: 10px 20px;
+        box-shadow: none;
+        animation: none;
+    }
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li.vg-nav-highlight > a::after {
+        display: none;
+    }
+}

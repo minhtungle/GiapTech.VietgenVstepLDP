@@ -1,0 +1,200 @@
+{
+  "id": "vocabulary",
+  "title": "Phần 2: Từ vựng - Điền khuyết",
+  "description": "Gõ một từ thích hợp vào chỗ trống. Không phân biệt chữ hoa, chữ thường.",
+  "type": "fill_blank",
+  "questions": [
+    {
+      "id": "bv1",
+      "level": "A2",
+      "question": "Please turn ______ the television before you go to bed.",
+      "answer": ["off"],
+      "hint": "trái nghĩa với on",
+      "explanation": "\"Turn off\" nghĩa là tắt thiết bị điện; \"turn on\" là bật."
+    },
+    {
+      "id": "bv2",
+      "level": "A2",
+      "question": "I go to school ______ bike every day.",
+      "answer": ["by"],
+      "hint": "giới từ chỉ phương tiện đi lại",
+      "explanation": "Dùng \"by + phương tiện\" (by bike, by bus) để nói về cách di chuyển."
+    },
+    {
+      "id": "bv3",
+      "level": "A2",
+      "question": "My birthday is ______ the fifth of May.",
+      "answer": ["on"],
+      "hint": "giới từ đi với ngày cụ thể",
+      "explanation": "Dùng \"on\" với ngày cụ thể, \"in\" với tháng/năm, \"at\" với giờ."
+    },
+    {
+      "id": "bv4",
+      "level": "A2",
+      "question": "She is afraid ______ spiders and never touches them.",
+      "answer": ["of"],
+      "hint": "be afraid ... = sợ",
+      "explanation": "Cụm cố định \"be afraid of something\" nghĩa là sợ cái gì."
+    },
+    {
+      "id": "bv5",
+      "level": "A2",
+      "question": "Can you look ______ my cat while I am away?",
+      "answer": ["after"],
+      "hint": "look ... = chăm sóc",
+      "explanation": "\"Look after\" nghĩa là chăm sóc; phân biệt với \"look for\" (tìm kiếm)."
+    },
+    {
+      "id": "bv6",
+      "level": "A2",
+      "question": "I would like to ______ a photo of this beautiful view.",
+      "answer": ["take"],
+      "hint": "động từ đi với \"a photo\"",
+      "explanation": "Collocation \"take a photo\" nghĩa là chụp ảnh, không dùng \"make\"."
+    },
+    {
+      "id": "bv7",
+      "level": "A2",
+      "question": "Hurry ______! The film starts in ten minutes.",
+      "answer": ["up"],
+      "hint": "hurry ... = nhanh lên",
+      "explanation": "\"Hurry up\" là cụm động từ thông dụng, giục ai đó nhanh lên."
+    },
+    {
+      "id": "bv8",
+      "level": "A2",
+      "question": "He is good at maths ______ he finds English difficult.",
+      "answer": ["but"],
+      "hint": "liên từ chỉ sự tương phản",
+      "explanation": "\"But\" nối hai vế mang ý trái ngược trong cùng một câu."
+    },
+    {
+      "id": "bv9",
+      "level": "B1",
+      "question": "Our teacher asked us to hand ______ the assignment by Friday.",
+      "answer": ["in"],
+      "hint": "hand ... = nộp bài",
+      "explanation": "\"Hand in\" nghĩa là nộp bài tập, báo cáo cho ai đó."
+    },
+    {
+      "id": "bv10",
+      "level": "B1",
+      "question": "I need to find ______ more about the course before I enrol.",
+      "answer": ["out"],
+      "hint": "find ... = tìm hiểu thông tin",
+      "explanation": "\"Find out\" nghĩa là tìm hiểu, phát hiện ra thông tin."
+    },
+    {
+      "id": "bv11",
+      "level": "B1",
+      "question": "The meeting was put ______ until next Monday because of the storm.",
+      "answer": ["off", "back"],
+      "hint": "put ... = hoãn lại",
+      "explanation": "\"Put off\" nghĩa là hoãn lại; \"put back\" cũng được dùng với nghĩa dời lịch."
+    },
+    {
+      "id": "bv12",
+      "level": "B1",
+      "question": "She is responsible ______ training new staff in the department.",
+      "answer": ["for"],
+      "hint": "be responsible ... = chịu trách nhiệm về",
+      "explanation": "Cụm cố định \"be responsible for something\" nghĩa là chịu trách nhiệm về việc gì."
+    },
+    {
+      "id": "bv13",
+      "level": "B1",
+      "question": "He finally succeeded ______ passing the driving test.",
+      "answer": ["in"],
+      "hint": "succeed ... + V-ing",
+      "explanation": "\"Succeed in doing something\" nghĩa là thành công trong việc làm gì."
+    },
+    {
+      "id": "bv14",
+      "level": "B1",
+      "question": "I have to ______ a decision about my career before the end of the year.",
+      "answer": ["make"],
+      "hint": "động từ đi với \"a decision\"",
+      "explanation": "Collocation \"make a decision\" nghĩa là đưa ra quyết định, không dùng \"do\"."
+    },
+    {
+      "id": "bv15",
+      "level": "B1",
+      "question": "The train was late; ______, we missed the opening ceremony.",
+      "answer": ["therefore", "consequently", "so", "thus"],
+      "hint": "từ nối chỉ kết quả",
+      "explanation": "Các từ nối chỉ kết quả như \"therefore\", \"consequently\", \"thus\" đều phù hợp ở đây."
+    },
+    {
+      "id": "bv16",
+      "level": "B1",
+      "question": "Please pay ______ to the instructions before you start the test.",
+      "answer": ["attention"],
+      "hint": "pay ... to = chú ý đến",
+      "explanation": "\"Pay attention to something\" là cụm cố định nghĩa là chú ý đến điều gì."
+    },
+    {
+      "id": "bv17",
+      "level": "B1",
+      "question": "We should take ______ of this opportunity to practise speaking.",
+      "answer": ["advantage"],
+      "hint": "take ... of = tận dụng",
+      "explanation": "\"Take advantage of something\" nghĩa là tận dụng cơ hội hoặc lợi thế."
+    },
+    {
+      "id": "bv18",
+      "level": "B1",
+      "question": "My brother takes ______ our father: they have the same smile.",
+      "answer": ["after"],
+      "hint": "take ... = giống (người thân)",
+      "explanation": "\"Take after somebody\" nghĩa là giống ai đó trong gia đình về ngoại hình hoặc tính cách."
+    },
+    {
+      "id": "bv19",
+      "level": "B2",
+      "question": "The scientists carried ______ a series of experiments on water quality.",
+      "answer": ["out"],
+      "hint": "carry ... = tiến hành",
+      "explanation": "\"Carry out\" nghĩa là tiến hành, thực hiện một nghiên cứu hay kế hoạch."
+    },
+    {
+      "id": "bv20",
+      "level": "B2",
+      "question": "The two sides finally reached an ______ after months of negotiation.",
+      "answer": ["agreement"],
+      "hint": "reach an ... = đạt được thỏa thuận",
+      "explanation": "Collocation \"reach an agreement\" nghĩa là đi đến thỏa thuận chung."
+    },
+    {
+      "id": "bv21",
+      "level": "B2",
+      "question": "The project failed to live ______ to the expectations of the investors.",
+      "answer": ["up"],
+      "hint": "live ... to = đáp ứng kỳ vọng",
+      "explanation": "\"Live up to expectations\" là idiom nghĩa là đáp ứng được kỳ vọng."
+    },
+    {
+      "id": "bv22",
+      "level": "B2",
+      "question": "The research was thorough; ______, the conclusion remains debatable.",
+      "answer": ["nevertheless", "nonetheless", "however"],
+      "hint": "từ nối chỉ sự tương phản",
+      "explanation": "\"Nevertheless\", \"nonetheless\" và \"however\" đều nối hai ý trái ngược một cách trang trọng."
+    },
+    {
+      "id": "bv23",
+      "level": "B2",
+      "question": "Learning a new skill at forty is never easy, but it is not out of the ______ either.",
+      "answer": ["question"],
+      "hint": "out of the ... = hoàn toàn không thể",
+      "explanation": "Idiom \"out of the question\" nghĩa là không thể xảy ra, không thể bàn tới."
+    },
+    {
+      "id": "bv24",
+      "level": "B2",
+      "question": "The government has decided to ______ down on companies that pollute rivers.",
+      "answer": ["crack", "clamp"],
+      "hint": "... down on = mạnh tay xử lý",
+      "explanation": "\"Crack down on\" (hoặc \"clamp down on\") nghĩa là siết chặt, xử lý mạnh tay với ai/điều gì."
+    }
+  ]
+}
