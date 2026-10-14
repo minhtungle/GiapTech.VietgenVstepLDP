@@ -38,7 +38,7 @@ function getTransporter() {
   return transporter
 }
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
+export const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 /** Gửi mail, thử lại vài lần vì máy chủ hay ngắt kết nối khi bận. */
 export async function sendMail({ to, subject, text, replyTo }) {

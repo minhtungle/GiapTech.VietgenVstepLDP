@@ -2,7 +2,7 @@ import express from 'express'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import dotenv from 'dotenv'
-import { sendMail, RECIPIENT } from './mailer.js'
+import { sendMail, RECIPIENT, sleep } from './mailer.js'
 
 dotenv.config()
 
@@ -59,14 +59,60 @@ app.post('/api/register', async (req, res) => {
       text: lines.join('\n'),
       replyTo: `${name} <${email}>`,
     })
-    res.json({ ok: true, message: 'Cảm ơn bạn! VietGen sẽ liên hệ tư vấn trong thời gian sớm nhất.' })
   } catch (err) {
-    console.error('[register] Gửi mail thất bại:', err.message)
-    res.status(500).json({
+    console.error('[register] Gửi mail nội bộ thất bại:', err.message)
+    return res.status(500).json({
       ok: false,
       message: 'Rất tiếc, đã có lỗi xảy ra. Vui lòng thử lại hoặc gọi hotline 0866.538.942.',
     })
   }
+
+  // Nghỉ một nhịp trước phiên SMTP thứ hai: máy chủ hay từ chối khi nhận nhiều
+  // kết nối dồn dập từ cùng một nguồn.
+  await sleep(2000)
+
+  // Mail xác nhận cho khách. Gửi hỏng thì chỉ ghi log: thông tin đã về tới
+  // trung tâm rồi nên không cần báo lỗi cho người vừa đăng ký.
+  const confirmLines = [
+    `Chào ${name},`,
+    '',
+    'VietGen đã nhận được thông tin đăng ký của bạn. Cảm ơn bạn đã quan tâm',
+    'tới các khóa luyện thi chứng chỉ VSTEP của trung tâm.',
+    '',
+    'THÔNG TIN BẠN ĐÃ GỬI',
+    `Họ và tên: ${name}`,
+    `Số điện thoại: ${phone}`,
+  ]
+  if (course) confirmLines.push(`Chứng chỉ quan tâm: ${course}`)
+  if (region) confirmLines.push(`Khu vực: ${region}`)
+  confirmLines.push(
+    '',
+    `Tư vấn viên sẽ liên hệ với bạn qua số ${phone} trong thời gian sớm nhất`,
+    'để trao đổi về lịch học, lịch thi, học phí và lộ trình phù hợp.',
+    '',
+    'Trong lúc chờ, bạn có thể làm bài test trình độ miễn phí trên website',
+    'để biết mình đang ở đâu và nên bắt đầu từ khóa học nào.',
+    '',
+    'Mọi thắc mắc xin liên hệ:',
+    'Hotline: 0866.538.942',
+    `Email: ${RECIPIENT}`,
+    '',
+    'Trân trọng,',
+    'VietGen Language Education',
+  )
+
+  try {
+    await sendMail({
+      to: email,
+      subject: 'VietGen đã nhận đăng ký của bạn',
+      text: confirmLines.join('\n'),
+      replyTo: `VietGen <${RECIPIENT}>`,
+    })
+  } catch (err) {
+    console.error('[register] Gửi mail xác nhận cho khách thất bại:', err.message)
+  }
+
+  res.json({ ok: true, message: 'Cảm ơn bạn! VietGen sẽ liên hệ tư vấn trong thời gian sớm nhất.' })
 })
 
 /**
@@ -131,6 +177,9 @@ app.post('/api/test-result', async (req, res) => {
   } catch (err) {
     console.error('[test-result] Gửi mail học viên thất bại:', err.message)
   }
+
+  // Nghỉ một nhịp trước phiên SMTP thứ hai, giống endpoint đăng ký.
+  await sleep(2000)
 
   const adminLines = [
     'Học viên vừa hoàn thành bài test trình độ trên website.',
