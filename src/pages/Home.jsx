@@ -305,7 +305,7 @@ export default function Home() {
         <div className="container">
           <div className="sec-title2 text-center mb-50 md-mb-30">
             <h2 className="title mb-0">
-              Lộ Trình <span style={{ color: '#0b0c51' }}>Nhanh Chóng</span>
+              Quy Trình <span style={{ color: '#0b0c51' }}>Nhanh Chóng</span>
             </h2>
           </div>
           <div className="row">

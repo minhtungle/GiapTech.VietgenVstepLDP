@@ -588,8 +588,8 @@ export const CONTENT = {
         {
           "name": "Quick Roadmap Section",
           "class": "vg-roadmap-section",
-          "title_html": "Lộ Trình <span style=\"color:#0b0c51;\">Nhanh Chóng</span>",
-          "title_plain": "Lộ Trình Nhanh Chóng",
+          "title_html": "Quy Trình <span style=\"color:#0b0c51;\">Nhanh Chóng</span>",
+          "title_plain": "Quy Trình Nhanh Chóng",
           "items": [
             {
               "number": "1",
