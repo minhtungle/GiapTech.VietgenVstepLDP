@@ -324,3 +324,73 @@ a[href^="mailto:"] {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* ===== Con trỏ chuột tuỳ chỉnh =====
+   Chấm nhỏ bám sát chuột, vòng tròn chạy theo sau và phình ra khi di qua nút.
+   Chỉ bật khi body có class vg-cursor-on (thiết bị có chuột thật, người dùng
+   không bật giảm chuyển động). */
+.vg-cursor-dot,
+.vg-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
+    opacity: 0;
+    will-change: transform;
+}
+.vg-cursor-dot {
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: #ff6f2a;
+    border-radius: 50%;
+    transition: opacity 0.2s ease;
+}
+.vg-cursor-ring {
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    border: 2px solid rgba(11, 12, 81, 0.55);
+    border-radius: 50%;
+    transition: width 0.22s ease, height 0.22s ease, margin 0.22s ease,
+                border-color 0.22s ease, background-color 0.22s ease, opacity 0.2s ease;
+}
+/* Di qua nút hoặc link: vòng tròn phình to và đổi sang màu cam */
+.vg-cursor-ring.vg-cursor-hover {
+    width: 54px;
+    height: 54px;
+    margin: -27px 0 0 -27px;
+    border-color: #ff6f2a;
+    background: rgba(255, 111, 42, 0.12);
+}
+/* Nhấn chuột: co lại một nhịp cho có phản hồi */
+.vg-cursor-ring.vg-cursor-down {
+    width: 26px;
+    height: 26px;
+    margin: -13px 0 0 -13px;
+    border-color: #ff6f2a;
+}
+
+/* Ẩn con trỏ mặc định khi con trỏ tuỳ chỉnh đang chạy.
+   Vẫn giữ con trỏ text trong ô nhập liệu để người dùng biết chỗ gõ chữ. */
+body.vg-cursor-on,
+body.vg-cursor-on a,
+body.vg-cursor-on button,
+body.vg-cursor-on label,
+body.vg-cursor-on select,
+body.vg-cursor-on [role="button"] {
+    cursor: none;
+}
+body.vg-cursor-on input:not([type="submit"]):not([type="button"]),
+body.vg-cursor-on textarea {
+    cursor: text;
+}
+
+/* Máy cảm ứng hoặc người dùng bật giảm chuyển động: không hiện gì cả */
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+    .vg-cursor-dot,
+    .vg-cursor-ring {
+        display: none;
+    }
+}
