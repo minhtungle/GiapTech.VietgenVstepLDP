@@ -4,6 +4,7 @@ import Seo from '../components/Seo.jsx'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
 import { postJSON } from '../lib/api.js'
 import { pages } from '../data/content.js'
+import QuickSignup from '../components/QuickSignup.jsx'
 
 const page = pages.contact
 const contactSection = page.sections.find((s) => s.name === 'Contact Section') || {}
@@ -178,15 +179,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
-                <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Nhập email của bạn"
-                    required
-                  />
-                  <button type="submit">Đăng Ký</button>
-                </form>
+                <QuickSignup placeholder="Nhập số điện thoại của bạn" buttonText="Đăng Ký" />
               </div>
             </div>
           </div>

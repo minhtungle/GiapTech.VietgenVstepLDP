@@ -4,6 +4,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 
 import Seo from '../components/Seo.jsx'
 import { useLeadPopup } from '../App.jsx'
+import QuickSignup from '../components/QuickSignup.jsx'
 import { pages, courses, teachers, testimonials, schedule, partners } from '../data/content.js'
 
 const page = pages.index
@@ -577,21 +578,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <form
-                    className="newsletter-form"
-                    onSubmit={(e) => {
-                      e.preventDefault()
-                      openLead()
-                    }}
-                  >
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder={newsletter.form?.input_placeholder}
-                      required
-                    />
-                    <button type="submit">{newsletter.form?.button}</button>
-                  </form>
+                  <QuickSignup
+                    placeholder="Nhập số điện thoại của bạn"
+                    buttonText={newsletter.form?.button}
+                  />
                 </div>
               </div>
             </div>

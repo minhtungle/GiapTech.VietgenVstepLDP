@@ -93,8 +93,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#/" onClick={(e) => e.preventDefault()}>
-                    <i className="fa fa-tiktok" />
+                  <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i className="fa fa-whatsapp" />
                   </a>
                 </li>
               </ul>

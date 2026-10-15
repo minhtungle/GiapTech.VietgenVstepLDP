@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Seo from '../components/Seo.jsx'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
 import { pages } from '../data/content.js'
+import QuickSignup from '../components/QuickSignup.jsx'
 
 const page = pages['team-single']
 const sections = page.sections
@@ -146,15 +147,10 @@ export default function TeacherDetail() {
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
-                <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder={newsletter.form?.input_placeholder}
-                    required
-                  />
-                  <button type="submit">{newsletter.form?.button}</button>
-                </form>
+                <QuickSignup
+                  placeholder="Nhập số điện thoại của bạn"
+                  buttonText={newsletter.form?.button}
+                />
               </div>
             </div>
           </div>

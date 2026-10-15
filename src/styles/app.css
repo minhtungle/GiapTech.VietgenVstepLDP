@@ -477,3 +477,33 @@ body.vg-cursor-on textarea {
     }
 }
 
+
+/* Thông báo của form đăng ký nhanh ở dải CTA (nền navy nên chữ phải sáng). */
+.vg-quick-msg {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.vg-quick-msg-ok {
+    color: #ffc107;
+}
+.vg-quick-msg-error {
+    color: #ff9a8a;
+}
+.newsletter-form button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Dòng bản quyền ở footer: giữ trên một dòng, không bẻ đôi câu.
+   Cột giữa hẹp nên chữ bị xuống dòng giữa "All" và "Rights Reserved". */
+#rs-footer .footer-bottom .copyright p {
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 991px) {
+    /* Màn hình hẹp thì cho xuống dòng, nếu không chữ sẽ tràn khỏi khung. */
+    #rs-footer .footer-bottom .copyright p {
+        white-space: normal;
+    }
+}

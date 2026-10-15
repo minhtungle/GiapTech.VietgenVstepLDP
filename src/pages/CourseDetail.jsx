@@ -5,6 +5,7 @@ import Seo from '../components/Seo.jsx'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
 import { useLeadPopup } from '../App.jsx'
 import { pages } from '../data/content.js'
+import QuickSignup from '../components/QuickSignup.jsx'
 
 const page = pages['course-single']
 const sections = page.sections
@@ -304,21 +305,7 @@ export default function CourseDetail() {
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
-                <form
-                  className="newsletter-form"
-                  onSubmit={(e) => {
-                    e.preventDefault()
-                    openLead()
-                  }}
-                >
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Nhập email hoặc số điện thoại"
-                    required
-                  />
-                  <button type="submit">Đăng Ký</button>
-                </form>
+                <QuickSignup placeholder="Nhập số điện thoại của bạn" buttonText="Đăng Ký" />
               </div>
             </div>
           </div>
