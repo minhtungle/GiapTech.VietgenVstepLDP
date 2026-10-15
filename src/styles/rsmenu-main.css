@@ -128,7 +128,7 @@ Version: 1.0.0
 }
 .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li a {
   transition: all 0.3s ease 0s;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 16px;
   text-transform: capitalize;
   height: 96px;
@@ -344,7 +344,7 @@ Version: 1.0.0
   display: inline-block;
   border-radius: 5px;
   font-weight: 600;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 .expand-btn .header-btn:hover {
   background: #fff;

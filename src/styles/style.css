@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800');
-
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900');
 /** 
 * 
 * -----------------------------------------------------------------------------
@@ -61,7 +58,7 @@ html,
 body {
   font-size: 15px;
   color: #505050;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   vertical-align: baseline;
   line-height: 26px;
   font-weight: 400;
@@ -81,7 +78,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   color: #111111;
   margin: 0 0 26px;
   line-height: 1.2;
@@ -127,7 +124,7 @@ h6 {
 .bold-text {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 .extra-bold {
   font-weight: 800 !important;
@@ -498,7 +495,7 @@ blockquote p {
   display: inline-block;
   text-transform: uppercase;
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 700;
   color: #111111;
   background: #f3f8f9;
@@ -651,7 +648,7 @@ blockquote p {
   display: inline-block;
   text-transform: capitalize;
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 500;
   color: #ffffff;
 }
@@ -678,7 +675,7 @@ blockquote p {
   display: inline-block;
   text-transform: capitalize;
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 500;
   color: #ffffff;
   background: #0b0c51;
@@ -777,7 +774,7 @@ blockquote p {
   display: inline-block;
   text-transform: uppercase;
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 500;
   color: #ffffff;
   background: #0b0c51;
@@ -4639,7 +4636,7 @@ body .modal-backdrop {
 .rs-slider.style1 .slider-content .sl-sub-title {
   font-size: 48px;
   line-height: 58px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   margin-bottom: 24px;
 }
 .rs-slider.style1 .slider-content .sl-title {
@@ -4715,7 +4712,7 @@ body .modal-backdrop {
 .rs-slider.style2 .slide-part .content .title {
   font-size: 55px;
   line-height: 70px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   margin-bottom: 40px;
   color: #031a3d;
 }
@@ -5001,7 +4998,7 @@ body .modal-backdrop {
   font-size: 22px;
   padding: 0;
   margin-bottom: 15px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 700;
   color: #111111;
 }
@@ -5085,7 +5082,7 @@ body .modal-backdrop {
 }
 .rs-about.style1 .notice-bord.style1 li .date span {
   font-size: 22px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   display: block;
 }
 .rs-about.style1 .notice-bord.style1 li .desc {
@@ -8847,7 +8844,7 @@ body .modal-backdrop {
   padding: 98px 0 98px 320px;
 }
 .rs-testimonial.style1 .testi-item .content-part .desc {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 600;
   color: #111111;
   font-size: 36px;
@@ -8907,7 +8904,7 @@ body .modal-backdrop {
   font-size: 22px;
   font-weight: 600;
   line-height: 30px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   color: #112958;
   display: inline;
   position: relative;
@@ -8945,7 +8942,7 @@ body .modal-backdrop {
   font-size: 22px;
   font-weight: 600;
   line-height: 30px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   color: #111111;
   display: inline;
   position: relative;
@@ -9547,7 +9544,7 @@ body .modal-backdrop {
   font-size: 20px;
   color: #000000;
   font-weight: 700;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 .rs-testimonial.home12-style .testi-item .item-content-basic .testi-content .designation {
   font-size: 16px;
@@ -9769,7 +9766,7 @@ body .modal-backdrop {
 }
 .rs-blog.style1 .events-short .date-part .date {
   font-size: 50px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   color: #0b0c51;
   font-weight: 700;
 }
@@ -10385,7 +10382,7 @@ body .modal-backdrop {
 }
 .rs-blog.home9-style .short .date-part .date {
   font-size: 50px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   color: #0b0c51;
   font-weight: 700;
 }
@@ -11287,7 +11284,7 @@ body .modal-backdrop {
 }
 .rs-latest-events.style1 .event-wrap .events-short .date-part .date {
   font-size: 50px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   color: #112958;
   font-weight: 700;
 }

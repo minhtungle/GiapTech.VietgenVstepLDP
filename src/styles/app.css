@@ -252,3 +252,75 @@ button.readon {
 .vg-popup-note i {
     color: #ff6f2a !important;
 }
+
+/* ===== Font tiếng Việt =====
+   Be Vietnam Pro thiết kế riêng cho tiếng Việt, dấu đặt cân đối. Font cũ
+   (Rubik, Nunito) không tải bộ ký tự tiếng Việt nên chữ có dấu bị thay bằng
+   font hệ thống, gây lệch nét giữa chữ có dấu và không dấu. */
+body,
+input,
+textarea,
+select,
+button {
+    font-family: 'Be Vietnam Pro', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ===== Ngắt dòng cân xứng =====
+   text-wrap: balance chia đều chữ cho các dòng của tiêu đề ngắn, tránh dòng
+   cuối chỉ còn một hai từ. Trình duyệt cũ bỏ qua thuộc tính này, chữ vẫn hiển
+   thị bình thường. */
+h1, h2, h3, h4, h5, h6,
+.title, .sec-title .title, .sec-title2 .title,
+.page-title, .vg-test-heading, .widget-title {
+    text-wrap: balance;
+}
+
+/* Đoạn văn dài dùng pretty: giữ nhịp dòng tự nhiên nhưng không để dòng cuối
+   mồ côi một từ. */
+p, .desc, .sub-text, .vg-test-lead, .vg-question-title, .vg-review-q {
+    text-wrap: pretty;
+}
+
+/* Không tách những cụm luôn đi liền nhau xuống hai dòng */
+.topbar-contact li,
+#rs-footer .address-widget li .desc,
+.vg-score-course span {
+    overflow-wrap: break-word;
+}
+
+/* Số điện thoại và email không bao giờ bị ngắt giữa chừng */
+a[href^="tel:"],
+a[href^="mailto:"] {
+    white-space: nowrap;
+}
+
+/* Email trong footer dài hơn cột. Thu nhỏ một chút để vừa trọn một dòng,
+   thay vì bẻ giữa tên miền thành "vietgeneducation." / "edu.vn". */
+#rs-footer .address-widget a[href^="mailto:"] {
+    white-space: nowrap;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+}
+@media only screen and (max-width: 1199px) {
+    /* Cột hẹp hơn thì đành cho xuống dòng, nhưng ưu tiên ngắt ở dấu @ */
+    #rs-footer .address-widget a[href^="mailto:"] {
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Đoạn mô tả dưới tiêu đề section: giới hạn bề ngang cho dễ đọc.
+   Dòng dài gần 1300px khiến mắt khó bắt được đầu dòng kế tiếp; khoảng 70-75
+   ký tự mỗi dòng là dễ đọc nhất. */
+.sec-title .desc,
+.sec-title2 .desc,
+.sec-title3 .desc {
+    max-width: 760px;
+}
+.sec-title.text-center .desc,
+.sec-title2.text-center .desc,
+.sec-title3.text-center .desc,
+.text-center > .desc {
+    margin-left: auto;
+    margin-right: auto;
+}
