@@ -213,3 +213,11 @@ button.readon {
 .vg-popup-close {
     z-index: 2002;
 }
+
+/* Logo chữ Zalo: giữ khoảng thở với viền nút trên màn hình nhỏ. */
+@media only screen and (max-width: 767px) {
+    .vg-float-zalo svg {
+        width: 32px;
+        height: 15px;
+    }
+}
