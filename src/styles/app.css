@@ -221,3 +221,34 @@ button.readon {
         height: 15px;
     }
 }
+
+/* ===== Icon và dấu đầu dòng trên nền tối =====
+   Template gốc đặt các chi tiết này màu navy #0b0c51 hoặc xám #505050, vốn hợp
+   với nền trắng. Ở footer, topbar và popup thì nền cũng là navy nên chúng chìm
+   hẳn (tương phản chỉ 1.0-1.6). Đổi sang vàng nhấn và trắng để nổi rõ. */
+
+/* Dấu đầu dòng ở footer */
+#rs-footer .site-map li::before {
+    background: #ffc107 !important;
+}
+
+/* Icon liên hệ ở footer: vị trí, điện thoại, email.
+   Đây là font-icon nên ký tự được vẽ trong ::before; đặt màu trên thẻ <i>
+   không ăn, phải nhắm thẳng vào pseudo-element. */
+#rs-footer .address-widget li i,
+#rs-footer .address-widget li i::before {
+    color: #ffc107 !important;
+}
+
+/* Icon ở thanh trên cùng */
+.topbar-area .topbar-right .fa-phone,
+.topbar-area .topbar-right .fa-phone::before,
+.topbar-area .topbar-contact li i,
+.topbar-area .topbar-contact li i::before {
+    color: #ffc107 !important;
+}
+
+/* Icon khiên "thông tin được bảo mật" trong popup đăng ký */
+.vg-popup-note i {
+    color: #ff6f2a !important;
+}
