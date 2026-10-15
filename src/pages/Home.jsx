@@ -64,6 +64,34 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Lịch Khai Giảng - đặt ngay sau banner để người mới vào thấy ngay
+          lớp nào sắp mở, không phải cuộn sâu tìm. */}
+      <div className="vg-schedule-section pt-70 pb-70 md-pt-50 md-pb-50">
+        <div className="container">
+          <div className="sec-title2 text-center mb-40 md-mb-30">
+            <h2 className="title mb-0">{about.notice_board?.title}</h2>
+          </div>
+          <div className="row">
+            {schedule.map((item) => (
+              <div className="col-lg-3 col-md-6 md-mb-20" key={`${item.day}-${item.month}`}>
+                <div className="vg-schedule-card">
+                  <div className="vg-schedule-date">
+                    <span>{item.day}</span>
+                    {item.month}
+                  </div>
+                  <div className="vg-schedule-desc">{item.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-40 md-mt-25">
+            <button type="button" className="readon banner-style" onClick={openLead}>
+              Đăng Ký Giữ Chỗ
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Certificate Intro Section */}
       <div className="vg-cert-section pt-100 pb-100 md-pt-70 md-pb-70">
         <div className="container">
@@ -112,23 +140,7 @@ export default function Home() {
       <div id="rs-about" className="rs-about style1 pb-100 md-pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 order-last">
-              <div className="notice-bord style1">
-                <h4 className="title">{about.notice_board?.title}</h4>
-                <ul>
-                  {schedule.map((item) => (
-                    <li key={`${item.day}-${item.month}`}>
-                      <div className="date">
-                        <span>{item.day}</span>
-                        {item.month}
-                      </div>
-                      <div className="desc">{item.desc}</div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-8 pr-50 md-pr-15">
+            <div className="col-lg-12">
               <div className="about-part">
                 <div className="sec-title mb-40">
                   <div className="sub-title primary">{about.sub_title}</div>
