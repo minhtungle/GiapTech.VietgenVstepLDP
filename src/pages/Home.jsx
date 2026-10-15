@@ -64,30 +64,49 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Lịch Khai Giảng - đặt ngay sau banner để người mới vào thấy ngay
-          lớp nào sắp mở, không phải cuộn sâu tìm. */}
-      <div className="vg-schedule-section pt-70 pb-70 md-pt-50 md-pb-50">
+      {/* Giới thiệu + Lịch khai giảng, đặt ngay sau banner: khách vừa biết
+          VietGen là ai, vừa thấy ngay lớp nào sắp mở để đăng ký. */}
+      <div id="rs-about" className="vg-intro-schedule pt-80 pb-80 md-pt-55 md-pb-55">
         <div className="container">
-          <div className="sec-title2 text-center mb-40 md-mb-30">
-            <h2 className="title mb-0">{about.notice_board?.title}</h2>
-          </div>
           <div className="row">
-            {schedule.map((item) => (
-              <div className="col-lg-3 col-md-6 md-mb-20" key={`${item.day}-${item.month}`}>
-                <div className="vg-schedule-card">
-                  <div className="vg-schedule-date">
-                    <span>{item.day}</span>
-                    {item.month}
-                  </div>
-                  <div className="vg-schedule-desc">{item.desc}</div>
+            <div className="col-lg-7 md-mb-40">
+              <div className="about-part">
+                <div className="sec-title mb-30">
+                  <div className="sub-title primary">{about.sub_title}</div>
+                  <h2 className="title">{about.title}</h2>
+                  <div className="desc">{about.desc}</div>
+                </div>
+                <div className="btn-part mt-25">
+                  <Link className="readon" to="/gioi-thieu">
+                    {about.buttons?.[0]?.text}
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-40 md-mt-25">
-            <button type="button" className="readon banner-style" onClick={openLead}>
-              Đăng Ký Giữ Chỗ
-            </button>
+            </div>
+
+            <div className="col-lg-5">
+              <div className="vg-schedule-box">
+                <h3 className="vg-schedule-title">{about.notice_board?.title}</h3>
+                <ul className="vg-schedule-list">
+                  {schedule.map((item) => (
+                    <li key={`${item.day}-${item.month}`}>
+                      <div className="vg-schedule-date">
+                        <span>{item.day}</span>
+                        {item.month}
+                      </div>
+                      <div className="vg-schedule-desc">{item.desc}</div>
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  type="button"
+                  className="readon banner-style vg-schedule-cta"
+                  onClick={openLead}
+                >
+                  Đăng Ký Giữ Chỗ
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -129,33 +148,6 @@ export default function Home() {
               <div className="col-lg-5">
                 <div className="vg-cert-img">
                   <img src={cert.images?.[0]?.src} alt={cert.images?.[0]?.alt} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* About Section */}
-      <div id="rs-about" className="rs-about style1 pb-100 md-pb-70">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="about-part">
-                <div className="sec-title mb-40">
-                  <div className="sub-title primary">{about.sub_title}</div>
-                  <h2 className="title">{about.title}</h2>
-                  <div className="desc">{about.desc}</div>
-                </div>
-                <div className="sign-part">
-                  <div className="author-part">
-                    <span className="post">{about.signature}</span>
-                  </div>
-                </div>
-                <div className="btn-part mt-20">
-                  <Link className="readon" to="/gioi-thieu">
-                    {about.buttons?.[0]?.text}
-                  </Link>
                 </div>
               </div>
             </div>
