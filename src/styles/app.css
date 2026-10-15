@@ -200,3 +200,16 @@ button.readon {
     color: #0b0c51;
     margin-bottom: 10px;
 }
+
+/* Thanh liên hệ trên cùng nổi lên trên lớp phủ của popup đăng ký.
+   Popup phủ một lớp tối lên cả trang, làm email và số hotline chìm hẳn, đúng
+   lúc khách đang cân nhắc liên hệ. Cho topbar nằm trên lớp phủ để các thông tin
+   này luôn đọc được. */
+.topbar-area {
+    position: relative;
+    z-index: 2001;
+}
+/* Nút đóng popup phải nằm trên topbar, nếu không sẽ bị topbar che mất. */
+.vg-popup-close {
+    z-index: 2002;
+}
