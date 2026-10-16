@@ -98,9 +98,8 @@ export default function OfferCountdown() {
     <div className="vg-offer-bar" role="region" aria-label="Ưu đãi có hạn">
       <div className="vg-offer-inner">
         <div className="vg-offer-text">
-          <span className="vg-offer-badge">ƯU ĐÃI</span>
           <span className="vg-offer-headline">
-            Giảm học phí cho học viên đăng ký hôm nay
+            Nhận ưu đãi học phí ngay hôm nay
           </span>
         </div>
 

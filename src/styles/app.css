@@ -1262,17 +1262,6 @@ body.vg-cursor-on textarea {
     flex: 1 1 auto;
     min-width: 0;
 }
-.vg-offer-badge {
-    flex: 0 0 auto;
-    background: #ff6f2a;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    animation: vgNavPulse 2.4s ease-in-out infinite;
-}
 .vg-offer-headline {
     color: #ffffff;
     font-size: 15px;
@@ -1369,10 +1358,19 @@ body:has(.vg-offer-bar) .vg-floating-contact {
 }
 @media only screen and (max-width: 991px) {
     body:has(.vg-offer-bar) #scrollUp {
-        bottom: 140px;
+        bottom: 104px;
     }
     body:has(.vg-offer-bar) .vg-floating-contact {
-        bottom: 144px;
+        bottom: 108px;
+    }
+}
+/* Dưới 575px thanh xếp hai hàng nên cao hơn, cần chừa thêm */
+@media only screen and (max-width: 575px) {
+    body:has(.vg-offer-bar) #scrollUp {
+        bottom: 104px;
+    }
+    body:has(.vg-offer-bar) .vg-floating-contact {
+        bottom: 108px;
     }
 }
 
@@ -1410,9 +1408,6 @@ body:has(.vg-offer-bar) .vg-floating-contact {
 
 @media (prefers-reduced-motion: reduce) {
     .vg-offer-bar {
-        animation: none;
-    }
-    .vg-offer-badge {
         animation: none;
     }
 }
@@ -1539,10 +1534,6 @@ body:has(.vg-offer-bar) .vg-floating-contact {
     .vg-offer-unit small {
         font-size: 12px;
     }
-    .vg-offer-badge {
-        font-size: 13px;
-        padding: 6px 13px;
-    }
 }
 
 /* Link "Xem Chi Tiết" và các nút chữ trong thẻ: nới vùng chạm cho ngón tay.
@@ -1637,11 +1628,7 @@ body:has(.vg-offer-bar) .vg-floating-contact {
     .vg-offer-text {
         flex: 0 0 auto;
     }
-    .vg-offer-badge {
-        font-size: 11px;
-        padding: 5px 10px;
-    }
-    .vg-offer-unit {
+.vg-offer-unit {
         min-width: 36px;
         padding: 3px 4px;
     }
@@ -1674,9 +1661,6 @@ body:has(.vg-offer-bar) .vg-floating-contact {
 
 /* Màn hình rất hẹp: ẩn nhãn ƯU ĐÃI, chỉ giữ đồng hồ và nút */
 @media only screen and (max-width: 400px) {
-    .vg-offer-badge {
-        display: none;
-    }
 }
 
 /* Căn nút menu thẳng hàng với logo. Template đặt .mobile-menu absolute nên nó
@@ -1769,10 +1753,7 @@ body:has(.vg-offer-bar) .vg-floating-contact {
     .vg-offer-unit small {
         font-size: 12px;
     }
-    .vg-offer-badge {
-        font-size: 12px;
-    }
-    .vg-offer-unit {
+.vg-offer-unit {
         min-width: 38px;
         padding: 3px 3px;
     }
@@ -1873,5 +1854,58 @@ body:has(.vg-offer-bar) .vg-floating-contact {
     .full-width-header .rs-header .menu-area .logo-part a,
     .full-width-header .rs-header .menu-area .logo-part img {
         display: block;
+    }
+}
+
+/* ===== Thanh ưu đãi sau khi bỏ nhãn "ƯU ĐÃI" =====
+   Quy tắc ẩn .vg-offer-headline ở màn hẹp có từ lúc còn nhãn thay thế; nay bỏ
+   nhãn thì ẩn chữ đi là không còn gì. Hiện lại, thu cỡ chữ cho vừa. */
+@media only screen and (max-width: 575px) {
+    .vg-offer-headline {
+        display: block !important;
+        font-size: 12px;
+        line-height: 1.35;
+    }
+}
+
+/* Máy tính bảng (768-991px): gom về một hàng thay vì hai, đỡ chiếm chỗ */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .vg-offer-inner {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .vg-offer-text {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .vg-offer-headline {
+        font-size: 13px;
+    }
+}
+
+/* Trên điện thoại tổng bề ngang các phần (chữ 202 + đồng hồ 136 + nút 102 +
+   nút đóng 40 = 480px) vượt quá màn hình. Xếp hai hàng: chữ ở trên, đồng hồ và
+   nút ở dưới. */
+@media only screen and (max-width: 575px) {
+    .vg-offer-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7px 10px;
+        padding: 9px 40px 9px 10px;
+    }
+    .vg-offer-text {
+        flex: 1 1 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .vg-offer-headline {
+        font-size: 13px;
+    }
+    .vg-offer-clock {
+        flex: 0 0 auto;
+    }
+    .vg-offer-cta {
+        flex: 0 0 auto;
     }
 }
