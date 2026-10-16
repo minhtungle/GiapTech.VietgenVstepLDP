@@ -15,7 +15,17 @@ function flattenQuestions(sections) {
     if (section.type === 'reading') {
       for (const passage of section.passages ?? []) {
         for (const q of passage.questions ?? []) {
-          out.push({ ...q, type: 'multiple_choice', sectionId: section.id, sectionTitle: section.title })
+          // Kèm luôn đoạn văn: khi làm từng câu một, học viên cần thấy đoạn đọc
+          // ngay bên cạnh câu hỏi chứ không phải cuộn ngược lên tìm.
+          out.push({
+            ...q,
+            type: 'multiple_choice',
+            sectionId: section.id,
+            sectionTitle: section.title,
+            passageId: passage.id,
+            passageTitle: passage.title,
+            passageText: passage.text,
+          })
         }
       }
     } else {
@@ -43,6 +53,7 @@ export default function PlacementTest() {
   const [loadError, setLoadError] = useState(false)
 
   const [stage, setStage] = useState(STAGES.INTRO)
+  const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState({})
   const [secondsLeft, setSecondsLeft] = useState(0)
   const [confirmSubmit, setConfirmSubmit] = useState(false)
@@ -125,6 +136,7 @@ export default function PlacementTest() {
   }, [stage, secondsLeft, goToGate])
 
   function startTest() {
+    setCurrent(0)
     setSecondsLeft((config?.duration_minutes ?? 25) * 60)
     setStage(STAGES.QUIZ)
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -213,7 +225,9 @@ export default function PlacementTest() {
 
           {config && stage === STAGES.QUIZ && (
             <QuizPanel
-              sections={sections}
+              questions={questions}
+              current={current}
+              setCurrent={setCurrent}
               answers={answers}
               setAnswers={setAnswers}
               answeredCount={answeredCount}
@@ -298,10 +312,12 @@ function IntroPanel({ config, total, onStart }) {
 }
 
 function QuizPanel({
-  sections, answers, setAnswers, answeredCount, total, timer, timerLow, onSubmit, warning,
+  questions, answers, setAnswers, answeredCount, total, timer, timerLow,
+  onSubmit, warning, current, setCurrent,
 }) {
-  let counter = 0
   const progress = total ? Math.round((answeredCount / total) * 100) : 0
+  const q = questions[current]
+  if (!q) return null
 
   const setAnswer = (id, value) => setAnswers((prev) => ({ ...prev, [id]: value }))
   const clearAnswer = (id) =>
@@ -311,12 +327,27 @@ function QuizPanel({
       return next
     })
 
+  const go = (index) => {
+    if (index < 0 || index >= total) return
+    setCurrent(index)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  // Câu đọc hiểu kế tiếp cùng một đoạn văn thì không lặp lại đoạn đó.
+  const prevQ = questions[current - 1]
+  const showPassage = q.passageText && (!prevQ || prevQ.passageId !== q.passageId)
+
+  const isAnswered = (item) => {
+    const v = answers[item.id]
+    return item.type === 'fill_blank' ? Boolean(v && String(v).trim()) : v !== undefined
+  }
+
   return (
     <div className="vg-test-panel">
       <div className="vg-test-progress-bar">
         <div className="vg-test-progress-info">
           <span>
-            Đã làm {answeredCount}/{total} câu
+            Câu {current + 1}/{total} · đã làm {answeredCount}
           </span>
           <span className={`vg-test-timer${timerLow ? ' vg-timer-low' : ''}`}>
             <i className="fa fa-clock-o" /> {timer}
@@ -327,58 +358,103 @@ function QuizPanel({
         </div>
       </div>
 
-      {sections.map((section) => (
-        <div className="vg-test-section" key={section.id}>
-          <div className="vg-test-section-head">
-            <h3>{section.title}</h3>
-            <p>{section.description}</p>
+      <div className="row">
+        <div className="col-lg-8 md-mb-30">
+          <div className="vg-test-section-head vg-test-section-head-sm">
+            <h3>{q.sectionTitle}</h3>
           </div>
 
-          {section.type === 'reading'
-            ? section.passages.map((passage) => (
-                <div key={passage.id}>
-                  <div className="vg-test-passage">
-                    <h4>{passage.title}</h4>
-                    <p>{passage.text}</p>
-                  </div>
-                  {passage.questions.map((q) => (
-                    <ChoiceCard
-                      key={q.id}
-                      q={q}
-                      index={++counter}
-                      value={answers[q.id]}
-                      onChange={(v) => setAnswer(q.id, v)}
-                    />
-                  ))}
-                </div>
-              ))
-            : section.questions.map((q) =>
-                section.type === 'fill_blank' ? (
-                  <BlankCard
-                    key={q.id}
-                    q={q}
-                    index={++counter}
-                    value={answers[q.id] ?? ''}
-                    onChange={(v) => (v.trim() ? setAnswer(q.id, v) : clearAnswer(q.id))}
-                  />
-                ) : (
-                  <ChoiceCard
-                    key={q.id}
-                    q={q}
-                    index={++counter}
-                    value={answers[q.id]}
-                    onChange={(v) => setAnswer(q.id, v)}
-                  />
-                ),
-              )}
-        </div>
-      ))}
+          {showPassage && (
+            <div className="vg-test-passage">
+              <h4>{q.passageTitle}</h4>
+              <p>{q.passageText}</p>
+            </div>
+          )}
 
-      <div className="vg-test-actions">
-        <button type="button" className="readon banner-style uppercase" onClick={onSubmit}>
-          Nộp Bài &amp; Xem Kết Quả
-        </button>
-        {warning && <p className="vg-test-warn">{warning}</p>}
+          {q.type === 'fill_blank' ? (
+            <BlankCard
+              q={q}
+              index={current + 1}
+              value={answers[q.id] ?? ''}
+              onChange={(v) => (v.trim() ? setAnswer(q.id, v) : clearAnswer(q.id))}
+            />
+          ) : (
+            <ChoiceCard
+              q={q}
+              index={current + 1}
+              value={answers[q.id]}
+              onChange={(v) => setAnswer(q.id, v)}
+            />
+          )}
+
+          <div className="vg-test-nav">
+            <button
+              type="button"
+              className="vg-test-nav-btn"
+              onClick={() => go(current - 1)}
+              disabled={current === 0}
+            >
+              <i className="fa fa-angle-left" /> Câu trước
+            </button>
+
+            {current < total - 1 ? (
+              <button type="button" className="vg-test-nav-btn vg-test-nav-next" onClick={() => go(current + 1)}>
+                Câu sau <i className="fa fa-angle-right" />
+              </button>
+            ) : (
+              <button type="button" className="readon banner-style uppercase" onClick={onSubmit}>
+                Nộp Bài &amp; Xem Kết Quả
+              </button>
+            )}
+          </div>
+
+          {warning && <p className="vg-test-warn">{warning}</p>}
+        </div>
+
+        <div className="col-lg-4">
+          <div className="vg-test-map">
+            <h4 className="vg-test-map-title">Danh sách câu hỏi</h4>
+            <div className="vg-test-map-grid">
+              {questions.map((item, i) => {
+                const classes = [
+                  'vg-test-map-cell',
+                  isAnswered(item) ? 'vg-map-done' : '',
+                  i === current ? 'vg-map-current' : '',
+                ]
+                  .filter(Boolean)
+                  .join(' ')
+                return (
+                  <button
+                    type="button"
+                    key={item.id}
+                    className={classes}
+                    onClick={() => go(i)}
+                    aria-label={`Câu ${i + 1}${isAnswered(item) ? ' - đã làm' : ' - chưa làm'}`}
+                    aria-current={i === current ? 'true' : undefined}
+                  >
+                    {i + 1}
+                  </button>
+                )
+              })}
+            </div>
+
+            <ul className="vg-test-map-legend">
+              <li>
+                <span className="vg-legend-box vg-map-done" /> Đã làm ({answeredCount})
+              </li>
+              <li>
+                <span className="vg-legend-box" /> Chưa làm ({total - answeredCount})
+              </li>
+              <li>
+                <span className="vg-legend-box vg-map-current" /> Câu hiện tại
+              </li>
+            </ul>
+
+            <button type="button" className="vg-popup-submit vg-test-map-submit" onClick={onSubmit}>
+              NỘP BÀI
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )

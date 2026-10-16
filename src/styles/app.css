@@ -1056,3 +1056,163 @@ body.vg-cursor-on textarea {
     transform: translateY(-6px);
     box-shadow: 0 14px 34px rgba(11, 12, 81, 0.14);
 }
+
+/* ===== Bài test: làm từng câu =====
+   Thay cho việc đổ toàn bộ 30 câu ra một trang dài. Cột phải là bảng danh sách
+   câu hỏi để nhảy tới câu bất kỳ và thấy ngay câu nào còn trống. */
+.vg-test-section-head-sm h3 {
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+/* Nút chuyển câu trước / câu sau */
+.vg-test-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 22px;
+}
+.vg-test-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #d8dced;
+    border-radius: 26px;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b0c51;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.vg-test-nav-btn:hover:not(:disabled) {
+    border-color: #0b0c51;
+    background: #f5f7fc;
+    transform: translateY(-2px);
+}
+.vg-test-nav-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+.vg-test-nav-next {
+    background: #0b0c51;
+    border-color: #0b0c51;
+    color: #ffffff;
+}
+.vg-test-nav-next:hover:not(:disabled) {
+    background: #16185f;
+    border-color: #16185f;
+    color: #ffffff;
+}
+
+/* Bảng danh sách câu hỏi */
+.vg-test-map {
+    position: sticky;
+    top: 20px;
+    background: #ffffff;
+    border: 1px solid #e8ebf3;
+    border-radius: 12px;
+    padding: 22px 20px;
+    box-shadow: 0 6px 22px rgba(11, 12, 81, 0.07);
+}
+.vg-test-map-title {
+    font-size: 16px;
+    color: #0b0c51;
+    margin-bottom: 16px;
+}
+.vg-test-map-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-bottom: 18px;
+}
+.vg-test-map-cell {
+    aspect-ratio: 1;
+    min-height: 38px;
+    border: 1px solid #d8dced;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    color: #777777;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+.vg-test-map-cell:hover {
+    border-color: #0b0c51;
+    color: #0b0c51;
+    transform: translateY(-2px);
+}
+/* Câu đã trả lời */
+.vg-test-map-cell.vg-map-done {
+    background: #0b0c51;
+    border-color: #0b0c51;
+    color: #ffffff;
+}
+/* Câu đang làm: viền cam đậm, luôn nhận ra được kể cả khi đã trả lời */
+.vg-test-map-cell.vg-map-current {
+    border-color: #ff6f2a;
+    border-width: 2px;
+    box-shadow: 0 0 0 3px rgba(255, 111, 42, 0.18);
+    color: #ff6f2a;
+}
+/* Ô vừa đã làm vừa đang xem: nền cam, chữ trắng. Phải khai báo cả color ở đây,
+   nếu không quy tắc .vg-map-current phía trên đặt chữ màu cam trên nền cam và
+   số biến mất. */
+.vg-test-map-cell.vg-map-done.vg-map-current {
+    background: #ff6f2a;
+    border-color: #ff6f2a;
+    color: #ffffff !important;
+}
+
+.vg-test-map-legend {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+    font-size: 13px;
+    color: #666666;
+}
+.vg-test-map-legend li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 7px;
+}
+.vg-legend-box {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d8dced;
+    border-radius: 4px;
+    flex: 0 0 auto;
+}
+.vg-legend-box.vg-map-done {
+    background: #0b0c51;
+    border-color: #0b0c51;
+}
+.vg-legend-box.vg-map-current {
+    border-color: #ff6f2a;
+    border-width: 2px;
+}
+.vg-test-map-submit {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    /* Trên mobile bảng câu hỏi nằm dưới câu đang làm, không dính theo cuộn */
+    .vg-test-map {
+        position: static;
+    }
+    .vg-test-map-grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .vg-test-map-cell {
+        min-height: 34px;
+        font-size: 12px;
+    }
+    .vg-test-nav-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
