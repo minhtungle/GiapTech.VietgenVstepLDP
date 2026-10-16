@@ -1416,3 +1416,387 @@ body:has(.vg-offer-bar) .vg-floating-contact {
         animation: none;
     }
 }
+
+/* ===== Rà soát hiển thị trên điện thoại =====
+   Các quy tắc dưới đây sửa những chỗ tràn khung đo được ở 320-414px. */
+
+@media only screen and (max-width: 767px) {
+    /* Email dài hơn bề ngang màn hình. Quy tắc nowrap thêm trước đó giúp email
+       gọn một dòng trên desktop nhưng lại đẩy nó tràn ra ngoài trên điện thoại. */
+    a[href^="mailto:"],
+    #rs-footer .address-widget li .desc,
+    #rs-footer .address-widget li .desc a,
+    .address-widget li .desc a,
+    .topbar-contact li a {
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /* Khối địa chỉ ở trang Liên hệ rộng hơn ô chứa nó */
+    .address-text,
+    .address-item .address-text,
+    .rs-contact-wrap .address-item {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+    .address-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Tiêu đề mục tràn hai bên do hiệu ứng trượt ngang khi hiện dần.
+       Trên điện thoại chỉ trượt dọc, không trượt ngang. */
+    .sec-title.vg-reveal.vg-reveal:not(.vg-revealed),
+    .sec-title2.vg-reveal.vg-reveal:not(.vg-revealed),
+    .sec-title3.vg-reveal.vg-reveal:not(.vg-revealed) {
+        transform: translateY(32px);
+    }
+
+    /* Chặn mọi khối con tràn khỏi khung nhìn */
+    .container,
+    .container-fluid {
+        overflow-x: clip;
+    }
+
+    /* Vùng bấm tối thiểu 44px theo chuẩn thiết bị cảm ứng */
+    .footer-social a,
+    .vg-test-map-cell,
+    .vg-offer-close,
+    .rs-menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    .footer-social li a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Ô nhập liệu đủ cao để ngón tay chạm trúng, và cỡ chữ 16px để iOS không
+       tự phóng to trang khi người dùng chạm vào ô. */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+        min-height: 46px;
+        font-size: 16px;
+    }
+}
+
+/* Màn hình rất hẹp (320-360px): thu tiêu đề cho vừa khung */
+@media only screen and (max-width: 360px) {
+    .banner-title,
+    .vg-type-title {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+    .page-title {
+        font-size: 28px;
+    }
+    .sec-title .title,
+    .sec-title2 .title {
+        font-size: 24px;
+    }
+    .vg-test-heading {
+        font-size: 21px;
+    }
+}
+
+/* ===== Vùng chạm và cỡ chữ trên điện thoại =====
+   Link trong các danh sách chỉ cao bằng dòng chữ (~19px), ngón tay dễ bấm nhầm
+   sang mục bên cạnh. Chuẩn tối thiểu là 44px. */
+@media only screen and (max-width: 767px) {
+    #rs-footer .site-map li a,
+    .address-widget li a,
+    .widget-title + ul li a,
+    .rs-menu .nav-menu > li > a,
+    .rs-menu .sub-menu li a {
+        display: block;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        min-height: 44px;
+    }
+    /* Mục đã có padding riêng thì chỉ cần đảm bảo chiều cao */
+    .rs-menu .nav-menu > li > a {
+        min-height: 48px;
+    }
+
+    /* Thẻ bài viết, khóa học, giảng viên: nới vùng chạm của tiêu đề */
+    .blog-item .title a,
+    .courses-item .title a,
+    .team-item .name a {
+        display: inline-block;
+        padding: 6px 0;
+    }
+
+    /* Chữ nhỏ dưới 12px khó đọc trên màn hình nhỏ. Nâng tối thiểu lên 12px và
+       các nhãn quan trọng lên 13px. */
+    .blog-item .date,
+    .blog-meta li,
+    .vg-offer-unit small {
+        font-size: 12px;
+    }
+    .vg-offer-badge {
+        font-size: 13px;
+        padding: 6px 13px;
+    }
+}
+
+/* Link "Xem Chi Tiết" và các nút chữ trong thẻ: nới vùng chạm cho ngón tay.
+   Logo không cần vì người dùng không nhắm chính xác vào nó như một nút. */
+@media only screen and (max-width: 767px) {
+    .btn-part a,
+    .bottom-part .btn-part a,
+    .courses-item .btn-part a,
+    .blog-button a,
+    .blog-item .blog-button a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px 2px;
+    }
+    /* Tiêu đề thẻ: hai dòng chữ đã đủ cao, chỉ cần thêm đệm dọc */
+    .courses-item .title a,
+    .blog-item .title a {
+        min-height: 44px;
+        align-items: center;
+        display: inline-flex;
+    }
+}
+
+/* Các link chữ còn lại trong thẻ tag, tên giảng viên, dòng mô tả */
+@media only screen and (max-width: 767px) {
+    .tag-line a,
+    .tag-line li a,
+    .des a,
+    .name a,
+    .team-item .name a,
+    .blog-item .tag-line a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 8px 0;
+    }
+    /* Thẻ tag xếp cạnh nhau cần khoảng cách để không bấm nhầm */
+    .tag-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 14px;
+    }
+}
+
+/* ===== Sửa bố cục đầu trang trên điện thoại =====
+   Ở màn hình hẹp, hàng logo và nút menu bị xếp chồng lệch nhau, còn tiêu đề
+   trang quá lớn nên tràn lên đè vào logo. */
+@media only screen and (max-width: 767px) {
+    /* Logo bên trái, nút menu bên phải, cùng một hàng */
+    .menu-area .row.y-middle {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .menu-area .row > .col-lg-2:first-child {
+        flex: 1 1 auto;
+        width: auto;
+    }
+    .menu-area .row > .col-lg-8 {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .logo-part img {
+        max-height: 46px;
+        width: auto;
+    }
+    .mobile-menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* Tiêu đề trang: thu nhỏ cho vừa khung, không đè lên header */
+    .rs-breadcrumbs .page-title {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        overflow-wrap: break-word;
+    }
+    .rs-breadcrumbs {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    /* Thanh ưu đãi: gom lại một hàng cho đỡ chiếm chỗ */
+    .vg-offer-inner {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 9px 42px 9px 10px;
+    }
+    .vg-offer-text {
+        flex: 0 0 auto;
+    }
+    .vg-offer-badge {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    .vg-offer-unit {
+        min-width: 36px;
+        padding: 3px 4px;
+    }
+    .vg-offer-unit strong {
+        font-size: 16px;
+    }
+    .vg-offer-unit small {
+        font-size: 10px;
+    }
+    .vg-offer-clock {
+        gap: 3px;
+    }
+    .vg-offer-clock i {
+        font-size: 15px;
+        margin-top: -10px;
+    }
+    .vg-offer-cta {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    .vg-offer-close {
+        right: 8px;
+        width: 26px;
+        height: 26px;
+        font-size: 17px;
+        min-width: 26px;
+        min-height: 26px;
+    }
+}
+
+/* Màn hình rất hẹp: ẩn nhãn ƯU ĐÃI, chỉ giữ đồng hồ và nút */
+@media only screen and (max-width: 400px) {
+    .vg-offer-badge {
+        display: none;
+    }
+}
+
+/* Căn nút menu thẳng hàng với logo. Template đặt .mobile-menu absolute nên nó
+   trôi lên trên; trả về trong luồng và dùng flex của hàng để căn giữa. */
+@media only screen and (max-width: 767px) {
+    .rs-menu-area,
+    .rs-menu-area .main-menu {
+        position: static;
+    }
+    .main-menu .mobile-menu {
+        position: static;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    .menu-area .row.y-middle > [class*="col-"] {
+        display: flex;
+        align-items: center;
+    }
+    .menu-area .row > .col-lg-8 {
+        justify-content: flex-end;
+    }
+    .mobile-menu .rs-menu-toggle {
+        margin: 0;
+        padding: 10px;
+        line-height: 1;
+    }
+}
+
+/* Nút menu cao bằng cả hàng (90px) nhưng align-items:flex-start của template
+   dồn icon lên đỉnh. Giữ nguyên chiều cao nút để hàng không co lại (làm vậy thì
+   tiêu đề trang đè lên logo), chỉ căn icon vào giữa. */
+@media only screen and (max-width: 767px) {
+    .main-menu .mobile-menu .rs-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-menu .mobile-menu .rs-menu-toggle i {
+        line-height: 1;
+    }
+}
+
+/* Logo và nút menu cùng chiều cao hàng để thẳng hàng với nhau.
+   Logo bị đẩy xuống vì .logo-cat-wrap có padding riêng của template. */
+@media only screen and (max-width: 767px) {
+    .menu-area .row.y-middle {
+        min-height: 90px;
+    }
+    .logo-cat-wrap,
+    .logo-part {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .logo-part a {
+        display: flex;
+        align-items: center;
+    }
+    .main-menu .mobile-menu {
+        height: 100%;
+    }
+}
+
+/* .logo-part là position:absolute trong template nên nằm ngoài luồng, cột chứa
+   nó cao 0px và logo bị lệch so với nút menu. Trả về luồng bình thường. */
+@media only screen and (max-width: 767px) {
+    .logo-cat-wrap .logo-part,
+    .menu-area .logo-part {
+        position: static !important;
+        height: auto !important;
+    }
+    .logo-cat-wrap {
+        height: auto;
+    }
+    .menu-area .row.y-middle > .col-lg-2:first-child {
+        min-height: 90px;
+    }
+}
+
+/* Nhãn trong thanh ưu đãi: bước thu nhỏ ở trên đẩy xuống 10-11px, khó đọc.
+   Nâng về 12px tối thiểu, bù lại bằng cách giảm đệm thay vì giảm cỡ chữ. */
+@media only screen and (max-width: 767px) {
+    .vg-offer-unit small {
+        font-size: 12px;
+    }
+    .vg-offer-badge {
+        font-size: 12px;
+    }
+    .vg-offer-unit {
+        min-width: 38px;
+        padding: 3px 3px;
+    }
+}
+
+/* Hai nhóm vùng bấm nhỏ còn lại trên điện thoại */
+@media only screen and (max-width: 767px) {
+    /* Nhãn phân loại trong thẻ khóa học và lịch khai giảng */
+    .categories a,
+    .meta-part li a,
+    .courses-item .meta-part a,
+    .events-short .categorie a,
+    .notice-bord .categorie a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 8px 0;
+    }
+
+    /* Nút đóng thanh ưu đãi: bước thu gọn ở trên làm nó còn 26px, quá nhỏ.
+       Nới vùng bấm mà giữ nguyên kích thước hình tròn nhìn thấy. */
+    .vg-offer-close {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0.14);
+    }
+}
