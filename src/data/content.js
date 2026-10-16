@@ -1302,8 +1302,8 @@ export const CONTENT = {
               {
                 "type": "email",
                 "icon": "flaticon-email",
-                "text": "tuyensinh@vietgeneducation.edu.vn",
-                "href": "mailto:tuyensinh@vietgeneducation.edu.vn"
+                "text": "tuyensinh.vstep@vietgeneducation.edu.vn",
+                "href": "mailto:tuyensinh.vstep@vietgeneducation.edu.vn"
               },
               {
                 "type": "phone",
@@ -1814,8 +1814,8 @@ export const CONTENT = {
                 {
                   "icon": "fa fa-envelope-o",
                   "label": "Email",
-                  "value": "tuyensinh@vietgeneducation.edu.vn",
-                  "href": "mailto:tuyensinh@vietgeneducation.edu.vn"
+                  "value": "tuyensinh.vstep@vietgeneducation.edu.vn",
+                  "href": "mailto:tuyensinh.vstep@vietgeneducation.edu.vn"
                 },
                 {
                   "icon": "fa fa-headphones",
@@ -1826,7 +1826,7 @@ export const CONTENT = {
                 {
                   "icon": "fa fa-map-signs",
                   "label": "Địa chỉ",
-                  "value": "Quận Đống Đa, Hà Nội"
+                  "value": "Tòa nhà Ecolife, 58 Tố Hữu, Hà Đông, Hà Nội"
                 }
               ]
             },
@@ -1836,8 +1836,8 @@ export const CONTENT = {
                 {
                   "icon": "fa fa-envelope-o",
                   "label": "Email",
-                  "value": "tuyensinh@vietgeneducation.edu.vn",
-                  "href": "mailto:tuyensinh@vietgeneducation.edu.vn"
+                  "value": "tuyensinh.vstep@vietgeneducation.edu.vn",
+                  "href": "mailto:tuyensinh.vstep@vietgeneducation.edu.vn"
                 },
                 {
                   "icon": "fa fa-headphones",
@@ -1858,8 +1858,8 @@ export const CONTENT = {
                 {
                   "icon": "fa fa-envelope-o",
                   "label": "Email",
-                  "value": "tuyensinh@vietgeneducation.edu.vn",
-                  "href": "mailto:tuyensinh@vietgeneducation.edu.vn"
+                  "value": "tuyensinh.vstep@vietgeneducation.edu.vn",
+                  "href": "mailto:tuyensinh.vstep@vietgeneducation.edu.vn"
                 },
                 {
                   "icon": "fa fa-headphones",

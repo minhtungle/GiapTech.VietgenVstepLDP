@@ -1216,3 +1216,16 @@ body.vg-cursor-on textarea {
         font-size: 13px;
     }
 }
+
+/* ===== Thẻ thông tin cơ sở (trang Liên hệ) =====
+   Email dài hơn bề ngang thẻ nên tràn ra ngoài khung. Cho phép ngắt dòng theo
+   ký tự và thu nhẹ cỡ chữ; dấu @ và dấu chấm là chỗ ngắt tự nhiên. */
+.vg-branch-card .vg-branch-value,
+.vg-branch-card a[href^="mailto:"],
+.contact-address-item a[href^="mailto:"],
+.address-item a[href^="mailto:"] {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: 15px;
+    line-height: 1.5;
+}

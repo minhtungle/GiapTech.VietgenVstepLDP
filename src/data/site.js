@@ -62,7 +62,7 @@ export const FOOTER_LINKS = {
     { label: 'Cấp Tốc 1-1 (7 buổi)', to: '/khoa-hoc' },
   ],
   branches: [
-    { label: 'Hà Nội - Đống Đa', to: '/lien-he' },
+    { label: 'Hà Nội - Hà Đông', to: '/lien-he' },
     { label: 'TP.HCM - Quận 10 & Bình Thạnh', to: '/lien-he' },
     { label: 'Học online toàn quốc', to: '/lien-he' },
   ],
