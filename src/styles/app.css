@@ -1229,3 +1229,190 @@ body.vg-cursor-on textarea {
     font-size: 15px;
     line-height: 1.5;
 }
+
+/* ===== Thanh đếm ngược ưu đãi =====
+   Bám đáy màn hình ở mọi trang. Đặt z-index dưới popup đăng ký (2000) nhưng
+   trên nội dung thường. */
+.vg-offer-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 995;
+    background: linear-gradient(100deg, #0b0c51 0%, #1b1f7a 55%, #2a2f9e 100%);
+    box-shadow: 0 -6px 24px rgba(11, 12, 81, 0.28);
+    animation: vgOfferUp 0.5s cubic-bezier(0.2, 1, 0.3, 1) both;
+}
+@keyframes vgOfferUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+.vg-offer-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 12px 58px 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.vg-offer-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.vg-offer-badge {
+    flex: 0 0 auto;
+    background: #ff6f2a;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    animation: vgNavPulse 2.4s ease-in-out infinite;
+}
+.vg-offer-headline {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Đồng hồ */
+.vg-offer-clock {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+}
+.vg-offer-clock i {
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffc107;
+    margin-top: -12px;
+}
+.vg-offer-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 46px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 5px 6px;
+}
+.vg-offer-unit strong {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    /* Chữ số cùng bề ngang để đồng hồ không nhảy ngang mỗi giây */
+    font-variant-numeric: tabular-nums;
+}
+.vg-offer-unit small {
+    font-size: 10px;
+    opacity: 0.75;
+    letter-spacing: 0.3px;
+}
+
+.vg-offer-cta {
+    flex: 0 0 auto;
+    background: #ff6f2a;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 11px 24px;
+    border-radius: 26px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vg-offer-cta:hover {
+    background: #e85f1c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 111, 42, 0.45);
+    color: #ffffff;
+}
+
+.vg-offer-close {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.14);
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.vg-offer-close:hover {
+    background: rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+}
+
+/* Chừa chỗ cho thanh để nút lên đầu trang và nút liên hệ nổi không bị che.
+   Thanh cao khác nhau theo bề ngang màn hình (một hàng trên desktop, hai hàng
+   trên mobile) nên khoảng chừa phải khai báo riêng cho từng mốc. */
+body:has(.vg-offer-bar) #scrollUp {
+    bottom: 96px;
+}
+body:has(.vg-offer-bar) .vg-floating-contact {
+    bottom: 100px;
+}
+@media only screen and (max-width: 991px) {
+    body:has(.vg-offer-bar) #scrollUp {
+        bottom: 140px;
+    }
+    body:has(.vg-offer-bar) .vg-floating-contact {
+        bottom: 144px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .vg-offer-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 46px 12px 14px;
+    }
+    .vg-offer-text {
+        flex: 1 1 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .vg-offer-headline {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .vg-offer-headline {
+        display: none;
+    }
+    .vg-offer-unit {
+        min-width: 40px;
+    }
+    .vg-offer-unit strong {
+        font-size: 17px;
+    }
+    .vg-offer-cta {
+        padding: 9px 18px;
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vg-offer-bar {
+        animation: none;
+    }
+    .vg-offer-badge {
+        animation: none;
+    }
+}
