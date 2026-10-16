@@ -710,3 +710,26 @@ body.vg-cursor-on textarea {
         display: none;
     }
 }
+
+/* Hộp menu con: thu gọn khoảng cách giữa các mục. Mặc định của template cho
+   mỗi mục padding 10px 30px cộng line-height rộng nên hộp cao gần 190px, lấn
+   sâu xuống vùng tiêu đề trang trông như đè chồng. */
+@media only screen and (min-width: 992px) {
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.sub-menu {
+        padding: 8px 0;
+        z-index: 1000;
+    }
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.sub-menu li {
+        height: auto;
+        display: block;
+    }
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.sub-menu li a {
+        display: block;
+        padding: 9px 24px;
+        line-height: 1.45;
+        height: auto;
+    }
+}
