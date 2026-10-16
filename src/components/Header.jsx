@@ -148,23 +148,12 @@ export default function Header({ onOpenLead }) {
               </div>
 
               <div className="col-lg-2 text-end relative d-none d-lg-block">
-                <div className="expand-btn-inner">
-                  <ul>
-                    <li>
-                      <Link className="hidden-xs rs-search" to="/test" aria-label="Test trình độ">
-                        <i className="flaticon-search" />
-                      </Link>
-                    </li>
-                  </ul>
-                  <span>
-                    {/* Nút gạch ngang bên phải: bản gốc mở off-canvas, nay dẫn tới trang test. */}
-                    <Link id="nav-expander" className="nav-expander style3" to="/test" aria-label="Test trình độ">
-                      <span className="dot1" />
-                      <span className="dot2" />
-                      <span className="dot3" />
-                    </Link>
-                  </span>
-                </div>
+                {/* Thay cho nút tìm kiếm và nút gạch ngang của template: cả hai
+                    đều chỉ dẫn tới trang test nên vừa thừa vừa khó hiểu. Nay là
+                    nút đăng ký, việc quan trọng nhất ở thanh menu. */}
+                <button type="button" className="vg-header-cta" onClick={onOpenLead}>
+                  <span className="vg-header-cta-text">Đăng Ký Ngay</span>
+                </button>
               </div>
             </div>
           </div>

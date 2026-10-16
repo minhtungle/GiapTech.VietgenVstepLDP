@@ -346,9 +346,9 @@ a[href^="mailto:"] {
 }
 
 /* ===== Con trỏ chuột tuỳ chỉnh =====
-   Chấm nhỏ bám sát chuột, vòng tròn chạy theo sau và phình ra khi di qua nút.
-   Chỉ bật khi body có class vg-cursor-on (thiết bị có chuột thật, người dùng
-   không bật giảm chuyển động). */
+   Một chấm nhỏ bám sát chuột và một quầng sáng mờ chạy theo sau. Quầng dùng
+   nền mờ thay vì viền đậm nên không che chữ bên dưới, nhẹ nhàng hơn kiểu vòng
+   tròn viền to. Chỉ bật khi body có class vg-cursor-on. */
 .vg-cursor-dot,
 .vg-cursor-ring {
     position: fixed;
@@ -360,36 +360,41 @@ a[href^="mailto:"] {
     will-change: transform;
 }
 .vg-cursor-dot {
-    width: 8px;
-    height: 8px;
-    margin: -4px 0 0 -4px;
+    width: 7px;
+    height: 7px;
+    margin: -3.5px 0 0 -3.5px;
     background: #ff6f2a;
     border-radius: 50%;
-    transition: opacity 0.2s ease;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+    transition: opacity 0.2s ease, width 0.18s ease, height 0.18s ease, margin 0.18s ease;
 }
 .vg-cursor-ring {
-    width: 36px;
-    height: 36px;
-    margin: -18px 0 0 -18px;
-    border: 2px solid rgba(11, 12, 81, 0.55);
-    border-radius: 50%;
-    transition: width 0.22s ease, height 0.22s ease, margin 0.22s ease,
-                border-color 0.22s ease, background-color 0.22s ease, opacity 0.2s ease;
-}
-/* Di qua nút hoặc link: vòng tròn phình to và đổi sang màu cam */
-.vg-cursor-ring.vg-cursor-hover {
-    width: 54px;
-    height: 54px;
-    margin: -27px 0 0 -27px;
-    border-color: #ff6f2a;
-    background: rgba(255, 111, 42, 0.12);
-}
-/* Nhấn chuột: co lại một nhịp cho có phản hồi */
-.vg-cursor-ring.vg-cursor-down {
     width: 26px;
     height: 26px;
     margin: -13px 0 0 -13px;
-    border-color: #ff6f2a;
+    background: rgba(11, 12, 81, 0.1);
+    border: 1px solid rgba(11, 12, 81, 0.25);
+    border-radius: 50%;
+    transition: width 0.25s cubic-bezier(0.2, 0.8, 0.3, 1),
+                height 0.25s cubic-bezier(0.2, 0.8, 0.3, 1),
+                margin 0.25s cubic-bezier(0.2, 0.8, 0.3, 1),
+                border-color 0.25s ease, background-color 0.25s ease, opacity 0.2s ease;
+}
+/* Di qua nút hoặc link: quầng nở rộng, chấm thu nhỏ lại nhường chỗ */
+.vg-cursor-ring.vg-cursor-hover {
+    width: 46px;
+    height: 46px;
+    margin: -23px 0 0 -23px;
+    background: rgba(255, 111, 42, 0.16);
+    border-color: rgba(255, 111, 42, 0.5);
+}
+/* Nhấn chuột: quầng co lại một nhịp */
+.vg-cursor-ring.vg-cursor-down {
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    background: rgba(255, 111, 42, 0.3);
+    border-color: rgba(255, 111, 42, 0.7);
 }
 
 /* Ẩn con trỏ mặc định khi con trỏ tuỳ chỉnh đang chạy.
@@ -525,5 +530,128 @@ body.vg-cursor-on textarea {
     /* Màn hình hẹp thì cho xuống dòng, nếu không chữ sẽ tràn khỏi khung. */
     #rs-footer .footer-bottom .copyright p {
         white-space: normal;
+    }
+}
+
+/* ===== Nút Đăng Ký ở thanh menu =====
+   Thay cho nút tìm kiếm và nút gạch ngang vốn chỉ dẫn tới trang test. */
+.vg-header-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: linear-gradient(135deg, #0b0c51 0%, #1b1f7a 100%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    padding: 12px 26px;
+    border-radius: 28px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(11, 12, 81, 0.32);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.vg-header-cta-text {
+    position: relative;
+    z-index: 2;
+}
+/* Vệt sáng quét ngang mỗi vài giây để hút mắt mà không gây rối */
+.vg-header-cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.45) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    animation: vgCtaShine 3.6s ease-in-out infinite;
+}
+@keyframes vgCtaShine {
+    0%, 62% { left: -60%; }
+    92%, 100% { left: 115%; }
+}
+.vg-header-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(11, 12, 81, 0.45);
+    color: #ffffff;
+}
+.vg-header-cta:active {
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .vg-header-cta::before {
+        animation: none;
+    }
+}
+
+/* Thanh menu có 6 mục cộng nút đăng ký nên thiếu chỗ: cột menu 8/12 chỉ được
+   847px trong khi các mục cần 861px, khiến "Liên hệ" rớt xuống hàng dưới.
+   Nới cột menu và thu cột logo + cột nút lại cho vừa. */
+@media only screen and (min-width: 992px) {
+    .menu-area .row > .col-lg-2:first-child {
+        flex: 0 0 auto;
+        width: 13%;
+    }
+    .menu-area .row > .col-lg-8 {
+        flex: 0 0 auto;
+        width: 74%;
+    }
+    .menu-area .row > .col-lg-2.text-end {
+        flex: 0 0 auto;
+        width: 13%;
+    }
+    .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li {
+        margin-right: 26px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+    .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li {
+        margin-right: 18px;
+    }
+    .vg-header-cta {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+}
+/* Cột chứa nút đăng ký cần đủ rộng cho chữ không bị bẻ */
+.vg-header-cta {
+    white-space: nowrap;
+}
+
+/* Mục "Test trình độ" là viên thuốc có height:auto nên không cao bằng 96px như
+   các mục khác, làm nó lệch xuống. Cho cả hàng xếp flex căn giữa để mọi mục
+   thẳng hàng bất kể chiều cao riêng. */
+@media only screen and (min-width: 992px) {
+    .rs-header .menu-area .main-menu .rs-menu ul.nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+    }
+    /* Selector phải dài tới .full-width-header để thắng quy tắc của template,
+       nếu không li giữ display:block và thẻ a bên trong trôi lên đầu khối. */
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.nav-menu > li {
+        display: flex;
+        align-items: center;
+        height: 96px;
+    }
+    /* Viên thuốc "Test trình độ": bỏ height/line-height riêng để flex căn giữa
+       nó như mọi mục khác, nếu không nó trôi lên đầu hàng. */
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.nav-menu li.vg-nav-highlight > a {
+        display: flex;
+        align-items: center;
+        height: auto;
+        line-height: 1;
+        align-self: center;
     }
 }
