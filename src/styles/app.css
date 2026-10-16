@@ -862,24 +862,62 @@ body.vg-cursor-on textarea {
 }
 
 /* ===== Hiện dần khi cuộn tới =====
-   Khối bắt đầu mờ và thấp hơn vị trí thật 26px, khi vào tầm nhìn thì trượt lên.
-   Dùng transform + opacity nên trình duyệt chỉ hợp thành lại lớp, không phải
-   tính lại bố cục. */
-.vg-reveal {
+   Khối trượt lên 56px kèm thu nhỏ nhẹ rồi giãn về đúng cỡ. Biên độ lớn và nhịp
+   chậm (900ms) để người xem kịp nhận ra có chuyển động; bản trước đi 26px trong
+   600ms nên gần như không thấy gì.
+
+   Easing dùng cubic-bezier(0.33, 0.1, 0.25, 1): chậm đều ở đầu rồi giảm tốc về
+   cuối. Hàm "ease-out mạnh" quen thuộc (0.16, 1, 0.3, 1) dồn gần hết quãng
+   đường vào 100ms đầu nên dù đặt 900ms mắt vẫn chỉ thấy một cú giật - đã đo và
+   xác nhận trước khi đổi.
+
+   Dùng transform + opacity nên trình duyệt chỉ hợp thành lại lớp, không tính
+   lại bố cục. */
+/* Nhân đôi class để thắng các quy tắc transition sẵn có của template, ví dụ
+   .rs-popular-courses.style3 .courses-item vốn đặt transition 0.3s và rút ngắn
+   hiệu ứng xuất hiện. */
+.vg-reveal.vg-reveal:not(.vg-revealed) {
     opacity: 0;
-    transform: translateY(26px);
+    transform: translateY(56px) scale(0.97);
     transition:
-        opacity 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) var(--vg-reveal-delay, 0ms),
-        transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) var(--vg-reveal-delay, 0ms);
+        opacity 0.85s cubic-bezier(0.33, 0.1, 0.25, 1) var(--vg-reveal-delay, 0ms),
+        transform 0.85s cubic-bezier(0.33, 0.1, 0.25, 1) var(--vg-reveal-delay, 0ms);
     will-change: opacity, transform;
 }
-.vg-reveal.vg-revealed {
+/* Thời lượng và easing khai báo riêng cho mọi trạng thái, vì quy tắc ẩn ở trên
+   đã giới hạn bằng :not(.vg-revealed). */
+.vg-reveal.vg-reveal {
+    transition:
+        opacity 0.85s cubic-bezier(0.33, 0.1, 0.25, 1) var(--vg-reveal-delay, 0ms),
+        transform 0.85s cubic-bezier(0.33, 0.1, 0.25, 1) var(--vg-reveal-delay, 0ms);
+}
+.vg-reveal.vg-reveal.vg-revealed {
     opacity: 1;
     transform: none;
 }
 
+/* Tiêu đề mục: trượt từ trái sang cho khác nhịp với các thẻ bên dưới, nhờ vậy
+   mắt đọc tiêu đề trước rồi mới tới nội dung. */
+.sec-title.vg-reveal.vg-reveal:not(.vg-revealed),
+.sec-title2.vg-reveal.vg-reveal:not(.vg-revealed),
+.sec-title3.vg-reveal.vg-reveal:not(.vg-revealed) {
+    transform: translateY(40px) translateX(-24px);
+}
+
+/* Hộp lớn (lịch khai giảng, phần giới thiệu, khối chứng chỉ) đi quãng dài hơn
+   vì diện tích lớn, cùng biên độ sẽ thấy ít chuyển động hơn thẻ nhỏ. */
+.vg-schedule-box.vg-reveal.vg-reveal:not(.vg-revealed),
+.about-part.vg-reveal.vg-reveal:not(.vg-revealed),
+.vg-cert-box.vg-reveal.vg-reveal:not(.vg-revealed) {
+    transform: translateY(72px) scale(0.98);
+    transition-duration: 1s;
+}
+
 /* ===== Hiệu ứng rê chuột lên các thẻ =====
    Nhấc thẻ lên một chút kèm bóng đổ sâu hơn, tạo cảm giác bấm được. */
+/* Chỉ khai báo transition cho box-shadow ở đây. Nếu thêm transform vào, quy tắc
+   này sẽ ghi đè transition của .vg-reveal (viết trước trong file) và rút hiệu
+   ứng xuất hiện từ 0.85s xuống 0.3s - đã đo và gặp đúng lỗi đó. */
 .courses-item,
 .team-item,
 .blog-item,
@@ -890,9 +928,9 @@ body.vg-cursor-on textarea {
 .vg-test-meta-box,
 .rs-addon-services,
 .categories-item {
-    transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1),
-                box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
+
 .courses-item:hover,
 .team-item:hover,
 .blog-item:hover,
@@ -983,6 +1021,38 @@ body.vg-cursor-on textarea {
 }
 .rs-team .swiper-slide .team-item:hover,
 .rs-team-grid .team-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(11, 12, 81, 0.14);
+}
+
+/* ===== Hover cho khối đã hiện xong =====
+   Đặt ở cuối file và nhân đôi class để thắng quy tắc transition của hiệu ứng
+   xuất hiện; nếu không, transform khi hover sẽ chạy theo nhịp 0.85s của hiệu
+   ứng cuộn và cảm giác ì. */
+.vg-reveal.vg-reveal.vg-revealed.courses-item,
+.vg-reveal.vg-reveal.vg-revealed.team-item,
+.vg-reveal.vg-reveal.vg-revealed.blog-item,
+.vg-reveal.vg-reveal.vg-revealed.testimonial-item,
+.vg-reveal.vg-reveal.vg-revealed.vg-format-card,
+.vg-reveal.vg-reveal.vg-revealed.vg-schedule-card,
+.vg-reveal.vg-reveal.vg-revealed.vg-section-score,
+.vg-reveal.vg-reveal.vg-revealed.vg-test-meta-box,
+.vg-reveal.vg-reveal.vg-revealed.rs-addon-services,
+.vg-reveal.vg-reveal.vg-revealed.categories-item {
+    transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1),
+                box-shadow 0.3s ease;
+    transition-delay: 0s;
+}
+.vg-reveal.vg-reveal.vg-revealed.courses-item:hover,
+.vg-reveal.vg-reveal.vg-revealed.team-item:hover,
+.vg-reveal.vg-reveal.vg-revealed.blog-item:hover,
+.vg-reveal.vg-reveal.vg-revealed.testimonial-item:hover,
+.vg-reveal.vg-reveal.vg-revealed.vg-format-card:hover,
+.vg-reveal.vg-reveal.vg-revealed.vg-schedule-card:hover,
+.vg-reveal.vg-reveal.vg-revealed.vg-section-score:hover,
+.vg-reveal.vg-reveal.vg-revealed.vg-test-meta-box:hover,
+.vg-reveal.vg-reveal.vg-revealed.rs-addon-services:hover,
+.vg-reveal.vg-reveal.vg-revealed.categories-item:hover {
     transform: translateY(-6px);
     box-shadow: 0 14px 34px rgba(11, 12, 81, 0.14);
 }

@@ -51,9 +51,9 @@ export default function ScrollReveal() {
           observer.unobserve(entry.target)
         }
       },
-      // Kích hoạt khi khối lộ ra khoảng 12%, trừ hao 60px dưới đáy màn hình để
-      // hiệu ứng chạy xong trước lúc người dùng nhìn thẳng vào nó.
-      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' },
+      // Chờ khối lộ ra 18% và cách đáy màn hình 120px mới chạy. Ngưỡng cao hơn
+      // bản trước để người xem thấy rõ chuyển động thay vì khối đã hiện sẵn.
+      { threshold: 0.18, rootMargin: '0px 0px -120px 0px' },
     )
 
     nodes.forEach((node, i) => {
@@ -62,8 +62,9 @@ export default function ScrollReveal() {
       if (node.closest('.swiper')) return
 
       node.classList.add('vg-reveal')
-      // Các thẻ cùng một hàng hiện lệch nhau một nhịp ngắn cho mượt.
-      node.style.setProperty('--vg-reveal-delay', `${(i % 4) * 90}ms`)
+      // Thẻ cùng hàng hiện lần lượt, cách nhau 140ms để thấy rõ thứ tự thay vì
+      // cả hàng bật lên cùng lúc.
+      node.style.setProperty('--vg-reveal-delay', `${(i % 4) * 140}ms`)
 
       // Khối đã nằm sẵn trong tầm nhìn khi vào trang thì hiện luôn, không chờ cuộn.
       const rect = node.getBoundingClientRect()
