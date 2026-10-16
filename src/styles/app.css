@@ -657,3 +657,56 @@ body.vg-cursor-on textarea {
         animation: none;
     }
 }
+
+/* ===== Tiêu đề banner gõ từng chữ =====
+   Bản ẩn chồng lên bản đang gõ để giữ nguyên chiều cao khối, nhờ vậy nội dung
+   bên dưới không bị đẩy lên xuống trong lúc chữ chạy. */
+.vg-type-title {
+    position: relative;
+}
+.vg-type-ghost {
+    visibility: hidden;
+}
+.vg-type-live {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+/* Từ khoá được tô sáng bằng vệt cam phía sau chữ */
+.vg-type-mark {
+    position: relative;
+    color: #ff6f2a;
+    white-space: nowrap;
+}
+.vg-type-mark::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    bottom: 0.1em;
+    height: 0.26em;
+    background: rgba(255, 111, 42, 0.22);
+    border-radius: 3px;
+    z-index: -1;
+}
+
+/* Con trỏ nhấp nháy ở cuối dòng đang gõ */
+.vg-type-caret {
+    display: inline-block;
+    width: 3px;
+    height: 0.85em;
+    margin-left: 4px;
+    vertical-align: text-bottom;
+    background: #ff6f2a;
+    animation: vgCaretBlink 0.9s step-end infinite;
+}
+@keyframes vgCaretBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .vg-type-caret {
+        display: none;
+    }
+}

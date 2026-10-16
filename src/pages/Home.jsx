@@ -5,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import Seo from '../components/Seo.jsx'
 import { useLeadPopup } from '../App.jsx'
 import QuickSignup from '../components/QuickSignup.jsx'
+import TypingTitle from '../components/TypingTitle.jsx'
 import { pages, courses, teachers, testimonials, schedule, partners } from '../data/content.js'
 
 const page = pages.index
@@ -51,7 +52,9 @@ export default function Home() {
       <div id="rs-banner" className="rs-banner style1">
         <div className="container">
           <div className="banner-content text-center">
-            <h1 className="banner-title capitalize">{banner.h1}</h1>
+            <h1 className="banner-title capitalize vg-type-title">
+              <TypingTitle text={banner.h1} highlights={['VSTEP', 'VIETGEN']} />
+            </h1>
             <div className="desc mb-35">{withLineBreaks(banner.desc_html_br)}</div>
             <div className="banner-btn">
               <button type="button" className="readon banner-style" onClick={openLead}>
