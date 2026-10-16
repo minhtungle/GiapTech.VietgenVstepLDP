@@ -860,3 +860,129 @@ body.vg-cursor-on textarea {
         margin-right: 14px;
     }
 }
+
+/* ===== Hiện dần khi cuộn tới =====
+   Khối bắt đầu mờ và thấp hơn vị trí thật 26px, khi vào tầm nhìn thì trượt lên.
+   Dùng transform + opacity nên trình duyệt chỉ hợp thành lại lớp, không phải
+   tính lại bố cục. */
+.vg-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+        opacity 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) var(--vg-reveal-delay, 0ms),
+        transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) var(--vg-reveal-delay, 0ms);
+    will-change: opacity, transform;
+}
+.vg-reveal.vg-revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* ===== Hiệu ứng rê chuột lên các thẻ =====
+   Nhấc thẻ lên một chút kèm bóng đổ sâu hơn, tạo cảm giác bấm được. */
+.courses-item,
+.team-item,
+.blog-item,
+.testimonial-item,
+.vg-format-card,
+.vg-schedule-card,
+.vg-section-score,
+.vg-test-meta-box,
+.rs-addon-services,
+.categories-item {
+    transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1),
+                box-shadow 0.3s ease;
+}
+.courses-item:hover,
+.team-item:hover,
+.blog-item:hover,
+.testimonial-item:hover,
+.vg-format-card:hover,
+.vg-schedule-card:hover,
+.vg-section-score:hover,
+.vg-test-meta-box:hover,
+.rs-addon-services:hover,
+.categories-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(11, 12, 81, 0.14);
+}
+
+/* Ảnh trong thẻ phóng nhẹ khi rê chuột. Template bọc ảnh trong .img-part, còn
+   thẻ giảng viên để ảnh nằm trực tiếp trong .team-item. */
+.courses-item .img-part,
+.blog-item .img-part,
+.team-item {
+    overflow: hidden;
+}
+.courses-item .img-part img,
+.blog-item .img-part img,
+.team-item > img {
+    display: block;
+    width: 100%;
+    transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.courses-item:hover .img-part img,
+.blog-item:hover .img-part img,
+.team-item:hover > img {
+    transform: scale(1.07);
+}
+
+/* Link trong nội dung: gạch chân chạy từ trái sang khi rê chuột */
+.courses-item .title a,
+.blog-item .title a,
+.team-item .name a {
+    background-image: linear-gradient(#ff6f2a, #ff6f2a);
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+}
+.courses-item .title a:hover,
+.blog-item .title a:hover,
+.team-item .name a:hover {
+    background-size: 100% 2px;
+}
+
+/* Mục trong lịch khai giảng: nhích sang phải nhẹ */
+.vg-schedule-list li {
+    transition: background-color 0.25s ease, padding-left 0.25s ease;
+}
+.vg-schedule-list li:hover {
+    background: #fff6f1;
+    padding-left: 16px;
+}
+.vg-schedule-list li:hover .vg-schedule-date span {
+    color: #e85f1c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vg-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .courses-item:hover,
+    .team-item:hover,
+    .blog-item:hover,
+    .testimonial-item:hover,
+    .vg-format-card:hover,
+    .vg-schedule-card:hover,
+    .vg-section-score:hover,
+    .vg-test-meta-box:hover,
+    .rs-addon-services:hover,
+    .categories-item:hover {
+        transform: none;
+    }
+}
+
+/* Thẻ giảng viên nằm trong carousel nên template có quy tắc riêng đè lên hiệu
+   ứng hover chung; nhắc lại với selector cụ thể hơn. */
+.rs-team .swiper-slide .team-item,
+.rs-team-grid .team-item {
+    transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.3s ease;
+}
+.rs-team .swiper-slide .team-item:hover,
+.rs-team-grid .team-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(11, 12, 81, 0.14);
+}

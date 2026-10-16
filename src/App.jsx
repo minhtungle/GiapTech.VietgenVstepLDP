@@ -7,6 +7,7 @@ import LeadPopup from './components/LeadPopup.jsx'
 import FloatingContact from './components/FloatingContact.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import CustomCursor from './components/CustomCursor.jsx'
+import ScrollReveal from './components/ScrollReveal.jsx'
 
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -42,6 +43,7 @@ export default function App() {
     <LeadPopupContext.Provider value={openPopup}>
       <ScrollToTop />
       <CustomCursor />
+      <ScrollReveal />
       <Header onOpenLead={openPopup} />
 
       <div className="main-content">
