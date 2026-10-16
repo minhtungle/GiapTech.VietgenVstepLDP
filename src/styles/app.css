@@ -738,3 +738,45 @@ body.vg-cursor-on textarea {
 .vg-type-caret-idle {
     animation-duration: 1.4s;
 }
+
+/* ===== Thanh liên hệ trên cùng =====
+   Cột trái (col-md-7) vừa khít tổng hai mục nên ở màn hình 1200-1400px chúng
+   rớt xuống hai hàng. Nới cột trái, thu cột phải và giảm khoảng cách giữa các
+   mục để luôn đủ chỗ dàn ngang. */
+@media only screen and (min-width: 992px) {
+    .topbar-area .row > .col-md-7 {
+        flex: 0 0 auto;
+        width: 66%;
+    }
+    .topbar-area .row > .col-md-5 {
+        flex: 0 0 auto;
+        width: 34%;
+    }
+    .topbar-area .topbar-contact {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+    .topbar-area .topbar-contact li {
+        white-space: nowrap;
+    }
+    .topbar-area .topbar-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+}
+/* Màn hình vừa: thu chữ và khoảng cách thay vì để rớt dòng */
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+    .topbar-area .topbar-contact li,
+    .topbar-area .topbar-right li {
+        font-size: 13px;
+    }
+    .topbar-area .topbar-contact li:not(:last-child) {
+        margin-right: 18px !important;
+        padding-right: 18px !important;
+    }
+}
