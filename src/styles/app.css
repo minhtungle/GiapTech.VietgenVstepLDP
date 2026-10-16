@@ -780,3 +780,83 @@ body.vg-cursor-on textarea {
         padding-right: 18px !important;
     }
 }
+
+/* ===== Hai nút chính ở thanh menu: to hơn và có chuyển động =====
+   Trước đây cả hai cùng cỡ chữ với mục menu thường nên không bật lên được. */
+@media only screen and (min-width: 992px) {
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.nav-menu li.vg-nav-highlight > a {
+        font-size: 17px;
+        font-weight: 700;
+        padding: 13px 24px;
+    }
+    .vg-header-cta {
+        font-size: 17px;
+        font-weight: 700;
+        padding: 14px 30px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+    /* Màn hình vừa: giữ to hơn mục thường nhưng vừa chỗ */
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.nav-menu li.vg-nav-highlight > a {
+        font-size: 15px;
+        padding: 11px 18px;
+    }
+    .vg-header-cta {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+}
+
+/* Nhún nhẹ lên xuống để hút mắt mà không gây chóng mặt. Dùng transform thay vì
+   đổi margin nên trình duyệt chỉ vẽ lại lớp đó, không tính lại bố cục. */
+@keyframes vgBtnFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+    ul.nav-menu li.vg-nav-highlight > a {
+    animation: vgNavPulse 2.4s ease-in-out infinite,
+               vgBtnFloat 2.4s ease-in-out infinite;
+}
+.vg-header-cta {
+    animation: vgNavPulse 2.4s ease-in-out infinite,
+               vgBtnFloat 2.4s ease-in-out infinite;
+    /* Lệch pha nửa nhịp so với nút kia để hai nút không nhún cùng lúc */
+    animation-delay: -1.2s;
+}
+/* Rê chuột thì dừng nhún, nhích lên và đậm màu */
+.full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+    ul.nav-menu li.vg-nav-highlight > a:hover {
+    animation: none;
+    transform: translateY(-3px) scale(1.04);
+}
+.vg-header-cta:hover {
+    animation: none;
+    transform: translateY(-3px) scale(1.04);
+}
+@media (prefers-reduced-motion: reduce) {
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.nav-menu li.vg-nav-highlight > a,
+    .vg-header-cta {
+        animation: none;
+    }
+}
+
+/* Ở 992-1099px nút đăng ký tràn khỏi mép phải màn hình vì cột chỉ rộng 125px
+   mà nút cần 150px. Thu nút lại cho vừa khung. */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .full-width-header .rs-header .menu-area .rs-menu-area .main-menu .rs-menu
+        ul.nav-menu li.vg-nav-highlight > a {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+    .vg-header-cta {
+        font-size: 13px;
+        padding: 11px 14px;
+    }
+    .rs-header .menu-area .main-menu .rs-menu ul.nav-menu > li {
+        margin-right: 14px;
+    }
+}
