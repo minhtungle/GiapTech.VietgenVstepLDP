@@ -50,7 +50,7 @@ app.post('/api/register', async (req, res) => {
   if (course) lines.push(`Chứng chỉ cần: ${course}`)
   if (region) lines.push(`Khu vực: ${region}`)
   if (message) lines.push('', `Nội dung:`, message)
-  lines.push('', '--', 'Gửi tự động từ form đăng ký trên website VietGen.')
+  lines.push('', '--', 'Gửi tự động từ form đăng ký trên website VIETGEN.')
 
   try {
     await sendMail({
@@ -76,7 +76,7 @@ app.post('/api/register', async (req, res) => {
   const confirmLines = [
     `Chào ${name},`,
     '',
-    'VietGen đã nhận được thông tin đăng ký của bạn. Cảm ơn bạn đã quan tâm',
+    'VIETGEN đã nhận được thông tin đăng ký của bạn. Cảm ơn bạn đã quan tâm',
     'tới các khóa luyện thi chứng chỉ VSTEP của trung tâm.',
     '',
     'THÔNG TIN BẠN ĐÃ GỬI',
@@ -98,21 +98,21 @@ app.post('/api/register', async (req, res) => {
     `Email: ${RECIPIENT}`,
     '',
     'Trân trọng,',
-    'VietGen Language Education',
+    'VIETGEN Language Education',
   )
 
   try {
     await sendMail({
       to: email,
-      subject: 'VietGen đã nhận đăng ký của bạn',
+      subject: 'VIETGEN đã nhận đăng ký của bạn',
       text: confirmLines.join('\n'),
-      replyTo: `VietGen VSTEP <${RECIPIENT}>`,
+      replyTo: `VIETGEN VSTEP <${RECIPIENT}>`,
     })
   } catch (err) {
     console.error('[register] Gửi mail xác nhận cho khách thất bại:', err.message)
   }
 
-  res.json({ ok: true, message: 'Cảm ơn bạn! VietGen sẽ liên hệ tư vấn trong thời gian sớm nhất.' })
+  res.json({ ok: true, message: 'Cảm ơn bạn! VIETGEN sẽ liên hệ tư vấn trong thời gian sớm nhất.' })
 })
 
 /**
@@ -143,7 +143,7 @@ app.post('/api/test-result', async (req, res) => {
   const studentBody = [
     `Chào ${name},`,
     '',
-    'Cảm ơn bạn đã hoàn thành bài test trình độ tiếng Anh của VietGen.',
+    'Cảm ơn bạn đã hoàn thành bài test trình độ tiếng Anh của VIETGEN.',
     'Dưới đây là kết quả của bạn:',
     '',
     '========================================',
@@ -154,7 +154,7 @@ app.post('/api/test-result', async (req, res) => {
     'Hai kỹ năng Speaking và Writing sẽ được giáo viên kiểm tra trực tiếp',
     'khi bạn tham gia buổi test đầu vào tại trung tâm.',
     '',
-    `Tư vấn viên của VietGen sẽ liên hệ với bạn qua số ${phone}`,
+    `Tư vấn viên của VIETGEN sẽ liên hệ với bạn qua số ${phone}`,
     'để trao đổi về lộ trình học phù hợp.',
     '',
     'Mọi thắc mắc xin liên hệ:',
@@ -162,16 +162,16 @@ app.post('/api/test-result', async (req, res) => {
     `Email: ${RECIPIENT}`,
     '',
     'Trân trọng,',
-    'VietGen Language Education',
+    'VIETGEN Language Education',
   ].join('\n')
 
   let studentSent = false
   try {
     await sendMail({
       to: email,
-      subject: 'Kết quả test trình độ tiếng Anh của bạn - VietGen',
+      subject: 'Kết quả test trình độ tiếng Anh của bạn - VIETGEN',
       text: studentBody,
-      replyTo: `VietGen VSTEP <${RECIPIENT}>`,
+      replyTo: `VIETGEN VSTEP <${RECIPIENT}>`,
     })
     studentSent = true
   } catch (err) {
@@ -202,7 +202,7 @@ app.post('/api/test-result', async (req, res) => {
     `Email kết quả gửi cho học viên: ${studentSent ? 'thành công' : 'THẤT BẠI'}`,
     '',
     '--',
-    'Gửi tự động từ trang test trình độ trên website VietGen.',
+    'Gửi tự động từ trang test trình độ trên website VIETGEN.',
   )
 
   try {

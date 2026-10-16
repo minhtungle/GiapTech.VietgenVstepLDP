@@ -174,7 +174,7 @@ export default function Contact() {
                     <div className="title-icon md-mb-15">
                       <img src="/assets/images/newsletter.png" alt="images" />
                     </div>
-                    <h2 className="title mb-0 white-color">Đăng Ký Nhận Tin VietGen</h2>
+                    <h2 className="title mb-0 white-color">Đăng Ký Nhận Tin VIETGEN</h2>
                   </div>
                 </div>
               </div>

@@ -170,11 +170,11 @@ export default function PlacementTest() {
       setMailNote(
         res.ok
           ? 'Kết quả chi tiết đã được gửi tới email của bạn.'
-          : 'Không gửi được email kết quả, nhưng bạn vẫn xem được điểm bên dưới. VietGen sẽ liên hệ với bạn qua số điện thoại.',
+          : 'Không gửi được email kết quả, nhưng bạn vẫn xem được điểm bên dưới. VIETGEN sẽ liên hệ với bạn qua số điện thoại.',
       )
     } catch {
       setMailNote(
-        'Không gửi được email kết quả, nhưng bạn vẫn xem được điểm bên dưới. VietGen sẽ liên hệ với bạn qua số điện thoại.',
+        'Không gửi được email kết quả, nhưng bạn vẫn xem được điểm bên dưới. VIETGEN sẽ liên hệ với bạn qua số điện thoại.',
       )
     } finally {
       setSending(false)
@@ -189,7 +189,7 @@ export default function PlacementTest() {
   return (
     <>
       <Seo
-        title="Test Trình Độ Tiếng Anh Miễn Phí - VietGen VSTEP"
+        title="Test Trình Độ Tiếng Anh Miễn Phí - VIETGEN VSTEP"
         description="Làm bài test trình độ tiếng Anh miễn phí theo khung VSTEP. Ngữ pháp, từ vựng, đọc hiểu. Nhận kết quả và lộ trình học phù hợp ngay."
       />
       <Breadcrumbs

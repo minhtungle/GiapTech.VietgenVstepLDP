@@ -49,7 +49,7 @@ export async function sendMail({ to, subject, text, replyTo }) {
     if (attempt > 0) await sleep(3000 * attempt)
     try {
       return await getTransporter().sendMail({
-        from: `VietGen VSTEP <${from}>`,
+        from: `VIETGEN VSTEP <${from}>`,
         to,
         subject,
         text,

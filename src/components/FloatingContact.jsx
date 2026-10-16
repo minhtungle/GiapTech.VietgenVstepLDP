@@ -26,7 +26,7 @@ export default function FloatingContact() {
         target="_blank"
         rel="noopener noreferrer"
         className="vg-float-btn vg-float-facebook"
-        aria-label="Facebook VietGen"
+        aria-label="Facebook VIETGEN"
       >
         <i className="fa fa-facebook" />
       </a>

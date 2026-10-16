@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
       {/* Giới thiệu + Lịch khai giảng, đặt ngay sau banner: khách vừa biết
-          VietGen là ai, vừa thấy ngay lớp nào sắp mở để đăng ký. */}
+          VIETGEN là ai, vừa thấy ngay lớp nào sắp mở để đăng ký. */}
       <div id="rs-about" className="vg-intro-schedule pt-80 pb-80 md-pt-55 md-pb-55">
         <div className="container">
           <div className="row">
@@ -274,7 +274,7 @@ export default function Home() {
             </h2>
             <div className="desc">
               Chất lượng thực tế, uy tín vững vàng và niềm tin từ đông đảo học viên đã trở thành
-              động lực để VietGen không ngừng mở rộng các hình thức đào tạo, giúp học viên{' '}
+              động lực để VIETGEN không ngừng mở rộng các hình thức đào tạo, giúp học viên{' '}
               <strong>&quot;Học Trọng Tâm – Ôn Dễ Dàng – Thi Đỗ Tỷ Lệ Cao&quot;</strong>.
             </div>
           </div>

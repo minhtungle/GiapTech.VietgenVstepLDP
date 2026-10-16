@@ -15,7 +15,7 @@ export const NAV_ITEMS = [
     label: 'Giới thiệu',
     to: '/gioi-thieu',
     children: [
-      { label: 'Về VietGen', to: '/gioi-thieu' },
+      { label: 'Về VIETGEN', to: '/gioi-thieu' },
       { label: 'Đội ngũ giảng viên', to: '/giang-vien' },
       { label: 'Chi tiết giảng viên', to: '/giang-vien/chi-tiet' },
     ],
@@ -49,7 +49,7 @@ export const REGIONS = ['Hà Nội', 'TP.HCM', 'Học Online']
 
 export const FOOTER_LINKS = {
   explore: [
-    { label: 'VietGen', to: '/' },
+    { label: 'VIETGEN', to: '/' },
     { label: 'Giới thiệu', to: '/gioi-thieu' },
     { label: 'Khóa học', to: '/khoa-hoc' },
     { label: 'Test trình độ', to: '/test' },

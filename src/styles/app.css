@@ -294,16 +294,36 @@ a[href^="mailto:"] {
     white-space: nowrap;
 }
 
-/* Email trong footer dài hơn cột. Thu nhỏ một chút để vừa trọn một dòng,
-   thay vì bẻ giữa tên miền thành "vietgeneducation." / "edu.vn". */
-#rs-footer .address-widget a[href^="mailto:"] {
+/* Cột "Liên Hệ" ở footer vốn rộng 3/12, quá hẹp cho địa chỉ dài và email nên
+   cả hai đều bị bẻ đôi. Nới cột này rộng hơn và thu hẹp ba cột còn lại - danh
+   sách link ở đó đều ngắn nên không ảnh hưởng. */
+@media only screen and (min-width: 992px) {
+    #rs-footer .footer-top .footer-widget:nth-child(1),
+    #rs-footer .footer-top .footer-widget:nth-child(2),
+    #rs-footer .footer-top .footer-widget:nth-child(3) {
+        flex: 0 0 auto;
+        width: 21%;
+    }
+    #rs-footer .footer-top .footer-widget:nth-child(4) {
+        flex: 0 0 auto;
+        width: 37%;
+    }
+}
+
+/* Giữ cỡ chữ đồng đều giữa ba dòng liên hệ; trước đây email bị thu nhỏ riêng
+   nên nhìn lệch hẳn so với địa chỉ và số điện thoại. */
+#rs-footer .address-widget li .desc,
+#rs-footer .address-widget li .desc a {
+    font-size: 15px;
+}
+/* Không bẻ địa chỉ và email giữa chừng khi cột đã đủ rộng */
+#rs-footer .address-widget li .desc {
     white-space: nowrap;
-    font-size: 14px;
-    letter-spacing: -0.2px;
 }
 @media only screen and (max-width: 1199px) {
-    /* Cột hẹp hơn thì đành cho xuống dòng, nhưng ưu tiên ngắt ở dấu @ */
-    #rs-footer .address-widget a[href^="mailto:"] {
+    /* Màn hình hẹp thì đành cho xuống dòng, nhưng ngắt theo từ chứ không
+       cắt giữa tên miền. */
+    #rs-footer .address-widget li .desc {
         white-space: normal;
         overflow-wrap: break-word;
     }

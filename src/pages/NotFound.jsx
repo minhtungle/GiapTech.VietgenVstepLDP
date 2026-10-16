@@ -6,8 +6,8 @@ export default function NotFound() {
   return (
     <>
       <Seo
-        title="Không Tìm Thấy Trang - VietGen"
-        description="Trang bạn tìm không tồn tại hoặc đã được chuyển sang địa chỉ khác. Quay lại trang chủ VietGen để tiếp tục tìm hiểu các khóa luyện thi VSTEP."
+        title="Không Tìm Thấy Trang - VIETGEN"
+        description="Trang bạn tìm không tồn tại hoặc đã được chuyển sang địa chỉ khác. Quay lại trang chủ VIETGEN để tiếp tục tìm hiểu các khóa luyện thi VSTEP."
       />
       <Breadcrumbs title="Không Tìm Thấy Trang" subText="Lỗi 404" />
 
@@ -17,7 +17,7 @@ export default function NotFound() {
             <h2 className="title mb-17">Rất tiếc, không tìm thấy trang này</h2>
             <div className="desc mb-30">
               Đường dẫn bạn truy cập không tồn tại hoặc đã được thay đổi. Bạn có thể quay lại trang
-              chủ hoặc xem danh sách khóa học VSTEP của VietGen.
+              chủ hoặc xem danh sách khóa học VSTEP của VIETGEN.
             </div>
             <div className="btn-part">
               <Link className="readon banner-style" to="/">

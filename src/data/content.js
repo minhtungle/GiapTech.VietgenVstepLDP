@@ -162,7 +162,7 @@ export const CONTENT = {
       "title_short_index": "Chứng chỉ VSTEP có giá trị bao lâu?",
       "date": "15/09/2026",
       "date_long": "15 Tháng 9, 2026",
-      "author": "VietGen",
+      "author": "VIETGEN",
       "category": "Chứng chỉ",
       "image": "/assets/images/blog/inner/1.jpg",
       "image_thumb": "assets/images/blog/style2/1.jpg",
@@ -175,12 +175,12 @@ export const CONTENT = {
       "title": "Mất gốc tiếng Anh có học được khóa VSTEP cấp tốc không?",
       "title_short_index": "Mất gốc có học được khóa cấp tốc không?",
       "date": "22/09/2026",
-      "author": "VietGen",
+      "author": "VIETGEN",
       "category": "Lộ trình",
       "image": "/assets/images/blog/inner/2.jpg",
       "image_thumb": "assets/images/blog/style2/2.jpg",
       "image_index": "assets/images/blog/2.jpg",
-      "excerpt": "Nhiều học viên lo lắng vì mất gốc tiếng Anh nhưng vẫn cần thi VSTEP gấp để kịp tốt nghiệp. VietGen chia sẻ lộ trình học bù kiến thức nền tảng song song với luyện đề, cách sắp xếp thời gian tự học và vai trò của mô hình 1 Giáo viên + 1 Trợ giảng trong việc kèm sát người mất gốc...",
+      "excerpt": "Nhiều học viên lo lắng vì mất gốc tiếng Anh nhưng vẫn cần thi VSTEP gấp để kịp tốt nghiệp. VIETGEN chia sẻ lộ trình học bù kiến thức nền tảng song song với luyện đề, cách sắp xếp thời gian tự học và vai trò của mô hình 1 Giáo viên + 1 Trợ giảng trong việc kèm sát người mất gốc...",
       "href": "blog-single.html",
       "href_index": "blog.html"
     },
@@ -189,7 +189,7 @@ export const CONTENT = {
       "title": "Nên học VSTEP B1 hay B2? Cách chọn khóa phù hợp",
       "title_short_index": "Nên học VSTEP B1 hay B2?",
       "date": "29/09/2026",
-      "author": "VietGen",
+      "author": "VIETGEN",
       "category": "Khóa học",
       "image": "/assets/images/blog/inner/3.jpg",
       "image_thumb": "assets/images/blog/style2/3.jpg",
@@ -202,7 +202,7 @@ export const CONTENT = {
       "id": "post-4",
       "title": "Bảng quy đổi điểm VSTEP theo khung năng lực 6 bậc",
       "date": "06/10/2026",
-      "author": "VietGen",
+      "author": "VIETGEN",
       "category": "Chứng chỉ",
       "image": "/assets/images/blog/inner/4.jpg",
       "image_thumb": "assets/images/blog/style2/4.jpg",
@@ -213,18 +213,18 @@ export const CONTENT = {
       "id": "post-5",
       "title": "Kinh nghiệm luyện Writing Part 2 VSTEP đạt điểm cao",
       "date": "13/10/2026",
-      "author": "VietGen",
+      "author": "VIETGEN",
       "category": "Kinh nghiệm thi",
       "image": "/assets/images/blog/inner/5.jpg",
       "image_thumb": "assets/images/blog/style2/5.jpg",
-      "excerpt": "Writing Part 2 (bài luận) thường khiến thí sinh mất điểm vì bố cục lan man và lập luận thiếu chặt chẽ. Giảng viên VietGen chia sẻ khung dàn ý 4 đoạn chuẩn, cách triển khai luận điểm và những lỗi ngữ pháp phổ biến cần tránh để đạt điểm Writing từ 7.0 trở lên...",
+      "excerpt": "Writing Part 2 (bài luận) thường khiến thí sinh mất điểm vì bố cục lan man và lập luận thiếu chặt chẽ. Giảng viên VIETGEN chia sẻ khung dàn ý 4 đoạn chuẩn, cách triển khai luận điểm và những lỗi ngữ pháp phổ biến cần tránh để đạt điểm Writing từ 7.0 trở lên...",
       "href": "blog-single.html"
     },
     {
       "id": "post-6",
       "title": "5 lỗi thường gặp khi luyện Speaking VSTEP và cách khắc phục",
       "date": "20/10/2026",
-      "author": "VietGen",
+      "author": "VIETGEN",
       "category": "Kinh nghiệm thi",
       "image": "/assets/images/blog/inner/6.jpg",
       "excerpt": "Phần thi Speaking VSTEP đòi hỏi phản xạ nhanh và phát âm rõ ràng. Bài viết chỉ ra 5 lỗi phổ biến nhất mà học viên hay mắc phải như nói lan man lạc đề, phát âm sai trọng âm, thiếu từ nối, đồng thời gợi ý cách luyện tập cùng trợ giảng để cải thiện trong thời gian ngắn...",
@@ -234,7 +234,7 @@ export const CONTENT = {
       "id": "post-7",
       "title": "Chi phí ôn thi VSTEP: Nên tự học hay đăng ký khóa cấp tốc?",
       "date": "27/10/2026",
-      "author": "VietGen",
+      "author": "VIETGEN",
       "category": "Lộ trình",
       "image": "/assets/images/blog/inner/7.jpg",
       "excerpt": "So sánh chi phí, thời gian và tỷ lệ đạt điểm giữa việc tự ôn luyện VSTEP tại nhà và tham gia khóa học cấp tốc có giảng viên kèm cặp. Bài viết giúp bạn cân nhắc phương án phù hợp với ngân sách và quỹ thời gian còn lại trước kỳ thi...",
@@ -244,7 +244,7 @@ export const CONTENT = {
       "id": "post-8",
       "title": "Cấu trúc bài thi VSTEP mới nhất: Những điều thí sinh cần biết",
       "date": "03/11/2026",
-      "author": "VietGen",
+      "author": "VIETGEN",
       "category": "Chứng chỉ",
       "image": "/assets/images/blog/inner/8.jpg",
       "excerpt": "Cập nhật cấu trúc 4 kỹ năng Nghe - Nói - Đọc - Viết trong bài thi VSTEP, thời lượng từng phần thi và hình thức thi trên máy tính. Bài viết tổng hợp đầy đủ để thí sinh chuẩn bị tâm lý và kỹ năng làm bài tốt nhất trước ngày thi chính thức...",
@@ -272,8 +272,8 @@ export const CONTENT = {
       "name": "Lê Quang Huy",
       "designation": "Nhân viên văn phòng - Đạt VSTEP B2",
       "image": "/assets/images/vstep/student-2.jpg",
-      "text": "Có nền B1 nhưng không biết cách triển khai bài học thuật. VietGen giúp mình có phương pháp làm bài rõ ràng, sau 10 buổi đã đạt B2 để nộp hồ sơ cao học.",
-      "text_short_about": "VietGen giúp mình có phương pháp làm bài rõ ràng, sau 10 buổi đã đạt B2 để nộp hồ sơ cao học.",
+      "text": "Có nền B1 nhưng không biết cách triển khai bài học thuật. VIETGEN giúp mình có phương pháp làm bài rõ ràng, sau 10 buổi đã đạt B2 để nộp hồ sơ cao học.",
+      "text_short_about": "VIETGEN giúp mình có phương pháp làm bài rõ ràng, sau 10 buổi đã đạt B2 để nộp hồ sơ cao học.",
       "appears_on": [
         "index",
         "about"
@@ -376,15 +376,15 @@ export const CONTENT = {
   "pages": {
     "index": {
       "file": "index.html",
-      "title": "VietGen - Trung Tâm Luyện Thi Chứng Chỉ VSTEP Cấp Tốc",
-      "description": "VietGen - Luyện thi VSTEP B1, B2 cấp tốc. Mô hình 1 Giáo viên + Trợ giảng, chữa Speaking/Writing trực tiếp, cam kết đầu ra.",
+      "title": "VIETGEN - Trung Tâm Luyện Thi Chứng Chỉ VSTEP Cấp Tốc",
+      "description": "VIETGEN - Luyện thi VSTEP B1, B2 cấp tốc. Mô hình 1 Giáo viên + Trợ giảng, chữa Speaking/Writing trực tiếp, cam kết đầu ra.",
       "breadcrumb": null,
       "body_class": "defult-home",
       "sections": [
         {
           "name": "Banner Section",
           "id": "rs-banner",
-          "h1": "Luyện Thi VSTEP Cấp Tốc Cùng VietGen",
+          "h1": "Luyện Thi VSTEP Cấp Tốc Cùng VIETGEN",
           "desc_html_br": "Khóa VSTEP B1 (9 buổi) & B2 (10 buổi) - mô hình 1 Giáo viên + 1 Trợ giảng,\nchữa Speaking & Writing trực tiếp, luyện đề sát cấu trúc thi thật.",
           "buttons": [
             {
@@ -471,13 +471,13 @@ export const CONTENT = {
             "title": "Lịch Khai Giảng",
             "items_ref": "shared.schedule (4 mục, dùng trường day/month/desc)"
           },
-          "sub_title": "Về VietGen",
+          "sub_title": "Về VIETGEN",
           "title": "Mô Hình 1 Giáo Viên + 1 Trợ Giảng Độc Quyền",
-          "desc": "VietGen tập trung luyện thi chứng chỉ VSTEP B1, B2 cấp tốc cho sinh viên, người đi làm và người mất gốc cần chứng chỉ trong thời gian ngắn. Học viên được chữa Speaking và Writing trực tiếp, có trợ giảng theo sát chấm bài và nhắc tiến độ suốt khóa học, cùng 20 bộ đề luyện tập bám sát cấu trúc đề thi thật.",
-          "signature": "Ths. Nguyễn Thu Hà - Giám Đốc Đào Tạo VietGen",
+          "desc": "VIETGEN tập trung luyện thi chứng chỉ VSTEP B1, B2 cấp tốc cho sinh viên, người đi làm và người mất gốc cần chứng chỉ trong thời gian ngắn. Học viên được chữa Speaking và Writing trực tiếp, có trợ giảng theo sát chấm bài và nhắc tiến độ suốt khóa học, cùng 20 bộ đề luyện tập bám sát cấu trúc đề thi thật.",
+          "signature": "Ths. Nguyễn Thu Hà - Giám Đốc Đào Tạo VIETGEN",
           "buttons": [
             {
-              "text": "Xem Thêm Về VietGen",
+              "text": "Xem Thêm Về VIETGEN",
               "href": "about.html",
               "style": "readon"
             }
@@ -556,7 +556,7 @@ export const CONTENT = {
           "class": "vg-format-section",
           "title_html": "Hình Thức <span style=\"color:#0b0c51;\">Đào Tạo</span>",
           "title_plain": "Hình Thức Đào Tạo",
-          "desc_html": "Chất lượng thực tế, uy tín vững vàng và niềm tin từ đông đảo học viên đã trở thành động lực để VietGen không ngừng mở rộng các hình thức đào tạo, giúp học viên <strong>\"Học Trọng Tâm – Ôn Dễ Dàng – Thi Đỗ Tỷ Lệ Cao\"</strong>.",
+          "desc_html": "Chất lượng thực tế, uy tín vững vàng và niềm tin từ đông đảo học viên đã trở thành động lực để VIETGEN không ngừng mở rộng các hình thức đào tạo, giúp học viên <strong>\"Học Trọng Tâm – Ôn Dễ Dàng – Thi Đỗ Tỷ Lệ Cao\"</strong>.",
           "items": [
             {
               "overlay_title_html_br": "Lớp Học Zoom\nTRỰC TUYẾN",
@@ -595,7 +595,7 @@ export const CONTENT = {
               "number": "1",
               "icon": "fa fa-info",
               "title": "Tiếp Nhận Thông Tin",
-              "desc": "Sau khi đăng ký thông tin, VietGen sẽ liên hệ tư vấn miễn phí về lịch học, lịch thi, học phí để học viên lựa chọn phù hợp với bản thân."
+              "desc": "Sau khi đăng ký thông tin, VIETGEN sẽ liên hệ tư vấn miễn phí về lịch học, lịch thi, học phí để học viên lựa chọn phù hợp với bản thân."
             },
             {
               "number": "2",
@@ -650,7 +650,7 @@ export const CONTENT = {
           "name": "Testimonial Section",
           "class": "rs-testimonial home-style1",
           "sub_title": "Học viên nói gì",
-          "title": "Cảm Nhận Của Học Viên VietGen",
+          "title": "Cảm Nhận Của Học Viên VIETGEN",
           "items_ref": "shared.testimonials (3 mục, dùng trường text đầy đủ)",
           "quote_icon": "assets/images/testimonial/style5/quote2.png"
         },
@@ -659,7 +659,7 @@ export const CONTENT = {
           "class": "rs-partner",
           "title_html": "Các Đơn Vị Tổ Chức Thi & Cấp Chứng Chỉ <span style=\"color:#0b0c51;\">Chuẩn Bộ GD&ĐT</span>",
           "title_plain": "Các Đơn Vị Tổ Chức Thi & Cấp Chứng Chỉ Chuẩn Bộ GD&ĐT",
-          "desc": "VietGen luyện thi theo đúng cấu trúc đề của các đơn vị được Bộ Giáo dục và Đào tạo cấp phép tổ chức thi và cấp chứng chỉ VSTEP trên toàn quốc. Đây là các đơn vị tổ chức thi độc lập, không phải đối tác hay nhà tài trợ của VietGen.",
+          "desc": "VIETGEN luyện thi theo đúng cấu trúc đề của các đơn vị được Bộ Giáo dục và Đào tạo cấp phép tổ chức thi và cấp chứng chỉ VSTEP trên toàn quốc. Đây là các đơn vị tổ chức thi độc lập, không phải đối tác hay nhà tài trợ của VIETGEN.",
           "items_ref": "shared.partners (8 logo, carousel owl)"
         },
         {
@@ -675,21 +675,21 @@ export const CONTENT = {
           "blog_items": [
             {
               "title": "Chứng chỉ VSTEP có giá trị bao lâu?",
-              "author": "VietGen",
+              "author": "VIETGEN",
               "image": "/assets/images/blog/1.jpg",
               "href": "blog-single.html",
               "btn": "Xem thêm"
             },
             {
               "title": "Mất gốc có học được khóa cấp tốc không?",
-              "author": "VietGen",
+              "author": "VIETGEN",
               "image": "/assets/images/blog/2.jpg",
               "href": "blog.html",
               "btn": "Xem thêm"
             },
             {
               "title": "Nên học VSTEP B1 hay B2?",
-              "author": "VietGen",
+              "author": "VIETGEN",
               "image": "/assets/images/blog/3.jpg",
               "href": "blog.html",
               "btn": "Xem thêm"
@@ -742,10 +742,10 @@ export const CONTENT = {
     },
     "about": {
       "file": "about.html",
-      "title": "Giới Thiệu VietGen - Trung Tâm Luyện Thi VSTEP",
-      "description": "VietGen - Trung tâm luyện thi chứng chỉ VSTEP cấp tốc với mô hình 1 Giáo viên + 1 Trợ giảng, đội ngũ giáo viên giàu kinh nghiệm.",
+      "title": "Giới Thiệu VIETGEN - Trung Tâm Luyện Thi VSTEP",
+      "description": "VIETGEN - Trung tâm luyện thi chứng chỉ VSTEP cấp tốc với mô hình 1 Giáo viên + 1 Trợ giảng, đội ngũ giáo viên giàu kinh nghiệm.",
       "breadcrumb": {
-        "h1": "Giới Thiệu VietGen",
+        "h1": "Giới Thiệu VIETGEN",
         "image": "/assets/images/breadcrumbs/2.jpg",
         "image_alt": "Breadcrumbs Image",
         "trail": [
@@ -763,10 +763,10 @@ export const CONTENT = {
         {
           "name": "About Section",
           "id": "rs-about",
-          "sub_title": "Về VietGen",
-          "title": "Chào Mừng Đến Với VietGen Language Education",
+          "sub_title": "Về VIETGEN",
+          "title": "Chào Mừng Đến Với VIETGEN Language Education",
           "bold_text": "Trung tâm luyện thi chứng chỉ VSTEP cấp tốc, đồng hành cùng hàng nghìn học viên đạt chứng chỉ ngay lần thi đầu tiên.",
-          "desc": "VietGen tập trung luyện thi chứng chỉ VSTEP B1, B2 cấp tốc cho sinh viên, người đi làm và người mất gốc cần chứng chỉ trong thời gian ngắn. Với mô hình 1 Giáo viên + 1 Trợ giảng độc quyền, học viên được chữa Speaking và Writing trực tiếp thay vì chỉ học lý thuyết suông, có trợ giảng theo sát chấm bài và nhắc tiến độ suốt khóa học. Chúng tôi cam kết lộ trình rõ ràng ngay từ buổi tư vấn đầu tiên, với 20 bộ đề luyện tập bám sát cấu trúc đề thi thật.",
+          "desc": "VIETGEN tập trung luyện thi chứng chỉ VSTEP B1, B2 cấp tốc cho sinh viên, người đi làm và người mất gốc cần chứng chỉ trong thời gian ngắn. Với mô hình 1 Giáo viên + 1 Trợ giảng độc quyền, học viên được chữa Speaking và Writing trực tiếp thay vì chỉ học lý thuyết suông, có trợ giảng theo sát chấm bài và nhắc tiến độ suốt khóa học. Chúng tôi cam kết lộ trình rõ ràng ngay từ buổi tư vấn đầu tiên, với 20 bộ đề luyện tập bám sát cấu trúc đề thi thật.",
           "images": [
             {
               "src": "/assets/images/vstep/about.jpg",
@@ -778,12 +778,12 @@ export const CONTENT = {
           "name": "CTA Section",
           "class": "rs-cta style2",
           "video": {
-            "text": "Xem Video Giới Thiệu VietGen",
+            "text": "Xem Video Giới Thiệu VIETGEN",
             "href": "https://www.youtube.com/watch?v=atMUy_bPoQI",
             "icon": "fa fa-play"
           },
           "title": "Đăng Ký Test Đầu Vào Miễn Phí",
-          "desc": "Để lại thông tin, VietGen sẽ liên hệ tư vấn lộ trình học phù hợp với mục tiêu và thời gian của bạn. Kiểm tra trình độ đầu vào miễn phí trước khi đăng ký khóa học.",
+          "desc": "Để lại thông tin, VIETGEN sẽ liên hệ tư vấn lộ trình học phù hợp với mục tiêu và thời gian của bạn. Kiểm tra trình độ đầu vào miễn phí trước khi đăng ký khóa học.",
           "buttons": [
             {
               "text": "Đăng Ký Ngay",
@@ -832,15 +832,15 @@ export const CONTENT = {
               "tab_icon": "flaticon-banknote",
               "id": "about-history",
               "active": true,
-              "title": "Lịch Sử VietGen",
-              "desc": "VietGen được thành lập bởi đội ngũ giáo viên có nhiều năm kinh nghiệm luyện thi chứng chỉ tiếng Anh, xuất phát từ mong muốn giúp học viên đạt chứng chỉ VSTEP nhanh chóng mà không phải học lan man, dàn trải. Từ những lớp học đầu tiên tại Hà Nội, VietGen đã mở rộng ra TP.HCM và triển khai hình thức học online phục vụ học viên toàn quốc."
+              "title": "Lịch Sử VIETGEN",
+              "desc": "VIETGEN được thành lập bởi đội ngũ giáo viên có nhiều năm kinh nghiệm luyện thi chứng chỉ tiếng Anh, xuất phát từ mong muốn giúp học viên đạt chứng chỉ VSTEP nhanh chóng mà không phải học lan man, dàn trải. Từ những lớp học đầu tiên tại Hà Nội, VIETGEN đã mở rộng ra TP.HCM và triển khai hình thức học online phục vụ học viên toàn quốc."
             },
             {
               "tab_label": "Sứ Mệnh",
               "tab_icon": "flaticon-flower",
               "id": "about-mission",
               "active": false,
-              "title": "Sứ Mệnh VietGen",
+              "title": "Sứ Mệnh VIETGEN",
               "desc": "Giúp mọi học viên, dù mất gốc hay đã có nền tảng, đều có thể đạt chứng chỉ VSTEP B1/B2 trong thời gian ngắn nhất với phương pháp học đúng trọng tâm, được chữa bài trực tiếp và theo sát xuyên suốt khóa học thay vì tự học một mình."
             },
             {
@@ -848,8 +848,8 @@ export const CONTENT = {
               "tab_icon": "flaticon-analysis",
               "id": "about-admin",
               "active": false,
-              "title": "Đội Ngũ VietGen",
-              "desc": "Mỗi lớp học tại VietGen đều có mô hình 1 Giáo viên + 1 Trợ giảng: giáo viên trực tiếp giảng dạy và chữa bài, trợ giảng theo sát chấm bài tập, nhắc tiến độ và hỗ trợ giải đáp thắc mắc cho học viên trong suốt khóa học."
+              "title": "Đội Ngũ VIETGEN",
+              "desc": "Mỗi lớp học tại VIETGEN đều có mô hình 1 Giáo viên + 1 Trợ giảng: giáo viên trực tiếp giảng dạy và chữa bài, trợ giảng theo sát chấm bài tập, nhắc tiến độ và hỗ trợ giải đáp thắc mắc cho học viên trong suốt khóa học."
             }
           ]
         },
@@ -867,7 +867,7 @@ export const CONTENT = {
             "image": "/assets/images/vstep/cta-bg.jpg",
             "image_alt": "VietGen",
             "title": "Cam Kết Đồng Hành",
-            "desc": "VietGen cam kết lộ trình học rõ ràng, hỗ trợ 24/7 qua hotline, Zalo, Facebook trong suốt quá trình ôn thi VSTEP của bạn.",
+            "desc": "VIETGEN cam kết lộ trình học rõ ràng, hỗ trợ 24/7 qua hotline, Zalo, Facebook trong suốt quá trình ôn thi VSTEP của bạn.",
             "buttons": [
               {
                 "text": "Nhận Tư Vấn Ngay",
@@ -881,7 +881,7 @@ export const CONTENT = {
         {
           "name": "Newsletter section",
           "class": "rs-newsletter style1",
-          "title": "Đăng Ký Nhận Tin VietGen",
+          "title": "Đăng Ký Nhận Tin VIETGEN",
           "icon_image": "assets/images/newsletter.png",
           "form": {
             "action": "#",
@@ -902,8 +902,8 @@ export const CONTENT = {
     },
     "course": {
       "file": "course.html",
-      "title": "Khóa Học VSTEP - VietGen",
-      "description": "Danh sách khóa học luyện thi VSTEP tại VietGen: B1 Cấp Tốc 9 buổi, B2 Cấp Tốc 10 buổi, Cấp Tốc 1-1 7 buổi, học offline hoặc online qua Zoom.",
+      "title": "Khóa Học VSTEP - VIETGEN",
+      "description": "Danh sách khóa học luyện thi VSTEP tại VIETGEN: B1 Cấp Tốc 9 buổi, B2 Cấp Tốc 10 buổi, Cấp Tốc 1-1 7 buổi, học offline hoặc online qua Zoom.",
       "breadcrumb": {
         "h1": "Khóa Học VSTEP",
         "image": "/assets/images/breadcrumbs/2.jpg",
@@ -963,8 +963,8 @@ export const CONTENT = {
     },
     "course-single": {
       "file": "course-single.html",
-      "title": "VSTEP B1 Cấp Tốc - 9 Buổi - VietGen",
-      "description": "Khóa VSTEP B1 Cấp Tốc 9 buổi tại VietGen: mô hình 1 Giáo viên + 1 Trợ giảng, chữa Speaking/Writing trực tiếp, 20 bộ đề luyện tập sát đề thi thật.",
+      "title": "VSTEP B1 Cấp Tốc - 9 Buổi - VIETGEN",
+      "description": "Khóa VSTEP B1 Cấp Tốc 9 buổi tại VIETGEN: mô hình 1 Giáo viên + 1 Trợ giảng, chữa Speaking/Writing trực tiếp, 20 bộ đề luyện tập sát đề thi thật.",
       "breadcrumb": {
         "h1": "VSTEP B1 Cấp Tốc - 9 Buổi",
         "image": "/assets/images/breadcrumbs/2.jpg",
@@ -1112,7 +1112,7 @@ export const CONTENT = {
             },
             {
               "question": "Có tùy chọn học nhanh hơn 9 buổi không?",
-              "answer": "Có. VietGen có tùy chọn cấp tốc 1-1 trong 7 buổi cho học viên cần tiến độ nhanh hơn.",
+              "answer": "Có. VIETGEN có tùy chọn cấp tốc 1-1 trong 7 buổi cho học viên cần tiến độ nhanh hơn.",
               "expanded": false
             }
           ],
@@ -1192,8 +1192,8 @@ export const CONTENT = {
     },
     "team": {
       "file": "team.html",
-      "title": "Đội Ngũ Giảng Viên - VietGen",
-      "description": "Đội ngũ giảng viên VietGen: thạc sĩ, chuyên gia chấm thi VSTEP giàu kinh nghiệm, trực tiếp giảng dạy và chữa bài Speaking, Writing theo mô hình 1 Giáo viên + 1 Trợ giảng.",
+      "title": "Đội Ngũ Giảng Viên - VIETGEN",
+      "description": "Đội ngũ giảng viên VIETGEN: thạc sĩ, chuyên gia chấm thi VSTEP giàu kinh nghiệm, trực tiếp giảng dạy và chữa bài Speaking, Writing theo mô hình 1 Giáo viên + 1 Trợ giảng.",
       "breadcrumb": {
         "h1": "Đội Ngũ Giảng Viên",
         "image": "/assets/images/breadcrumbs/2.jpg",
@@ -1215,8 +1215,8 @@ export const CONTENT = {
           "id": "rs-team",
           "sub_title": "Đội ngũ giảng viên",
           "title": "Giáo Viên Giàu Kinh Nghiệm",
-          "desc_html": "Mỗi lớp học tại VietGen luôn có <strong>1 Giáo viên + 1 Trợ giảng</strong> đồng hành, trực tiếp chữa bài Speaking & Writing cho từng học viên, đảm bảo lộ trình luyện thi VSTEP hiệu quả và sát với đề thi thật.",
-          "desc_plain": "Mỗi lớp học tại VietGen luôn có 1 Giáo viên + 1 Trợ giảng đồng hành, trực tiếp chữa bài Speaking & Writing cho từng học viên, đảm bảo lộ trình luyện thi VSTEP hiệu quả và sát với đề thi thật.",
+          "desc_html": "Mỗi lớp học tại VIETGEN luôn có <strong>1 Giáo viên + 1 Trợ giảng</strong> đồng hành, trực tiếp chữa bài Speaking & Writing cho từng học viên, đảm bảo lộ trình luyện thi VSTEP hiệu quả và sát với đề thi thật.",
+          "desc_plain": "Mỗi lớp học tại VIETGEN luôn có 1 Giáo viên + 1 Trợ giảng đồng hành, trực tiếp chữa bài Speaking & Writing cho từng học viên, đảm bảo lộ trình luyện thi VSTEP hiệu quả và sát với đề thi thật.",
           "items": [
             {
               "name": "Ths. Nguyễn Thu Hà",
@@ -1272,8 +1272,8 @@ export const CONTENT = {
     },
     "team-single": {
       "file": "team-single.html",
-      "title": "Ths. Nguyễn Thu Hà - Giảng Viên VietGen",
-      "description": "Ths. Nguyễn Thu Hà - Giám Đốc Đào Tạo, giáo viên luyện thi VSTEP tại VietGen với 10 năm kinh nghiệm chữa Speaking, Writing và ôn thi cấp tốc B1-C1.",
+      "title": "Ths. Nguyễn Thu Hà - Giảng Viên VIETGEN",
+      "description": "Ths. Nguyễn Thu Hà - Giám Đốc Đào Tạo, giáo viên luyện thi VSTEP tại VIETGEN với 10 năm kinh nghiệm chữa Speaking, Writing và ôn thi cấp tốc B1-C1.",
       "breadcrumb": {
         "h1": "Giảng Viên: Ths. Nguyễn Thu Hà",
         "image": "/assets/images/breadcrumbs/2.jpg",
@@ -1333,7 +1333,7 @@ export const CONTENT = {
           },
           "content_column": {
             "h2": "Ths. Nguyễn Thu Hà",
-            "h4": "Giáo viên luyện thi VSTEP tại VietGen",
+            "h4": "Giáo viên luyện thi VSTEP tại VIETGEN",
             "student_list": [
               {
                 "text": "10 Năm Kinh Nghiệm Luyện Thi VSTEP"
@@ -1349,7 +1349,7 @@ export const CONTENT = {
               }
             ],
             "intro_heading": "Giới Thiệu",
-            "intro_text": "Cô Nguyễn Thu Hà có 10 năm kinh nghiệm luyện thi VSTEP các trình độ B1-C1, tốt nghiệp Thạc sĩ Ngôn ngữ Anh và từng giảng dạy tại nhiều trường đại học lớn trước khi trở thành Giám Đốc Đào Tạo tại VietGen. Cô trực tiếp chữa bài Speaking và Writing cho từng học viên, giúp phát hiện và khắc phục nhanh các lỗi sai thường gặp trong bài thi. Với mô hình 1 giáo viên đứng lớp kết hợp 1 trợ giảng theo sát, cô đảm bảo mọi học viên đều được quan tâm sát sao trong suốt khóa học. Phương pháp giảng dạy của cô tập trung vào chiến thuật làm bài theo từng dạng đề VSTEP, kết hợp luyện phản xạ Speaking và xây dựng khung bài Writing chuẩn giám khảo. Nhờ đó, phần lớn học viên của cô đạt được mục tiêu đầu ra chỉ sau một khóa học cấp tốc.",
+            "intro_text": "Cô Nguyễn Thu Hà có 10 năm kinh nghiệm luyện thi VSTEP các trình độ B1-C1, tốt nghiệp Thạc sĩ Ngôn ngữ Anh và từng giảng dạy tại nhiều trường đại học lớn trước khi trở thành Giám Đốc Đào Tạo tại VIETGEN. Cô trực tiếp chữa bài Speaking và Writing cho từng học viên, giúp phát hiện và khắc phục nhanh các lỗi sai thường gặp trong bài thi. Với mô hình 1 giáo viên đứng lớp kết hợp 1 trợ giảng theo sát, cô đảm bảo mọi học viên đều được quan tâm sát sao trong suốt khóa học. Phương pháp giảng dạy của cô tập trung vào chiến thuật làm bài theo từng dạng đề VSTEP, kết hợp luyện phản xạ Speaking và xây dựng khung bài Writing chuẩn giám khảo. Nhờ đó, phần lớn học viên của cô đạt được mục tiêu đầu ra chỉ sau một khóa học cấp tốc.",
             "skill_title": "Kỹ Năng Giảng Dạy Của Cô:",
             "skills": [
               {
@@ -1372,7 +1372,7 @@ export const CONTENT = {
           },
           "bottom_content": {
             "title": "Phương Pháp Giúp Học Viên Vượt Qua Nỗi Sợ VSTEP",
-            "text": "Trong quá trình giảng dạy, cô Hà nhận thấy phần lớn học viên gặp khó khăn không phải vì thiếu kiến thức mà vì thiếu chiến thuật làm bài và sự tự tin khi thi Speaking, Writing. Vì vậy, mỗi buổi học đều được thiết kế để học viên được thực hành trực tiếp, nhận phản hồi ngay tại chỗ và sửa lỗi liên tục thay vì chỉ học lý thuyết suông. Đội ngũ trợ giảng hỗ trợ theo sát từng học viên trong lớp, đảm bảo không ai bị bỏ lại phía sau dù trình độ đầu vào khác nhau. Nhiều học viên từng thi trượt nhiều lần đã cải thiện rõ rệt điểm số chỉ sau một khóa học cấp tốc nhờ nắm chắc format đề thi và luyện tập đúng trọng tâm. Đó cũng chính là kim chỉ nam trong triết lý giảng dạy mà cô Hà xây dựng cho toàn bộ đội ngũ giáo viên tại VietGen."
+            "text": "Trong quá trình giảng dạy, cô Hà nhận thấy phần lớn học viên gặp khó khăn không phải vì thiếu kiến thức mà vì thiếu chiến thuật làm bài và sự tự tin khi thi Speaking, Writing. Vì vậy, mỗi buổi học đều được thiết kế để học viên được thực hành trực tiếp, nhận phản hồi ngay tại chỗ và sửa lỗi liên tục thay vì chỉ học lý thuyết suông. Đội ngũ trợ giảng hỗ trợ theo sát từng học viên trong lớp, đảm bảo không ai bị bỏ lại phía sau dù trình độ đầu vào khác nhau. Nhiều học viên từng thi trượt nhiều lần đã cải thiện rõ rệt điểm số chỉ sau một khóa học cấp tốc nhờ nắm chắc format đề thi và luyện tập đúng trọng tâm. Đó cũng chính là kim chỉ nam trong triết lý giảng dạy mà cô Hà xây dựng cho toàn bộ đội ngũ giáo viên tại VIETGEN."
           }
         },
         {
@@ -1397,8 +1397,8 @@ export const CONTENT = {
     },
     "blog": {
       "file": "blog.html",
-      "title": "Tin Tức & Kiến Thức VSTEP - VietGen",
-      "description": "Cập nhật tin tức, kiến thức và kinh nghiệm luyện thi chứng chỉ VSTEP từ VietGen: quy đổi điểm, lộ trình học, mẹo làm bài Speaking - Writing.",
+      "title": "Tin Tức & Kiến Thức VSTEP - VIETGEN",
+      "description": "Cập nhật tin tức, kiến thức và kinh nghiệm luyện thi chứng chỉ VSTEP từ VIETGEN: quy đổi điểm, lộ trình học, mẹo làm bài Speaking - Writing.",
       "breadcrumb": {
         "h1": "Tin Tức & Kiến Thức VSTEP",
         "image": "/assets/images/breadcrumbs/2.jpg",
@@ -1516,7 +1516,7 @@ export const CONTENT = {
                   "href": "#"
                 },
                 {
-                  "text": "VietGen.edu.vn",
+                  "text": "VIETGEN.edu.vn",
                   "href": "index.html"
                 }
               ]
@@ -1545,8 +1545,8 @@ export const CONTENT = {
     },
     "blog-single": {
       "file": "blog-single.html",
-      "title": "Chứng Chỉ VSTEP Có Giá Trị Bao Lâu? - VietGen",
-      "description": "Tìm hiểu thời hạn hiệu lực 2 năm của chứng chỉ VSTEP, các mục đích sử dụng phổ biến như xét tốt nghiệp, học cao học, thi công chức và lời khuyên chọn khóa cấp tốc phù hợp tại VietGen.",
+      "title": "Chứng Chỉ VSTEP Có Giá Trị Bao Lâu? - VIETGEN",
+      "description": "Tìm hiểu thời hạn hiệu lực 2 năm của chứng chỉ VSTEP, các mục đích sử dụng phổ biến như xét tốt nghiệp, học cao học, thi công chức và lời khuyên chọn khóa cấp tốc phù hợp tại VIETGEN.",
       "breadcrumb": {
         "h1": "Chứng Chỉ VSTEP Có Giá Trị Bao Lâu?",
         "image": "/assets/images/breadcrumbs/2.jpg",
@@ -1573,7 +1573,7 @@ export const CONTENT = {
             },
             "meta": {
               "date": "15 Tháng 9, 2026",
-              "author": "VietGen",
+              "author": "VIETGEN",
               "category": "Chứng chỉ",
               "comments": "0",
               "icons": {
@@ -1611,7 +1611,7 @@ export const CONTENT = {
               },
               {
                 "type": "p",
-                "text": "Với những bạn đang cần gấp chứng chỉ để kịp hạn nộp hồ sơ tốt nghiệp, xét tuyển cao học hay hoàn thiện hồ sơ công chức, lời khuyên là nên lựa chọn các khóa luyện thi cấp tốc được thiết kế sát với cấu trúc đề thi thật. Tại VietGen, khóa VSTEP B1 cấp tốc chỉ gồm 9 buổi học và khóa B2 cấp tốc gồm 10 buổi, áp dụng mô hình 1 giáo viên đứng lớp kết hợp 1 trợ giảng đồng hành xuyên suốt, giúp học viên được chữa bài Speaking và Writing trực tiếp, sát với tiêu chí chấm thi thực tế thay vì học lý thuyết chung chung."
+                "text": "Với những bạn đang cần gấp chứng chỉ để kịp hạn nộp hồ sơ tốt nghiệp, xét tuyển cao học hay hoàn thiện hồ sơ công chức, lời khuyên là nên lựa chọn các khóa luyện thi cấp tốc được thiết kế sát với cấu trúc đề thi thật. Tại VIETGEN, khóa VSTEP B1 cấp tốc chỉ gồm 9 buổi học và khóa B2 cấp tốc gồm 10 buổi, áp dụng mô hình 1 giáo viên đứng lớp kết hợp 1 trợ giảng đồng hành xuyên suốt, giúp học viên được chữa bài Speaking và Writing trực tiếp, sát với tiêu chí chấm thi thực tế thay vì học lý thuyết chung chung."
               },
               {
                 "type": "ul",
@@ -1630,16 +1630,16 @@ export const CONTENT = {
               },
               {
                 "type": "p",
-                "text": "Nếu bạn còn nhiều thời gian, việc ôn luyện từ từ theo lộ trình cá nhân là hoàn toàn hợp lý. Nhưng nếu thời gian gấp rút và cần chứng chỉ trong thời gian ngắn, một khóa học cấp tốc có giáo viên đồng hành sẽ giúp bạn tiết kiệm thời gian tự mày mò, tránh sai sót ở hai kỹ năng khó cải thiện nhất là Nói và Viết. Hãy liên hệ với VietGen ngay hôm nay để được tư vấn miễn phí lộ trình học phù hợp nhất với mục tiêu và thời hạn của bạn."
+                "text": "Nếu bạn còn nhiều thời gian, việc ôn luyện từ từ theo lộ trình cá nhân là hoàn toàn hợp lý. Nhưng nếu thời gian gấp rút và cần chứng chỉ trong thời gian ngắn, một khóa học cấp tốc có giáo viên đồng hành sẽ giúp bạn tiết kiệm thời gian tự mày mò, tránh sai sót ở hai kỹ năng khó cải thiện nhất là Nói và Viết. Hãy liên hệ với VIETGEN ngay hôm nay để được tư vấn miễn phí lộ trình học phù hợp nhất với mục tiêu và thời hạn của bạn."
               },
               {
                 "type": "h4",
                 "class": "sm-title",
-                "text": "VietGen luôn sẵn sàng đồng hành cùng bạn"
+                "text": "VIETGEN luôn sẵn sàng đồng hành cùng bạn"
               },
               {
                 "type": "p",
-                "text": "Đội ngũ giảng viên VietGen có nhiều năm kinh nghiệm luyện thi và chấm thi VSTEP, hiểu rõ các tiêu chí đánh giá thực tế nên có thể giúp học viên nhận diện đúng điểm yếu và cải thiện nhanh chóng trong thời gian ngắn. Đừng để thời hạn nộp hồ sơ trở thành áp lực - hãy chủ động tìm hiểu và đăng ký khóa học phù hợp ngay từ bây giờ."
+                "text": "Đội ngũ giảng viên VIETGEN có nhiều năm kinh nghiệm luyện thi và chấm thi VSTEP, hiểu rõ các tiêu chí đánh giá thực tế nên có thể giúp học viên nhận diện đúng điểm yếu và cải thiện nhanh chóng trong thời gian ngắn. Đừng để thời hạn nộp hồ sơ trở thành áp lực - hãy chủ động tìm hiểu và đăng ký khóa học phù hợp ngay từ bây giờ."
               }
             ],
             "navigation": [
@@ -1736,7 +1736,7 @@ export const CONTENT = {
                   "href": "#"
                 },
                 {
-                  "text": "Tin tức VietGen",
+                  "text": "Tin tức VIETGEN",
                   "href": "#"
                 }
               ]
@@ -1777,10 +1777,10 @@ export const CONTENT = {
     },
     "contact": {
       "file": "contact.html",
-      "title": "Liên Hệ - VietGen",
-      "description": "Liên hệ VietGen để được tư vấn miễn phí lộ trình luyện thi VSTEP phù hợp. Hotline 0866.538.942, cơ sở Hà Nội, TP.HCM và học online toàn quốc.",
+      "title": "Liên Hệ - VIETGEN",
+      "description": "Liên hệ VIETGEN để được tư vấn miễn phí lộ trình luyện thi VSTEP phù hợp. Hotline 0866.538.942, cơ sở Hà Nội, TP.HCM và học online toàn quốc.",
       "breadcrumb": {
-        "h1": "Liên Hệ VietGen",
+        "h1": "Liên Hệ VIETGEN",
         "image": "/assets/images/breadcrumbs/6.jpg",
         "image_alt": "Breadcrumbs Image",
         "trail": [
@@ -1877,7 +1877,7 @@ export const CONTENT = {
           ],
           "quick_contact": {
             "title": "Đăng Ký Tư Vấn Miễn Phí",
-            "desc_html_br": "Để lại thông tin, VietGen sẽ liên hệ tư vấn lộ trình học phù hợp\nvới mục tiêu và thời gian của bạn trong vòng 24 giờ.",
+            "desc_html_br": "Để lại thông tin, VIETGEN sẽ liên hệ tư vấn lộ trình học phù hợp\nvới mục tiêu và thời gian của bạn trong vòng 24 giờ.",
             "form": {
               "id": "contact-form",
               "action": "mailer.php",

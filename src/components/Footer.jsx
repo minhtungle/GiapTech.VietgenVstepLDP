@@ -77,7 +77,7 @@ export default function Footer() {
             </div>
             <div className="col-lg-4 md-mb-20">
               <div className="copyright text-center md-text-start">
-                <p>&copy; 2026 VietGen Language Education. All Rights Reserved.</p>
+                <p>&copy; 2026 VIETGEN Language Education. All Rights Reserved.</p>
               </div>
             </div>
             <div className="col-lg-4 text-end md-text-start">

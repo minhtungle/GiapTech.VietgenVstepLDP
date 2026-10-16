@@ -40,7 +40,7 @@ export default function QuickSignup({ placeholder, buttonText }) {
       })
 
       if (res.ok) {
-        setFeedback({ text: 'Đã nhận thông tin! VietGen sẽ gọi lại cho bạn sớm.', error: false })
+        setFeedback({ text: 'Đã nhận thông tin! VIETGEN sẽ gọi lại cho bạn sớm.', error: false })
         setPhone('')
       } else {
         setFeedback({ text: res.message || 'Gửi không thành công, vui lòng thử lại.', error: true })
