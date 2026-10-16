@@ -733,3 +733,8 @@ body.vg-cursor-on textarea {
         height: auto;
     }
 }
+
+/* Con trỏ ở nhịp nghỉ giữa hai lượt gõ: nháy chậm hơn cho đỡ sốt ruột. */
+.vg-type-caret-idle {
+    animation-duration: 1.4s;
+}

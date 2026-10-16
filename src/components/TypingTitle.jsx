@@ -8,7 +8,14 @@ import { useState, useEffect, useMemo } from 'react'
  *
  * Người dùng bật "giảm chuyển động" thì hiện luôn toàn bộ, không gõ.
  */
-export default function TypingTitle({ text, highlights = [], speed = 55, startDelay = 300 }) {
+export default function TypingTitle({
+  text,
+  highlights = [],
+  speed = 55,
+  startDelay = 300,
+  holdMs = 3000,
+  eraseSpeed = 25,
+}) {
   const [shown, setShown] = useState(0)
   const [done, setDone] = useState(false)
 
@@ -31,6 +38,8 @@ export default function TypingTitle({ text, highlights = [], speed = 55, startDe
       .map((chunk) => ({ text: chunk, mark: highlights.includes(chunk) }))
   }, [text, highlights])
 
+  // Vòng lặp: gõ hết chữ -> giữ nguyên holdMs -> xoá ngược -> gõ lại.
+  // Xoá nhanh hơn gõ để người xem không phải chờ lâu ở nhịp nghỉ.
   useEffect(() => {
     if (calm || !text) {
       setShown(text?.length || 0)
@@ -41,23 +50,38 @@ export default function TypingTitle({ text, highlights = [], speed = 55, startDe
     setShown(0)
     setDone(false)
 
-    let i = 0
     let timer
-    const start = setTimeout(function step() {
-      i += 1
-      setShown(i)
-      if (i < text.length) {
-        timer = setTimeout(step, speed)
-      } else {
-        setDone(true)
-      }
-    }, startDelay)
+    let i = 0
+    let erasing = false
 
-    return () => {
-      clearTimeout(start)
-      clearTimeout(timer)
+    function tick() {
+      if (!erasing) {
+        i += 1
+        setShown(i)
+        if (i < text.length) {
+          timer = setTimeout(tick, speed)
+        } else {
+          setDone(true)
+          erasing = true
+          timer = setTimeout(tick, holdMs)
+        }
+        return
+      }
+
+      i -= 1
+      setShown(i)
+      setDone(false)
+      if (i > 0) {
+        timer = setTimeout(tick, eraseSpeed)
+      } else {
+        erasing = false
+        timer = setTimeout(tick, speed * 4)
+      }
     }
-  }, [text, speed, startDelay, calm])
+
+    timer = setTimeout(tick, startDelay)
+    return () => clearTimeout(timer)
+  }, [text, speed, startDelay, holdMs, eraseSpeed, calm])
 
   if (!text) return null
 
@@ -97,7 +121,14 @@ export default function TypingTitle({ text, highlights = [], speed = 55, startDe
 
       <span className="vg-type-live">
         {rendered}
-        {!done && <span className="vg-type-caret" aria-hidden="true" />}
+        {/* Con trỏ luôn hiện trong lúc chạy vòng lặp; chỉ nháy chậm lại ở nhịp
+            nghỉ giữa hai lượt gõ cho đỡ sốt ruột. */}
+        {!calm && (
+          <span
+            className={`vg-type-caret${done ? ' vg-type-caret-idle' : ''}`}
+            aria-hidden="true"
+          />
+        )}
       </span>
     </>
   )
