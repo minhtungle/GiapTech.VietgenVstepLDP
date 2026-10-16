@@ -60,11 +60,6 @@ export default function Header({ onOpenLead }) {
                     <i className="fa fa-phone" />
                     Hotline: <a href={`tel:${CONTACT.phoneRaw}`}>{CONTACT.phone}</a>
                   </li>
-                  <li className="btn-part">
-                    <button type="button" className="apply-btn" onClick={onOpenLead}>
-                      Đăng Ký Ngay
-                    </button>
-                  </li>
                 </ul>
               </div>
             </div>
