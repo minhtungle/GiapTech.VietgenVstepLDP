@@ -1800,3 +1800,51 @@ body:has(.vg-offer-bar) .vg-floating-contact {
         background: rgba(255, 255, 255, 0.14);
     }
 }
+
+/* ===== Header dính theo cuộn trên điện thoại =====
+   Template chỉ khai báo position:fixed cho .menu-area.sticky bên trong media
+   query min-width:992px, nên dưới mốc đó header cuộn mất luôn. Bổ sung cho màn
+   hình nhỏ, dùng chung class .sticky mà JS sẵn có đã gắn. */
+@media only screen and (max-width: 991px) {
+    .rs-header .menu-area.menu-sticky {
+        transition: box-shadow 0.3s ease;
+    }
+    .rs-header .menu-area.menu-sticky.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        border: none;
+        z-index: 999;
+        box-shadow: 0 4px 16px rgba(11, 12, 81, 0.12);
+        /* Thu gọn chiều cao khi dính để chừa chỗ cho nội dung */
+        min-height: 68px;
+    }
+    .rs-header .menu-area.menu-sticky.sticky .row.y-middle {
+        min-height: 68px;
+    }
+    .rs-header .menu-area.menu-sticky.sticky .logo-part img {
+        max-height: 40px;
+    }
+    .rs-header .menu-area.menu-sticky.sticky .row.y-middle > .col-lg-2:first-child {
+        min-height: 68px;
+    }
+    /* Menu bung ra khi dính phải nằm ngay dưới thanh, không bị header che */
+    .rs-header .menu-area.menu-sticky.sticky .rs-menu.rs-menu-open .nav-menu {
+        max-height: calc(100vh - 68px);
+    }
+}
+
+/* Khối giữ chỗ cho header khi nó chuyển sang fixed, tránh nội dung nhảy lên. */
+.vg-sticky-spacer {
+    height: 120px;
+}
+@media only screen and (max-width: 991px) {
+    .vg-sticky-spacer {
+        height: 90px;
+    }
+}

@@ -66,6 +66,9 @@ export default function Header({ onOpenLead }) {
           </div>
         </div>
 
+        {/* Khi header chuyển sang fixed nó rời khỏi luồng, làm nội dung bên dưới
+            nhảy lên đúng bằng chiều cao của nó. Khối này giữ chỗ thay thế. */}
+        {sticky && <div className="vg-sticky-spacer" aria-hidden="true" />}
         <div className={`menu-area menu-sticky${sticky ? ' sticky' : ''}`}>
           <div className="container">
             <div className="row y-middle">
